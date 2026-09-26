@@ -1,0 +1,26 @@
+Mode: Built-in image generation
+Assets saved in assets/images/ inside this website package.
+
+duplex-entry-clean.png
+Use case: photorealistic-natural. Asset type: photo for a professional duplex cleaning website. Generate one realistic 4:3 landscape photograph of a Mexican male professional cleaner in a plain navy polo and dark work trousers, full body including shoes and both hands visible, wiping the exterior glass of one of two separate front doors at a modest attractive two-unit residential duplex in Southern California. Include both doorways, a small shared porch, and a compact unbranded cleaning caddy on the ground, warm natural daylight, believable candid professional work, high photographic quality. No text whatsoever, no house numbers, no logos, no labels, no watermark. Keep the cleaner's entire body, head, arms and all tools comfortably inside the frame. No collage.
+
+restaurant-kitchen-clean.png
+Use case: photorealistic-natural. Asset type: photo for a restaurant cleaning service website. Generate one realistic 4:3 landscape photograph of two Mexican professional cleaners, a woman in front wiping a stainless steel commercial kitchen work surface with a blue cloth and a man farther back mopping the tiled floor. Both wear plain navy work uniforms and blue gloves. Show the full bodies, shoes, hands, mop and complete cleaning cart. Spacious restaurant back-of-house with stainless counters, commercial range and extractor hood, clean neutral daylight and realistic textures. No text anywhere at all, no signs, no labels, no logos, no lettering on clothes, no watermarks. Do not crop important people or equipment. No collage.
+
+construction-detail-clean.png
+Use case: photorealistic-natural. Asset type: image for a post-construction cleaning website. Generate one realistic 4:3 landscape photograph of a Mexican woman cleaner wearing a plain navy work uniform and gloves, carefully wiping pale construction dust from a newly installed low reception counter in an unoccupied renovated office. Camera wide enough to show her entire body, head, both hands and shoes comfortably within the frame. A plain unbranded cleaning cart and a folded step ladder stand in the background, new tall windows, neutral floors, daylight, realistic candid commercial photography. No text of any kind, no writing, no logos, no labels, no watermarks. Do not crop important subjects or equipment. No collage.
+
+
+
+REVISION 24, FAQ PHOTO
+Tool: built-in image generation.
+Saved website asset: assets/images/faq-consultation-v24.png
+Prompt: Photorealistic professional janitorial company FAQ photograph,
+4:3 landscape. A Mexican woman cleaning supervisor in a plain navy polo
+answers a Mexican male property manager's questions at a small round table
+in a bright office meeting room. Both seated, reviewing a tablet naturally,
+complete people including shoes, generous room, subjects on the right,
+plain office wall on the left for HTML copy. Different from people walking
+in a lobby or standing in an empty apartment. Natural daylight, realistic
+hands, no text, logos, watermarks, borders or collage. Fictional marketing
+scene, not an actual employee photo.

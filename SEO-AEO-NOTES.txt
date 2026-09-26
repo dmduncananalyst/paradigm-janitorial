@@ -1,0 +1,71 @@
+PARADIGM JANITORIAL SERVICES, SEO AND AEO, REVISION 24
+
+Completed in the website code
+
+All 33 pages have a unique title, meta description, canonical URL, one H1,
+indexing and preview directives, Open Graph metadata and X/Twitter card metadata.
+Social preview images have absolute URLs, dimensions and alternative text.
+
+All 33 pages are reachable from the home page through ordinary HTML links.
+The XML sitemap contains exactly those 33 canonical pages and their primary
+images. robots.txt allows crawling and points to that sitemap. Existing page
+filenames were preserved so these edits do not break existing inbound links.
+
+There are 32 visible breadcrumb trails with matching BreadcrumbList markup.
+The JSON-LD graph connects the business, website, page and primary image.
+The site includes 17 Service entities, 11 Articles with matching direct answers,
+the FAQ page with its 8 visible questions and answers, the Clean Spaces article
+collection, and appropriate AboutPage and ContactPage types.
+
+Eighteen home/service/location introductions now state the service, scope and
+service area directly. Existing article answers and related service links were
+preserved. Important answers are ordinary HTML text and do not require a chatbot.
+
+The business schema uses Organization with the supplied name, logo, phone,
+email, counties and contact hours. A verified public street address was not
+supplied. No address, map coordinates, ratings, reviews, affiliations, social
+profiles or publishing dates were invented. LocalBusiness rich-result markup
+can be added when a verified public business address is supplied.
+
+SEO-AEO-AUDIT.csv lists each page's title, description, canonical URL, social
+image, schema types and H1 for review.
+
+Validation completed locally
+
+- All 33 pages have distinct titles, descriptions and canonical URLs.
+- All local assets and internal page links resolve.
+- Every page is reachable from the home page; no orphan pages were found.
+- Sitemap URLs match canonical URLs exactly.
+- JSON-LD parses, entity references resolve, and breadcrumb, service, FAQ and
+  article answer data match the visible page content.
+- Hero and card layouts were checked on all 33 pages at six viewport sizes.
+- All 33 pages were checked again at the smallest tested width after SEO edits.
+- These are local code and browser checks, not a live Search Console or
+  Google Rich Results Test certification.
+
+Publishing and external work still required
+
+Upload the complete site to the final host. The supplied canonical domain is
+https://www.paradigmjanitorial.net/. Keep it consistent in metadata, sitemap,
+schema and hosting redirects. If that domain changes, update every occurrence.
+
+After publishing, verify the site in Google Search Console and Bing Webmaster
+Tools and submit https://www.paradigmjanitorial.net/sitemap.xml. Check live
+indexing, HTTPS, server redirects, mobile performance and structured data.
+Any old live URLs outside this supplied ZIP need a verified redirect mapping.
+
+External backlinks must be earned or added by other sites, such as a genuine
+business directory, local association, vendor or customer. They are not created
+by adding meta tags or hidden links. No external outreach or listings were sent.
+Maintain an accurate Google Business Profile using the real business details.
+
+SEO and useful, crawlable answers support search and AI discovery. There is no
+special AEO meta tag that guarantees citations, rankings or indexing. No such
+outcome is promised by this package.
+
+Primary references checked for this audit
+https://developers.google.com/search/docs/appearance/ai-features
+https://developers.google.com/search/docs/appearance/structured-data/organization
+https://developers.google.com/search/docs/appearance/structured-data/local-business
+https://developers.google.com/search/docs/appearance/structured-data/breadcrumb
+https://schema.org/Service
