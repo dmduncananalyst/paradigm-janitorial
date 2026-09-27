@@ -157,6 +157,7 @@
     });
   }
   initializeMobileCardCarousels();
+  mobileCardMode.addEventListener('change', initializeMobileCardCarousels);
 
   document.querySelectorAll('.hero > video').forEach(video => {
     video.muted = true;
