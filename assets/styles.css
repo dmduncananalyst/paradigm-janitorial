@@ -572,7 +572,7 @@ img[src$="about-hero-wide.webp"],img[src$="about-hero-wide.webp"],img[src$="floo
 
 /* v31 MOBILE ONLY: keep home video visible, move service links below video, and show obvious carousel arrows */
 @media(max-width:600px){
-  /* Home hero stays focused on the video/title/button. The service links are moved below it by JS. */
+  /* Keep the home video and title visible; move the service links and CTA below it. */
   .home-page-hero{
     overflow:hidden!important;
   }
@@ -607,6 +607,18 @@ img[src$="about-hero-wide.webp"],img[src$="about-hero-wide.webp"],img[src$="floo
     text-decoration:none!important;
   }
   .mobile-home-services a:last-child:nth-child(odd){grid-column:1/-1!important}
+  .mobile-home-cta{
+    display:flex;
+    justify-content:center;
+    padding:0 16px 22px;
+    background:#fff;
+  }
+  .mobile-home-cta .hero-actions{
+    display:flex;
+    justify-content:center;
+    width:100%;
+    margin:0;
+  }
 
   /* One visible card at a time. */
   .service-carousel,
@@ -784,5 +796,64 @@ img[src$="about-hero-wide.webp"],img[src$="about-hero-wide.webp"],img[src$="floo
   .page-contact .chat-overlay.chat-embedded .ai-choice{
     padding:12px 14px!important;
     line-height:1.25!important;
+  }
+}
+
+/* Keep every quick answer reachable inside the phone chat dialog. */
+@media (max-width:600px){
+  .chat-overlay:not(.chat-embedded){padding:8px;}
+  .chat-overlay:not(.chat-embedded) .ai-chat-panel{
+    width:100%;
+    height:auto;
+    max-height:calc(100dvh - 16px);
+    grid-template-rows:auto minmax(120px,28dvh) minmax(0,auto);
+  }
+  .chat-overlay:not(.chat-embedded) .ai-chat-log{
+    min-height:120px;
+    max-height:28dvh;
+    overflow-y:auto;
+  }
+  .chat-overlay:not(.chat-embedded) .ai-chat-composer{
+    min-height:0;
+    max-height:calc(100dvh - 216px);
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    padding:14px 14px calc(14px + env(safe-area-inset-bottom));
+  }
+  .chat-overlay:not(.chat-embedded) .ai-choice-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px;
+    align-items:stretch;
+  }
+  .chat-overlay:not(.chat-embedded) .ai-choice-grid .ai-choice{
+    width:100%;
+    max-width:none;
+    min-height:46px;
+    margin:0;
+    padding:8px;
+    font-size:14px;
+    line-height:1.2;
+    white-space:normal;
+  }
+  .chat-overlay:not(.chat-embedded) .ai-choice-grid .ai-choice:last-child:nth-child(odd){grid-column:1/-1;}
+}
+@media (min-width:601px) and (max-height:600px){
+  .chat-overlay:not(.chat-embedded){padding:6px;}
+  .chat-overlay:not(.chat-embedded) .ai-chat-panel{
+    height:auto;
+    max-height:calc(100dvh - 12px);
+    grid-template-rows:auto minmax(60px,20dvh) minmax(0,auto);
+  }
+  .chat-overlay:not(.chat-embedded) .ai-chat-log{
+    min-height:60px;
+    max-height:20dvh;
+    overflow-y:auto;
+  }
+  .chat-overlay:not(.chat-embedded) .ai-chat-composer{
+    min-height:0;
+    max-height:calc(100dvh - 140px);
+    overflow-y:auto;
+    overscroll-behavior:contain;
   }
 }

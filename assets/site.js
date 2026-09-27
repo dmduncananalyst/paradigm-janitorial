@@ -85,7 +85,10 @@
   // On mobile, keep the Home video clean and place the service buttons immediately below it.
   const homeHero = document.querySelector('.home-page-hero');
   const homeServiceRibbon = homeHero?.querySelector('.home-service-ribbon');
+  const homeHeroCopy = homeHero?.querySelector('.hero-copy');
+  const homeHeroActions = homeHeroCopy?.querySelector('.hero-actions');
   let mobileHomeServices = null;
+  let mobileHomeCta = null;
   function syncMobileHomeServices(){
     if (!homeHero || !homeServiceRibbon) return;
     if (mobileCardMode.matches) {
@@ -96,8 +99,18 @@
         [...homeServiceRibbon.querySelectorAll('a')].forEach(link => mobileHomeServices.appendChild(link.cloneNode(true)));
       }
       if (!mobileHomeServices.isConnected) homeHero.insertAdjacentElement('afterend', mobileHomeServices);
-    } else if (mobileHomeServices?.isConnected) {
-      mobileHomeServices.remove();
+      if (homeHeroActions) {
+        if (!mobileHomeCta) {
+          mobileHomeCta = document.createElement('div');
+          mobileHomeCta.className = 'mobile-home-cta';
+        }
+        mobileHomeServices.insertAdjacentElement('afterend', mobileHomeCta);
+        mobileHomeCta.appendChild(homeHeroActions);
+      }
+    } else {
+      if (homeHeroActions && homeHeroCopy) homeHeroCopy.appendChild(homeHeroActions);
+      mobileHomeCta?.remove();
+      mobileHomeServices?.remove();
     }
   }
   syncMobileHomeServices();
