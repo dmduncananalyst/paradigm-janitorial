@@ -84,19 +84,11 @@
 
   // On mobile, keep the Home video clean and place the service buttons immediately below it.
   const homeHero = document.querySelector('.home-page-hero');
-  // Browsers can restore a previous scroll position when index.html is opened
-  // again, hiding the hero on the first view. Home should open at its top.
+  // Start a fresh Home navigation at the hero once. Never reset the user's
+  // scroll position after loading media or while they are already browsing.
   if (homeHero && !window.location.hash) {
     if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-    const showHomeHero = () => window.scrollTo({top:0,left:0,behavior:'instant'});
-    showHomeHero();
-    window.addEventListener('pageshow', () => requestAnimationFrame(showHomeHero));
-    window.addEventListener('load', () => {
-      requestAnimationFrame(showHomeHero);
-      // Firefox can restore file:// scroll position after its load event.
-      setTimeout(showHomeHero, 150);
-      setTimeout(showHomeHero, 500);
-    }, {once:true});
+    window.scrollTo({top: 0, left: 0, behavior: 'instant'});
   }
   const mobileCarouselSelectors = ['.hub-grid', '.panel-grid', '.clean-question-grid', '.story-grid', '.service-static-grid', '.county-cards'];
 
@@ -177,44 +169,19 @@
     sync();
   });
 
-  // One set of real cards, readable manual controls, and gentle automatic scrolling.
+  // Service photos move only when the visitor scrolls, swipes, or uses controls.
   document.querySelectorAll('.service-carousel').forEach(carousel => {
-    const controls = carousel.nextElementSibling;
-    const pauseButton = controls?.querySelector('.carousel-pause');
-    let paused = reducedMotion.matches, hover = false, dragging = false, last = 0, holdUntil = 0, direction = 1;
-    const sync = () => {
-      if (!pauseButton) return;
-      pauseButton.textContent = paused ? 'Play' : 'Pause';
-      pauseButton.setAttribute('aria-label', paused ? 'Start automatic scrolling' : 'Pause automatic scrolling');
-    };
-    pauseButton?.addEventListener('click', () => { paused = !paused; sync(); });
-    const move = amount => {
-      holdUntil = performance.now() + 6000;
-      carousel.scrollBy({left: amount * carousel.clientWidth * .8, behavior: reducedMotion.matches ? 'auto' : 'smooth'});
-    };
-    controls?.querySelector('.carousel-prev')?.addEventListener('click', () => move(-1));
-    controls?.querySelector('.carousel-next')?.addEventListener('click', () => move(1));
-    carousel.addEventListener('pointerenter', () => { hover = true; });
-    carousel.addEventListener('pointerleave', () => { hover = false; dragging = false; });
-    carousel.addEventListener('pointerdown', () => { dragging = true; });
-    window.addEventListener('pointerup', () => { dragging = false; holdUntil = performance.now() + 3000; });
+    carousel.querySelectorAll('img').forEach(img => { img.draggable = false; });
     carousel.addEventListener('keydown', event => {
-      if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {event.preventDefault();move(event.key === 'ArrowRight' ? 1 : -1);}
-    });
-    let visible = false;
-    const observer = new IntersectionObserver(entries => {visible = entries[0].isIntersecting;}, {threshold: .1});
-    observer.observe(carousel);
-    const frame = time => {
-      const elapsed = Math.min(time - (last || time), 64);last = time;
-      if (visible && !mobileCardMode.matches && !document.hidden && !paused && !hover && !dragging && !carousel.contains(document.activeElement) && time > holdUntil) {
-        const limit = carousel.scrollWidth - carousel.clientWidth;
-        carousel.scrollLeft += direction * elapsed * .022;
-        if (carousel.scrollLeft >= limit - 1) { direction = -1; holdUntil = time + 1800; }
-        if (carousel.scrollLeft <= 0) { direction = 1; }
+      if (event.target !== carousel) return;
+      if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+        event.preventDefault();
+        carousel.scrollBy({
+          left: (event.key === 'ArrowRight' ? 1 : -1) * carousel.clientWidth * .8,
+          behavior: reducedMotion.matches ? 'auto' : 'smooth'
+        });
       }
-      requestAnimationFrame(frame);
-    };
-    sync();requestAnimationFrame(frame);
+    });
   });
 
   const PORTAL = '247103073';
@@ -352,6 +319,7 @@
   overlay.querySelector('.chat-close').addEventListener('click', close);
   overlay.addEventListener('click', event => {if (event.target === overlay) close();});
   overlay.addEventListener('keydown', event => {
+    if (overlay.classList.contains('chat-embedded')) return;
     if (event.key === 'Escape') {event.preventDefault();close();return;}
     if (event.key !== 'Tab') return;
     const focusable = [...overlay.querySelectorAll('button,a,input,textarea,select,[tabindex="0"]')].filter(x => x.getClientRects().length && !x.disabled);
@@ -360,7 +328,7 @@
     else if (!event.shiftKey && document.activeElement === last) {event.preventDefault();first?.focus();}
   });
 
-  function renderQuestion() {
+  function renderQuestion(shouldFocus = true) {
     rebuildLog();
     addBubble('assistant', config.questions[step]);
     const question = config.questions[step];
@@ -431,7 +399,7 @@
       input.addEventListener('keydown', event => { if (event.key === 'Enter' && !event.shiftKey) { event.preventDefault(); send(); } });
     }
     composer.querySelector('.ai-back')?.addEventListener('click', () => { if (step > 0) { step--; renderQuestion(); } });
-    focusFirst();
+    if (shouldFocus) focusFirst();
   }
 
   let contactMethod = '';
@@ -534,7 +502,9 @@
       overlay.classList.add('open', 'chat-embedded');
       panel.querySelector('.chat-close')?.remove();
       wrap.appendChild(overlay);
-      renderQuestion();
+      panel.removeAttribute("aria-modal");
+      panel.setAttribute("role", "region");
+      renderQuestion(false);
     }
   }
 

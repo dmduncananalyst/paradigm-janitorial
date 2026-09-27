@@ -869,3 +869,37 @@ img[src$="about-hero-wide.webp"],img[src$="about-hero-wide.webp"],img[src$="floo
 /* Home mobile content exists in HTML on first paint, independent of JavaScript. */
 .mobile-home-services,.mobile-home-cta{display:none}
 @media(max-width:600px){.home-page-hero .hero-actions{display:none!important}.mobile-home-services{display:grid!important}.mobile-home-cta{display:flex!important}}
+
+/* Quote page: photo and conversation share the arrival section. */
+.page-contact .quote-page{padding-top:24px;padding-bottom:40px}
+.page-contact .quote-page .breadcrumbs{margin-bottom:12px}
+.page-contact .quote-page .section-heading{margin-bottom:20px}
+.page-contact .quote-page h1{font-size:clamp(28px,3vw,42px);margin:0;color:var(--navy)}
+.page-contact .quote-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:start}
+.page-contact .quote-picture img{display:block;width:100%;height:auto}
+.page-contact .quote-layout .form-wrap{min-width:0}
+.page-contact .quote-layout .chat-panel{width:100%;margin:0;grid-template-rows:auto auto auto;max-height:none}
+.page-contact .quote-layout .ai-chat-log{min-height:100px;max-height:180px;padding:14px 18px}
+.page-contact .quote-layout .ai-choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.page-contact .quote-layout .ai-choice{width:100%;min-width:0;margin:0;padding:10px 8px;white-space:normal;line-height:1.25;font-size:16px}
+@media(max-width:760px){
+ .page-contact .quote-layout{grid-template-columns:1fr;gap:16px}
+ .page-contact .quote-page{padding-top:12px}
+ .page-contact .quote-page .section-heading{margin-bottom:12px}
+ .page-contact .quote-picture img{max-height:26svh;object-fit:contain}
+ .page-contact .quote-layout .chat-panel{margin:0 auto!important;grid-template-rows:auto auto auto}
+ .page-contact .quote-layout .ai-chat-log{min-height:80px!important;max-height:140px!important}
+}
+.page-contact .quote-layout .chat-overlay.chat-embedded .ai-chat-log{min-height:100px!important;max-height:180px!important}
+@media(max-width:760px){.page-contact .quote-layout .chat-overlay.chat-embedded .ai-chat-log{min-height:80px!important;max-height:140px!important}}
+/* Keep late image loads from shifting a manually positioned photo row. */
+.service-carousel,.service-carousel *{overflow-anchor:none}
+@media(min-width:601px){
+ .service-carousel{scroll-behavior:auto!important;scroll-snap-type:none!important;scrollbar-width:auto;overflow-y:hidden}
+ .service-carousel::-webkit-scrollbar{height:18px}
+ .service-carousel::-webkit-scrollbar-track{background:#e8edf0;border-radius:9px}
+ .service-carousel::-webkit-scrollbar-thumb{background:#8a9da9;border:3px solid #e8edf0;border-radius:9px}
+ .service-carousel .carousel-track{flex-wrap:nowrap}
+ .service-carousel .service-card{flex:0 0 min(560px,82vw)}
+ .service-carousel .slide-collage img{aspect-ratio:4/3;object-fit:contain}
+}
