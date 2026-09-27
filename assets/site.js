@@ -84,37 +84,20 @@
 
   // On mobile, keep the Home video clean and place the service buttons immediately below it.
   const homeHero = document.querySelector('.home-page-hero');
-  const homeServiceRibbon = homeHero?.querySelector('.home-service-ribbon');
-  const homeHeroCopy = homeHero?.querySelector('.hero-copy');
-  const homeHeroActions = homeHeroCopy?.querySelector('.hero-actions');
-  let mobileHomeServices = null;
-  let mobileHomeCta = null;
-  function syncMobileHomeServices(){
-    if (!homeHero || !homeServiceRibbon) return;
-    if (mobileCardMode.matches) {
-      if (!mobileHomeServices) {
-        mobileHomeServices = document.createElement('nav');
-        mobileHomeServices.className = 'mobile-home-services';
-        mobileHomeServices.setAttribute('aria-label','Cleaning services');
-        [...homeServiceRibbon.querySelectorAll('a')].forEach(link => mobileHomeServices.appendChild(link.cloneNode(true)));
-      }
-      if (!mobileHomeServices.isConnected) homeHero.insertAdjacentElement('afterend', mobileHomeServices);
-      if (homeHeroActions) {
-        if (!mobileHomeCta) {
-          mobileHomeCta = document.createElement('div');
-          mobileHomeCta.className = 'mobile-home-cta';
-        }
-        mobileHomeServices.insertAdjacentElement('afterend', mobileHomeCta);
-        mobileHomeCta.appendChild(homeHeroActions);
-      }
-    } else {
-      if (homeHeroActions && homeHeroCopy) homeHeroCopy.appendChild(homeHeroActions);
-      mobileHomeCta?.remove();
-      mobileHomeServices?.remove();
-    }
+  // Browsers can restore a previous scroll position when index.html is opened
+  // again, hiding the hero on the first view. Home should open at its top.
+  if (homeHero && !window.location.hash) {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    const showHomeHero = () => window.scrollTo({top:0,left:0,behavior:'instant'});
+    showHomeHero();
+    window.addEventListener('pageshow', () => requestAnimationFrame(showHomeHero));
+    window.addEventListener('load', () => {
+      requestAnimationFrame(showHomeHero);
+      // Firefox can restore file:// scroll position after its load event.
+      setTimeout(showHomeHero, 150);
+      setTimeout(showHomeHero, 500);
+    }, {once:true});
   }
-  syncMobileHomeServices();
-  mobileCardMode.addEventListener?.('change', syncMobileHomeServices);
   const mobileCarouselSelectors = ['.hub-grid', '.panel-grid', '.clean-question-grid', '.story-grid', '.service-static-grid', '.county-cards'];
 
   function setupMobileCardCarousel(container) {

@@ -857,3 +857,7 @@ img[src$="about-hero-wide.webp"],img[src$="about-hero-wide.webp"],img[src$="floo
     overscroll-behavior:contain;
   }
 }
+
+/* Home mobile content exists in HTML on first paint, independent of JavaScript. */
+.mobile-home-services,.mobile-home-cta{display:none}
+@media(max-width:600px){.home-page-hero .hero-actions{display:none!important}.mobile-home-services{display:grid!important}.mobile-home-cta{display:flex!important}}
