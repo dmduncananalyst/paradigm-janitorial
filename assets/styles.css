@@ -145,10 +145,10 @@ main>.section+.section{border-top:1px solid var(--line)}
 .location-list{columns:2;column-gap:36px;padding-left:22px}
 .location-list li{margin-bottom:8px}
 .action-band{background:var(--navy);color:white;padding:52px 5vw;margin:0}
-.action-band-inner{max-width:1280px;margin:auto;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(200px,.7fr);gap:36px;align-items:center}
+.action-band-inner{max-width:1280px;margin:auto;display:flex;justify-content:center;align-items:center}
 .action-band h2{font-size:clamp(28px,2.4vw,36px);color:white;margin-bottom:12px}
 .action-band p{font-size:18px;line-height:1.6;color:#dae3e9;margin:0}
-.action-band-actions{justify-self:end;max-width:340px}
+.action-band-actions{max-width:340px;width:100%;text-align:center}
 .article{max-width:1060px;margin:auto;padding:60px 5vw 0}
 .article-title{font-size:clamp(34px,4.1vw,58px);line-height:1.1;letter-spacing:-.025em;margin-bottom:26px}
 .article .answer-box{font-size:20px;line-height:1.65;background:var(--section-alt);border-left:5px solid var(--olive);padding:24px 28px;margin:28px 0}
@@ -239,8 +239,8 @@ main>.section+.section{border-top:1px solid var(--line)}
  .hub-card:nth-child(n){grid-column:span 6}
  .simple-service-list{grid-template-columns:repeat(2,minmax(0,1fr))}
  .clean-question-grid,.home-clean-spaces-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
- .action-band-inner{grid-template-columns:1fr;gap:24px}
- .action-band-actions{justify-self:start;max-width:none}
+ .action-band-inner{display:flex;justify-content:center}
+ .action-band-actions{max-width:none;width:100%;text-align:center}
  .article{padding-top:44px}
 }
 @media(max-width:600px){
@@ -341,11 +341,11 @@ img[src$="power-driveways.webp"]{object-position:left center}
 .breadcrumbs [aria-current=page]{overflow-wrap:anywhere}
 
 /* Keep people and equipment in view when wide photos share a 4:3 card row. */
-img[src$="about-hero-wide.png"],img[src$="slider-commercial-1.png"],img[src$="floor-tile-clean.png"],img[src$="jan-dusting-clean.png"],img[src$="slider-power-1.png"],img[src$="slider-window-1.png"],img[src$="slider-window-2.png"],img[src$="win-int-ext.webp"],img[src$="win-multi.webp"],img[src$="win-screen-clean.png"]{object-position:left center}
+img[src$="about-hero-wide.webp"],img[src$="about-hero-wide.webp"],img[src$="floor-tile-clean.webp"],img[src$="jan-dusting-clean.webp"],img[src$="slider-power-1.webp"],img[src$="slider-window-1.webp"],img[src$="slider-window-2.webp"],img[src$="win-int-ext.webp"],img[src$="win-multi.webp"],img[src$="win-screen-clean.webp"]{object-position:left center}
 
 
 /* v25 requested corrections: exact dropdown anchoring + complete dropdown imagery */
-@media (min-width:801px){
+@media (min-width:1281px){
   .nav-group{position:relative!important;display:flex!important;align-items:stretch!important}
   .nav-group>a{height:100%!important;display:flex!important;align-items:center!important}
   .nav-panel{
@@ -671,4 +671,118 @@ img[src$="about-hero-wide.png"],img[src$="slider-commercial-1.png"],img[src$="fl
 
   /* User does not want video controls on mobile. */
   .video-toggle{display:none!important}
+}
+
+/* v32: show the approved apartment image complete, with equal article photo frames. */
+.apartment-gallery{display:block!important;}
+.apartment-gallery>img{display:block;width:100%!important;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;}
+
+/* Mobile only: prevent scroll anchoring from pushing an opened nav label out of view. */
+@media(max-width:600px){.main-nav{overflow-anchor:none!important}.nav-group,.nav-panel{overflow-anchor:none!important}}
+
+/* Mobile CTA buttons: keep the button itself centered. Desktop unchanged. */
+@media(max-width:600px){
+  .action-band-actions{display:flex;justify-content:center;align-items:center;width:100%;}
+  .action-band .button{width:auto;max-width:100%;margin-left:auto;margin-right:auto;}
+}
+
+/* Chat quick-choice buttons */
+.ai-choice-grid{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.ai-choice-grid .ai-choice{width:auto;max-width:100%;text-align:center}
+@media (max-width:760px){
+  .ai-choice-grid{justify-content:center}
+  .ai-choice-grid .ai-choice{flex:0 0 auto;margin:0 auto}
+}
+
+/* v33: mobile Contact submenu cards match other two-column nav cards */
+@media (max-width:600px){
+  .main-nav > .nav-group:last-child > .nav-panel{
+    position:static!important;
+    left:auto!important;
+    right:auto!important;
+    transform:none!important;
+    width:100%!important;
+    max-width:none!important;
+    padding:6px 0 16px!important;
+    margin:0!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:12px!important;
+  }
+  .main-nav > .nav-group:last-child.expanded > .nav-panel{
+    display:grid!important;
+  }
+  .main-nav > .nav-group:last-child > .nav-panel .nav-photo{
+    width:100%!important;
+    height:110px!important;
+    margin:0!important;
+    overflow:hidden!important;
+  }
+  .main-nav > .nav-group:last-child > .nav-panel .nav-photo img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+  }
+  .main-nav > .nav-group:last-child > .nav-panel .nav-photo span{
+    font-size:13px!important;
+    left:8px!important;
+    right:8px!important;
+    bottom:8px!important;
+  }
+}
+
+/* VERIFIED MOBILE NAV FIX: desktop uses justify-content:flex-end. When the mobile
+   nav switches to a column and Commercial expands taller than the viewport,
+   flex-end pushes the beginning of the menu above the visible area. Always
+   anchor mobile/tablet navigation content at the top instead. */
+@media (max-width:1280px){
+  .main-nav{
+    justify-content:flex-start!important;
+    align-items:stretch!important;
+  }
+}
+
+/* Desktop audit: mobile carousel position controls must never appear above 600px. */
+@media (min-width: 601px){
+  .mobile-card-nav{
+    display:none!important;
+  }
+}
+
+/* v33 approved quote flow + embedded contact-page chat */
+.ai-choice.selected{outline:3px solid var(--olive);outline-offset:2px}
+.ai-choice-continue{margin-top:14px}
+.ai-other-wrap{margin-top:12px;display:flex;gap:10px;align-items:center}
+.ai-other-wrap[hidden]{display:none!important}
+.page-contact .chat-overlay.chat-embedded{position:static;inset:auto;display:block;background:transparent;padding:0;width:100%;z-index:auto}
+.page-contact .chat-overlay.chat-embedded .chat-panel{width:min(760px,100%);max-height:none;margin:0 auto;box-shadow:var(--shadow);border:1px solid var(--line);border-top:5px solid var(--olive)}
+.page-contact .chat-overlay.chat-embedded .ai-chat-log{min-height:240px;max-height:420px}
+.page-contact #quote-form .form-wrap{display:block}
+
+/* v40: mobile embedded quote chat breathing room */
+@media (max-width:600px){
+  .page-contact #quote-form{padding-left:12px!important;padding-right:12px!important;}
+  .page-contact .chat-overlay.chat-embedded{padding:0 4px 24px!important;}
+  .page-contact .chat-overlay.chat-embedded .chat-panel{
+    width:calc(100% - 8px)!important;
+    margin:12px auto 0!important;
+  }
+  .page-contact .chat-overlay.chat-embedded .ai-chat-panel .chat-top{
+    padding:18px 18px 16px!important;
+  }
+  .page-contact .chat-overlay.chat-embedded .ai-chat-log{
+    padding:22px 18px!important;
+    min-height:210px!important;
+    max-height:360px!important;
+  }
+  .page-contact .chat-overlay.chat-embedded .ai-chat-composer{
+    padding:20px 18px 24px!important;
+  }
+  .page-contact .chat-overlay.chat-embedded .ai-choice-grid{
+    gap:12px!important;
+    padding:2px 0!important;
+  }
+  .page-contact .chat-overlay.chat-embedded .ai-choice{
+    padding:12px 14px!important;
+    line-height:1.25!important;
+  }
 }

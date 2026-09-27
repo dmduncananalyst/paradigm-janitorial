@@ -1,232 +1,211 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.paradigmjanitorial.net/about.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
-      <image:loc>https://www.paradigmjanitorial.net/assets/images/about-hero-wide.png</image:loc>
+      <image:loc>https://www.paradigmjanitorial.net/assets/images/about-hero-wide.webp</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/apartment-buildings.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
-      <image:loc>https://www.paradigmjanitorial.net/assets/images/apartment-hero-v20.png</image:loc>
+      <image:loc>https://www.paradigmjanitorial.net/assets/images/apartment-lobby-v32.webp</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/clean-spaces-apartment-common-area-responsibility.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
       <image:loc>https://www.paradigmjanitorial.net/assets/images/paradigm-logo.png</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/clean-spaces-business-open-late-opens-early.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
       <image:loc>https://www.paradigmjanitorial.net/assets/images/paradigm-logo.png</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/clean-spaces-cleaning-throughout-the-day.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
       <image:loc>https://www.paradigmjanitorial.net/assets/images/paradigm-logo.png</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/clean-spaces-construction-dust-building-ready.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
-      <image:loc>https://www.paradigmjanitorial.net/assets/images/construction-detail-clean.png</image:loc>
+      <image:loc>https://www.paradigmjanitorial.net/assets/images/construction-detail-clean.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://www.paradigmjanitorial.net/clean-spaces-house-renovation-what-to-expect.html</loc>
-    <lastmod>2026-09-26</lastmod>
+    <loc>https://www.paradigmjanitorial.net/clean-spaces-estate-cleaning-zones.html</loc>
     <image:image>
-      <image:loc>https://www.paradigmjanitorial.net/assets/images/art-renov-3.webp</image:loc>
+      <image:loc>https://www.paradigmjanitorial.net/assets/images/estate-zones-v32.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.paradigmjanitorial.net/clean-spaces-estate-delicate-finishes.html</loc>
+    <image:image>
+      <image:loc>https://www.paradigmjanitorial.net/assets/images/estate-finishes-v32.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.paradigmjanitorial.net/clean-spaces-estate-staff-cleaning-schedules.html</loc>
+    <image:image>
+      <image:loc>https://www.paradigmjanitorial.net/assets/images/estate-schedules-v32.webp</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/clean-spaces-kitchen-staff-or-cleaning-service.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
-      <image:loc>https://www.paradigmjanitorial.net/assets/images/paradigm-logo.png</image:loc>
+      <image:loc>https://www.paradigmjanitorial.net/assets/images/restaurant-kitchen-clean.webp</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/clean-spaces-new-office-affordable-cleaning.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
-      <image:loc>https://www.paradigmjanitorial.net/assets/images/duplex-secondary-v20.png</image:loc>
+      <image:loc>https://www.paradigmjanitorial.net/assets/images/office-cleaning-team-v4.webp</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/clean-spaces-office-front-warehouse-back.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
       <image:loc>https://www.paradigmjanitorial.net/assets/images/paradigm-logo.png</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/clean-spaces-office-kitchen-accountability.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
       <image:loc>https://www.paradigmjanitorial.net/assets/images/paradigm-logo.png</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/clean-spaces-painted-apartment-cleaning-before-move-in.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
       <image:loc>https://www.paradigmjanitorial.net/assets/images/art-paint-1.webp</image:loc>
     </image:image>
   </url>
   <url>
+    <loc>https://www.paradigmjanitorial.net/clean-spaces-seasonal-estate-cleaning.html</loc>
+    <image:image>
+      <image:loc>https://www.paradigmjanitorial.net/assets/images/estate-seasonal-v32.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.paradigmjanitorial.net/clean-spaces-tenants-different-cleanliness.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
       <image:loc>https://www.paradigmjanitorial.net/assets/images/paradigm-logo.png</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/clean-spaces.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
-      <image:loc>https://www.paradigmjanitorial.net/assets/images/clean-spaces-hero-source-v20.png</image:loc>
+      <image:loc>https://www.paradigmjanitorial.net/assets/images/clean-spaces-hero-source-v20.webp</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/commercial.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
-      <image:loc>https://www.paradigmjanitorial.net/assets/images/commercial-hero-v4.png</image:loc>
+      <image:loc>https://www.paradigmjanitorial.net/assets/images/commercial-hero-v4.webp</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/construction-cleaning.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
-      <image:loc>https://www.paradigmjanitorial.net/assets/images/construction-hero-v20.png</image:loc>
+      <image:loc>https://www.paradigmjanitorial.net/assets/images/construction-hero-v20.webp</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/contact.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
-      <image:loc>https://www.paradigmjanitorial.net/assets/images/about-consultation-wide.png</image:loc>
+      <image:loc>https://www.paradigmjanitorial.net/assets/images/about-consultation-wide.webp</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/day-night-porter-service.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
-      <image:loc>https://www.paradigmjanitorial.net/assets/images/porter-day-page.png</image:loc>
+      <image:loc>https://www.paradigmjanitorial.net/assets/images/porter-day-page.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://www.paradigmjanitorial.net/duplexes.html</loc>
-    <lastmod>2026-09-26</lastmod>
+    <loc>https://www.paradigmjanitorial.net/estates.html</loc>
     <image:image>
-      <image:loc>https://www.paradigmjanitorial.net/assets/images/duplex-secondary-v20.png</image:loc>
+      <image:loc>https://www.paradigmjanitorial.net/assets/images/estate-hero-v32.webp</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/faq.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
-      <image:loc>https://www.paradigmjanitorial.net/assets/images/faq-consultation-v24.png</image:loc>
+      <image:loc>https://www.paradigmjanitorial.net/assets/images/faq-consultation-v24.webp</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/floor-care.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
-      <image:loc>https://www.paradigmjanitorial.net/assets/images/flooring-v4.png</image:loc>
+      <image:loc>https://www.paradigmjanitorial.net/assets/images/flooring-v4.webp</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
       <image:loc>https://www.paradigmjanitorial.net/assets/images/home-video-poster.jpg</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/learning-facility-cleaning.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
       <image:loc>https://www.paradigmjanitorial.net/assets/images/learning-1.webp</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/los-angeles-county.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
       <image:loc>https://www.paradigmjanitorial.net/assets/images/la-video-poster.jpg</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/office-cleaning.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
       <image:loc>https://www.paradigmjanitorial.net/assets/images/office-video-poster.jpg</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/power-washing.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
-      <image:loc>https://www.paradigmjanitorial.net/assets/images/power-hero-v20.png</image:loc>
+      <image:loc>https://www.paradigmjanitorial.net/assets/images/power-hero-v20.webp</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/residential.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
-      <image:loc>https://www.paradigmjanitorial.net/assets/images/professional_hallway_cleaning_service.webp</image:loc>
+      <image:loc>https://www.paradigmjanitorial.net/assets/images/estate-overview-v32.webp</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/restaurant-cleaning.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
-      <image:loc>https://www.paradigmjanitorial.net/assets/images/restaurant-dining-page.png</image:loc>
+      <image:loc>https://www.paradigmjanitorial.net/assets/images/restaurant-dining-page.webp</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/retail-cleaning.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
-      <image:loc>https://www.paradigmjanitorial.net/assets/images/retail-cleaning-mall-v4.png</image:loc>
+      <image:loc>https://www.paradigmjanitorial.net/assets/images/menu-retail-mall.webp</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/san-bernardino-county.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
       <image:loc>https://www.paradigmjanitorial.net/assets/images/sanbernardino-video-poster.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://www.paradigmjanitorial.net/single-family-homes.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <image:image>
-      <image:loc>https://www.paradigmjanitorial.net/assets/images/single-home-hero-v4.png</image:loc>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.paradigmjanitorial.net/warehouse-industrial-cleaning.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
       <image:loc>https://www.paradigmjanitorial.net/assets/images/industrial-video-poster.jpg</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://www.paradigmjanitorial.net/window-cleaning.html</loc>
-    <lastmod>2026-09-26</lastmod>
     <image:image>
       <image:loc>https://www.paradigmjanitorial.net/assets/images/jan-glass.webp</image:loc>
     </image:image>

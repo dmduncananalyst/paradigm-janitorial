@@ -44,7 +44,15 @@
     // On touch screens the first tap reveals the menu; a second tap follows the overview link.
     link.addEventListener('click', event => {
       if ((compact.matches || window.matchMedia('(hover: none)').matches) && !group.classList.contains('expanded')) {
-        event.preventDefault(); closeGroups(); setOpen(true);
+        event.preventDefault();
+        closeGroups();
+        // On mobile, collapsing the previously-open section can leave the nav's
+        // scrollTop stranded halfway down the menu. Reset the menu BEFORE opening
+        // the new section so Home, About, Residential and Commercial stay visible
+        // and the Commercial label has the same breathing room as Residential.
+        if (compact.matches && nav) nav.scrollTop = 0;
+        setOpen(true);
+        if (compact.matches && nav) requestAnimationFrame(() => { nav.scrollTop = 0; });
       }
     });
     group.addEventListener('keydown', event => {
@@ -290,8 +298,18 @@
     // It is submitted to HubSpot in the background as the Message property.
   }
 
-  const config = window.PARADIGM_PAGE_CHAT;
-  if (!config) return;
+  const config = window.PARADIGM_PAGE_CHAT || {source: location.pathname.split('/').pop() || 'contact.html', title: document.title, questions: []};
+  // One approved quote flow everywhere on the site.
+  config.questions = [
+    'What type of property do you have?',
+    'What are you looking to have done?',
+    'What city is the property in?'
+  ];
+  const universalChoices = {
+    'What type of property do you have?': ['Estate', 'Apartment Building', 'Office', 'Retail / Storefront', 'Restaurant', 'Warehouse / Industrial', 'Learning Facility', 'Construction Site', 'Other'],
+    'What are you looking to have done?': ['Janitorial Cleaning', 'Porter Service', 'Power Washing', 'Window Cleaning', 'Floor Care', 'Move-In / Move-Out Cleaning', 'Post-Construction Cleaning', 'Other']
+  };
+  const multiSelectQuestions = new Set();
   const overlay = document.createElement('div');
   overlay.className = 'chat-overlay';
   overlay.innerHTML = `<div class="chat-panel ai-chat-panel" role="dialog" aria-modal="true" aria-labelledby="chat-brand" tabindex="-1">
@@ -348,85 +366,181 @@
   function renderQuestion() {
     rebuildLog();
     addBubble('assistant', config.questions[step]);
-    composer.innerHTML = `<div class="ai-composer-row"><textarea class="chat-input ai-chat-input" rows="2" maxlength="4000" placeholder="Type your answer…"></textarea><button type="button" class="button ai-send">Send</button></div><p class="chat-form-error" role="status" hidden></p>${step ? '<button type="button" class="chat-back ai-back">Back</button>' : ''}`;
-    const input = composer.querySelector('.ai-chat-input');
-    input.value = answers[step] || '';
-    const send = () => {
-      const value = input.value.trim();
-      if (!value) {
-        const error = composer.querySelector('.chat-form-error'); error.textContent = 'Add a few details so we can keep going.'; error.hidden = false; input.focus(); return;
+    const question = config.questions[step];
+    const choices = universalChoices[question];
+    if (choices) {
+      const isMulti = multiSelectQuestions.has(question);
+      composer.innerHTML = `<div class="ai-choice-grid">${choices.map(choice => `<button type="button" class="button ai-choice" data-value="${esc(choice)}" aria-pressed="false">${esc(choice)}</button>`).join('')}</div><div class="ai-other-wrap" hidden><input class="ai-contact-input ai-other-input" type="text" maxlength="200" placeholder="Please specify"></div>${isMulti ? '<button type="button" class="button ai-choice-continue">Continue</button>' : ''}${step ? '<button type="button" class="chat-back ai-back">Back</button>' : ''}`;
+      const otherWrap = composer.querySelector('.ai-other-wrap');
+      const otherInput = composer.querySelector('.ai-other-input');
+      if (isMulti) {
+        const selected = new Set((answers[step] || '').split(', ').filter(Boolean));
+        composer.querySelectorAll('.ai-choice').forEach(button => {
+          if (selected.has(button.dataset.value)) { button.classList.add('selected'); button.setAttribute('aria-pressed','true'); }
+          button.addEventListener('click', () => {
+            const value = button.dataset.value;
+            if (selected.has(value)) selected.delete(value); else selected.add(value);
+            button.classList.toggle('selected', selected.has(value)); button.setAttribute('aria-pressed', selected.has(value) ? 'true' : 'false');
+            if (value === 'Other') otherWrap.hidden = !selected.has('Other');
+          });
+        });
+        composer.querySelector('.ai-choice-continue').addEventListener('click', () => {
+          if (!selected.size) return;
+          let vals = [...selected];
+          if (selected.has('Other') && otherInput.value.trim()) vals = vals.map(v => v === 'Other' ? `Other: ${otherInput.value.trim()}` : v);
+          const value = vals.join(', '); answers[step] = value; addBubble('user', value); step++;
+          if (step < config.questions.length) renderQuestion(); else renderContact();
+        });
+      } else {
+        composer.querySelectorAll('.ai-choice').forEach(button => button.addEventListener('click', () => {
+          const value = button.dataset.value;
+          if (value === 'Other') {
+            // Other is the only choice that needs a typed detail before advancing.
+            composer.innerHTML = `<label class="ai-other-question" for="ai-other-detail">What do you need cleaned?</label><input id="ai-other-detail" class="ai-contact-input ai-other-input" type="text" maxlength="200"><button type="button" class="button ai-other-next">Next</button><button type="button" class="chat-back ai-other-cancel">Back</button>`;
+            const detailInput = composer.querySelector('#ai-other-detail');
+            const submitOther = () => {
+              const detail = detailInput.value.trim();
+              if (!detail) { detailInput.focus(); return; }
+              answers[step] = `Other: ${detail}`;
+              addBubble('user', answers[step]);
+              step++;
+              if (step < config.questions.length) renderQuestion(); else renderContact();
+            };
+            composer.querySelector('.ai-other-next').addEventListener('click', submitOther);
+            composer.querySelector('.ai-other-cancel').addEventListener('click', renderQuestion);
+            detailInput.addEventListener('keydown', event => {
+              if (event.key === 'Enter') { event.preventDefault(); submitOther(); }
+            });
+            detailInput.focus();
+            return;
+          }
+          answers[step] = value; addBubble('user', value); step++;
+          if (step < config.questions.length) renderQuestion(); else renderContact();
+        }));
       }
-      answers[step] = value; addBubble('user', value); step++;
-      if (step < config.questions.length) renderQuestion(); else renderContact();
-    };
-    composer.querySelector('.ai-send').addEventListener('click', send);
-    input.addEventListener('keydown', event => { if (event.key === 'Enter' && !event.shiftKey) { event.preventDefault(); send(); } });
+    } else {
+      composer.innerHTML = `<div class="ai-composer-row"><textarea class="chat-input ai-chat-input" rows="2" maxlength="4000" placeholder="Type your answer…"></textarea><button type="button" class="button ai-send">Send</button></div><p class="chat-form-error" role="status" hidden></p>${step ? '<button type="button" class="chat-back ai-back">Back</button>' : ''}`;
+      const input = composer.querySelector('.ai-chat-input');
+      input.value = answers[step] || '';
+      const send = () => {
+        const value = input.value.trim();
+        if (!value) {
+          const error = composer.querySelector('.chat-form-error'); error.textContent = 'Add a few details so we can keep going.'; error.hidden = false; input.focus(); return;
+        }
+        answers[step] = value; addBubble('user', value); step++;
+        if (step < config.questions.length) renderQuestion(); else renderContact();
+      };
+      composer.querySelector('.ai-send').addEventListener('click', send);
+      input.addEventListener('keydown', event => { if (event.key === 'Enter' && !event.shiftKey) { event.preventDefault(); send(); } });
+    }
     composer.querySelector('.ai-back')?.addEventListener('click', () => { if (step > 0) { step--; renderQuestion(); } });
     focusFirst();
   }
 
-  const contactPrompts = [
-    {key:'name', text:'Great. What name should we put with this request?', type:'text', required:true, placeholder:'Your name'},
-    {key:'phone', text:'What phone number is best for reaching you?', type:'tel', required:false, placeholder:'Phone number'},
-    {key:'email', text:'And what email should we use for the request?', type:'email', required:true, placeholder:'Email address'}
-  ];
-  function getContactValue(key) { return key === 'name' ? contactName : key === 'phone' ? contactPhone : contactEmail; }
-  function setContactValue(key, value) { if (key === 'name') contactName = value; else if (key === 'phone') contactPhone = value; else contactEmail = value; }
-
+  let contactMethod = '';
   function renderContact() {
-    if (contactStep === 0) { rebuildLog(); for (let i = 0; i < answers.length; i++) { if (i >= step) break; } }
-    // Rebuild complete conversation only once at contact stage.
     resetLog();
     config.questions.forEach((question, index) => { addBubble('assistant', question); addBubble('user', answers[index] || ''); });
-    for (let i = 0; i < contactStep; i++) {
-      const item = contactPrompts[i]; addBubble('assistant', item.text); const val = getContactValue(item.key); if (val) addBubble('user', val);
+    if (contactName) { addBubble('assistant', "Great. What's your name?"); addBubble('user', contactName); }
+    if (contactStep >= 1 && !contactName) contactStep = 0;
+
+    if (contactStep === 0) {
+      addBubble('assistant', "Great. What's your name?");
+      composer.innerHTML = `<div class="ai-composer-row"><input class="ai-contact-input" type="text" autocomplete="name" placeholder="Your name" value="${esc(contactName)}"><button type="button" class="button ai-send">Continue</button></div><p class="chat-form-error" role="status" hidden></p><button type="button" class="chat-back ai-back">Back</button>`;
+      const input = composer.querySelector('.ai-contact-input');
+      const next = () => {
+        const value = input.value.trim();
+        if (!value) { const error=composer.querySelector('.chat-form-error'); error.textContent='Please add your name to continue.'; error.hidden=false; input.focus(); return; }
+        contactName = value; contactStep = 1; renderContact();
+      };
+      composer.querySelector('.ai-send').addEventListener('click', next);
+      input.addEventListener('keydown', event => { if (event.key === 'Enter') { event.preventDefault(); next(); } });
+      composer.querySelector('.ai-back').addEventListener('click', () => { step = config.questions.length - 1; renderQuestion(); });
+      focusFirst(); return;
     }
-    const item = contactPrompts[contactStep];
-    addBubble('assistant', item.text);
-    composer.innerHTML = `<div class="ai-composer-row"><input class="ai-contact-input" type="${item.type}" autocomplete="${item.key === 'name' ? 'name' : item.key === 'phone' ? 'tel' : 'email'}" placeholder="${item.placeholder}" value="${esc(getContactValue(item.key))}"><button type="button" class="button ai-send">${contactStep === contactPrompts.length - 1 ? 'Send Request' : 'Continue'}</button></div><p class="chat-form-error" role="status" hidden></p><button type="button" class="chat-back ai-back">Back</button>`;
+
+    addBubble('assistant', "What's the best way for us to get back to you?");
+    if (contactStep === 1) {
+      composer.innerHTML = `<div class="ai-choice-grid"><button type="button" class="button ai-choice" data-contact="phone">Phone</button><button type="button" class="button ai-choice" data-contact="email">Email</button></div><button type="button" class="chat-back ai-back">Back</button>`;
+      composer.querySelectorAll('[data-contact]').forEach(button => button.addEventListener('click', () => { contactMethod = button.dataset.contact; contactStep = 2; renderContact(); }));
+      composer.querySelector('.ai-back').addEventListener('click', () => { contactName=''; contactStep=0; renderContact(); });
+      focusFirst(); return;
+    }
+
+    addBubble('user', contactMethod === 'phone' ? 'Phone' : 'Email');
+    const isPhone = contactMethod === 'phone';
+    const prompt = isPhone ? "What's the best phone number to reach you?" : "What's the best email address to reach you?";
+    addBubble('assistant', prompt);
+    const current = isPhone ? contactPhone : contactEmail;
+    composer.innerHTML = `<div class="ai-composer-row"><input class="ai-contact-input" type="${isPhone ? 'tel' : 'email'}" autocomplete="${isPhone ? 'tel' : 'email'}" placeholder="${isPhone ? 'Phone number' : 'Email address'}" value="${esc(current)}"><button type="button" class="button ai-send">Submit</button></div><p class="chat-form-error" role="status" hidden></p><button type="button" class="chat-back ai-back">Back</button>`;
     const input = composer.querySelector('.ai-contact-input');
-    const next = async () => {
+    const send = async () => {
       const value = input.value.trim();
-      if (item.required && !value) { const error=composer.querySelector('.chat-form-error'); error.textContent='Please add this detail to continue.'; error.hidden=false; input.focus(); return; }
-      if (item.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) { const error=composer.querySelector('.chat-form-error'); error.textContent='Please enter a valid email address.'; error.hidden=false; input.focus(); return; }
-      setContactValue(item.key, value);
-      if (contactStep < contactPrompts.length - 1) { contactStep++; renderContact(); }
-      else await submitChatRequest();
+      if (!value) { const error=composer.querySelector('.chat-form-error'); error.textContent=`Please add your ${isPhone ? 'phone number' : 'email address'} to continue.`; error.hidden=false; input.focus(); return; }
+      if (!isPhone && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) { const error=composer.querySelector('.chat-form-error'); error.textContent='Please enter a valid email address.'; error.hidden=false; input.focus(); return; }
+      if (isPhone) { contactPhone=value; contactEmail=''; } else { contactEmail=value; contactPhone=''; }
+      await submitChatRequest();
     };
-    composer.querySelector('.ai-send').addEventListener('click', next);
-    input.addEventListener('keydown', event => { if (event.key === 'Enter') { event.preventDefault(); next(); } });
-    composer.querySelector('.ai-back').addEventListener('click', () => {
-      if (contactStep > 0) { contactStep--; renderContact(); }
-      else { step = config.questions.length - 1; renderQuestion(); }
-    });
+    composer.querySelector('.ai-send').addEventListener('click', send);
+    input.addEventListener('keydown', event => { if (event.key === 'Enter') { event.preventDefault(); send(); } });
+    composer.querySelector('.ai-back').addEventListener('click', () => { contactStep=1; renderContact(); });
     focusFirst();
   }
 
   async function submitChatRequest() {
     if (submitted) return;
     const sendButton = composer.querySelector('.ai-send');
+    if (sendButton?.disabled) return;
     if (sendButton) { sendButton.disabled = true; sendButton.textContent = 'Sending…'; }
     const names = contactName.trim().split(/\s+/);
+    // Only submit the contact method the visitor actually chose. Sending an
+    // empty email/phone value can be rejected by HubSpot field validation.
     const fields = [
       {objectTypeId:'0-1', name:'firstname', value:names.shift() || ''},
       {objectTypeId:'0-1', name:'lastname', value:names.join(' ')},
-      {objectTypeId:'0-1', name:'email', value:contactEmail.trim()},
-      {objectTypeId:'0-1', name:'phone', value:contactPhone.trim()},
       {objectTypeId:'0-1', name:'message', value:buildTranscript()}
     ];
+    if (contactMethod === 'phone' && contactPhone.trim()) {
+      fields.push({objectTypeId:'0-1', name:'phone', value:contactPhone.trim()});
+    }
+    if (contactMethod === 'email' && contactEmail.trim()) {
+      fields.push({objectTypeId:'0-1', name:'email', value:contactEmail.trim()});
+    }
     const context = {pageUri: canonical(), pageName: document.title};
     try {
       const response = await fetch(SUBMIT_URL, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({fields, context, submittedAt:String(Date.now())})});
-      if (!response.ok) throw new Error('We couldn’t send that just yet. Please try again or call 818-746-5432.');
+      if (!response.ok) {
+        const result = await response.json().catch(() => ({}));
+        const errors = Array.isArray(result.errors) ? result.errors : [];
+        const invalidEmail = errors.some(item => /email/i.test(JSON.stringify(item)));
+        if (contactMethod === 'email' && invalidEmail) {
+          throw new Error('Please check the email address and try again.');
+        }
+        throw new Error('We couldn’t send that just yet. Please try again or call 818-746-5432.');
+      }
       submitted = true; resetLog();
       addBubble('assistant', `Thanks, ${contactName.split(/\s+/)[0] || 'there'}. We have your cleaning details and will be in touch soon.`);
       composer.innerHTML = `<div class="ai-chat-finished"><a class="button" href="tel:8187465432">Call 818-746-5432</a><button type="button" class="chat-back ai-close-finished">Close</button></div>`;
       composer.querySelector('.ai-close-finished').addEventListener('click', close);
     } catch (error) {
-      const msg = document.createElement('p'); msg.className='chat-form-error'; msg.textContent=error.message; composer.appendChild(msg);
-      if (sendButton) { sendButton.disabled=false; sendButton.textContent='Send Request'; }
+      const msg = composer.querySelector('.chat-form-error');
+      if (msg) { msg.textContent = error.message; msg.hidden = false; }
+      if (sendButton) { sendButton.disabled=false; sendButton.textContent='Submit'; }
     }
   }
+  // On the Contact/Get a Quote page, replace the old form area with the same chat already open.
+  const quoteSection = document.querySelector('#quote-form');
+  if (quoteSection && document.body.classList.contains('page-contact')) {
+    const wrap = quoteSection.querySelector('.form-wrap');
+    if (wrap) {
+      wrap.innerHTML = '';
+      overlay.classList.add('open', 'chat-embedded');
+      panel.querySelector('.chat-close')?.remove();
+      wrap.appendChild(overlay);
+      renderQuestion();
+    }
+  }
+
   document.querySelectorAll('.open-page-chat').forEach(button => {
     button.setAttribute('aria-haspopup', 'dialog');
     button.addEventListener('click', () => {
