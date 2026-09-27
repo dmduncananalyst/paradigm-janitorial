@@ -777,24 +777,32 @@ img[src$="about-hero-wide.webp"],img[src$="about-hero-wide.webp"],img[src$="floo
   .page-contact .chat-overlay.chat-embedded .chat-panel{
     width:calc(100% - 8px)!important;
     margin:12px auto 0!important;
+    grid-template-rows:auto minmax(120px,170px) auto;
   }
   .page-contact .chat-overlay.chat-embedded .ai-chat-panel .chat-top{
     padding:18px 18px 16px!important;
   }
   .page-contact .chat-overlay.chat-embedded .ai-chat-log{
-    padding:22px 18px!important;
-    min-height:210px!important;
-    max-height:360px!important;
+    padding:14px 18px!important;
+    min-height:120px!important;
+    max-height:170px!important;
+    overflow-y:auto;
   }
   .page-contact .chat-overlay.chat-embedded .ai-chat-composer{
-    padding:20px 18px 24px!important;
+    padding:12px 18px 18px!important;
   }
   .page-contact .chat-overlay.chat-embedded .ai-choice-grid{
-    gap:12px!important;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px!important;
     padding:2px 0!important;
   }
   .page-contact .chat-overlay.chat-embedded .ai-choice{
-    padding:12px 14px!important;
+    width:100%;
+    min-width:0;
+    margin:0;
+    white-space:normal;
+    padding:8px!important;
     line-height:1.25!important;
   }
 }
