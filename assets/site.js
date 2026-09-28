@@ -153,6 +153,28 @@
 
   document.querySelectorAll('.hero > video').forEach(video => {
     video.muted = true;
+    if (video.closest('.home-page-hero')) {
+      video.defaultMuted = true;
+      video.playsInline = true;
+      video.loop = true;
+      const showPoster = () => video.classList.add('video-show-poster');
+      const showVideo = () => video.classList.remove('video-show-poster');
+      ['waiting', 'seeking', 'emptied', 'error'].forEach(event => video.addEventListener(event, showPoster));
+      video.addEventListener('playing', showVideo);
+      video.addEventListener('seeked', () => {
+        if (video.readyState >= 2) showVideo();
+      });
+      video.addEventListener('ended', () => {
+        showPoster();
+        if (!reducedMotion.matches) {
+          video.currentTime = 0;
+          video.play().catch(showPoster);
+        }
+      });
+      video.addEventListener('loadeddata', () => {
+        if (video.readyState >= 2) showVideo();
+      });
+    }
     if (reducedMotion.matches) video.pause();
     else video.play().catch(() => {});
     const control = video.parentElement.querySelector('.video-toggle');

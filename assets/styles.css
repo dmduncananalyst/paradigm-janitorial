@@ -903,3 +903,8 @@ img[src$="about-hero-wide.webp"],img[src$="about-hero-wide.webp"],img[src$="floo
  .service-carousel .service-card{flex:0 0 min(560px,82vw)}
  .service-carousel .slide-collage img{aspect-ratio:4/3;object-fit:contain}
 }
+
+/* Keep the home hero visible while the video buffers or restarts. */
+.home-page-hero{background-image:url("images/home-video-poster.jpg");background-position:center;background-repeat:no-repeat;background-size:contain}
+.home-page-hero>video{background:transparent}
+.home-page-hero>video.video-show-poster{opacity:0}
