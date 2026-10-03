@@ -88,6 +88,7 @@ main>.section+.section{border-top:1px solid var(--line)}
 .hub-card{grid-column:span 4;display:flex;flex-direction:column;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
 .hub-card:nth-child(1){grid-column:span 6}
 .hub-card:nth-child(2){grid-column:span 6}
+.commercial-property-grid .hub-card:nth-child(n){grid-column:span 4}
 .hub-card img{position:static;width:100%;height:auto;object-fit:cover}
 .hub-copy{padding:22px 24px}
 .hub-copy h3{font-size:25px;line-height:1.13;margin-bottom:12px}
@@ -150,7 +151,7 @@ main>.section+.section{border-top:1px solid var(--line)}
 .action-band p{font-size:18px;line-height:1.6;color:#dae3e9;margin:0}
 .action-band-actions{max-width:340px;width:100%;text-align:center}
 .article{max-width:1060px;margin:auto;padding:60px 5vw 0}
-.article-title{font-size:clamp(34px,4.1vw,58px);line-height:1.1;letter-spacing:-.025em;margin-bottom:26px}
+.article-title{font-size:clamp(30px,2.7vw,40px);line-height:1.15;letter-spacing:-.02em;margin-bottom:26px}
 .article .answer-box{font-size:20px;line-height:1.65;background:var(--section-alt);border-left:5px solid var(--olive);padding:24px 28px;margin:28px 0}
 .article h2{font-size:30px;margin-top:38px}
 .article h3{font-size:24px;margin-top:28px}
@@ -237,6 +238,7 @@ main>.section+.section{border-top:1px solid var(--line)}
  .split-media,.home-about-layout,.form-wrap{grid-template-columns:1fr;gap:24px}
  .about-wide-media{max-width:720px}
  .hub-card:nth-child(n){grid-column:span 6}
+ .commercial-property-grid .hub-card:nth-child(n){grid-column:span 6}
  .simple-service-list{grid-template-columns:repeat(2,minmax(0,1fr))}
  .clean-question-grid,.home-clean-spaces-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
  .action-band-inner{display:flex;justify-content:center}
@@ -267,6 +269,7 @@ main>.section+.section{border-top:1px solid var(--line)}
  .service-tile .card-body{padding:14px}
  .hub-grid{display:grid;grid-template-columns:1fr}
  .hub-card:nth-child(n){grid-column:auto}
+ .commercial-property-grid .hub-card:nth-child(n){grid-column:auto}
  .clean-question-grid,.home-clean-spaces-grid,.values-grid,.simple-service-list{grid-template-columns:1fr}
  .panel-grid{grid-template-columns:1fr}
  .service-card{width:84vw;max-width:84vw}
@@ -280,7 +283,7 @@ main>.section+.section{border-top:1px solid var(--line)}
  .action-band{padding:38px 20px}
  .action-band .button{width:100%}
  .article{padding:36px 20px 0}
- .article-title{font-size:32px}
+ .article-title{font-size:28px;line-height:1.18}
  .article .answer-box{padding:20px;font-size:18px}
  .article h2{font-size:27px}
  .article-action-band{margin:36px -20px 0;padding:36px 20px}
@@ -908,3 +911,186 @@ img[src$="about-hero-wide.webp"],img[src$="about-hero-wide.webp"],img[src$="floo
 .home-page-hero{background-image:url("images/home-video-poster.jpg");background-position:center;background-repeat:no-repeat;background-size:contain}
 .home-page-hero>video{background:transparent}
 .home-page-hero>video.video-show-poster{opacity:0}
+
+
+/* Industry expansion: AEO article visuals and text-only industry question links. */
+.article-visual{margin:24px 0 32px}
+.article-visual img{display:block;width:100%;height:auto;max-height:560px;object-fit:cover}
+.industry-question-link{display:block;padding:24px;border-top:4px solid var(--green);background:#fff}
+.industry-question-link>div{padding:0}
+.industry-question-link h3{margin-top:0}
+@media(max-width:600px){
+  .article-visual{margin:18px 0 24px}
+  .industry-question-link{padding:18px}
+}
+
+
+/* v41: Commercial desktop mega-menu, approved 4-industry photo layout. */
+@media (min-width:1281px){
+  .nav-panel.commercial-mega{
+    width:min(940px,calc(100vw - 48px))!important;
+    max-width:940px!important;
+    max-height:calc(100dvh - var(--header-height) - 18px)!important;
+    padding:18px!important;
+    display:none!important;
+    grid-template-columns:270px minmax(0,1fr)!important;
+    gap:18px 22px!important;
+    overflow:auto!important;
+    border-radius:10px!important;
+  }
+  .nav-group.expanded>.nav-panel.commercial-mega{display:grid!important}
+  .commercial-mega-links{grid-row:1;grid-column:1;display:flex;flex-direction:column;border-right:1px solid var(--line);padding-right:18px}
+  .commercial-mega-links h3{margin:0 0 8px;color:var(--navy);font-size:20px;line-height:1.2}
+  .commercial-mega-links>a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);color:var(--navy);font-size:14px;font-weight:700;line-height:1.25}
+  .commercial-mega-links>a span{font-size:22px;line-height:1;color:var(--navy)}
+  .commercial-mega-featured{grid-row:1;grid-column:2;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 16px}
+  .commercial-mega-card{display:grid;grid-template-rows:118px auto auto;align-content:start;min-width:0;color:var(--navy)}
+  .commercial-mega-card img{display:block;width:100%;height:118px;object-fit:cover;border-radius:7px;background:#f2f4f5}
+  .commercial-mega-card strong{display:block;margin-top:7px;font-size:15px;line-height:1.2}
+  .commercial-mega-card>span{display:block;margin-top:2px;color:var(--muted);font-size:12px;line-height:1.3}
+  .commercial-mega-all{grid-column:1/-1;display:flex;align-items:center;gap:10px;padding-top:12px;border-top:1px solid var(--line);color:var(--navy);font-size:14px;font-weight:800}
+  .commercial-mega-all span{font-size:20px}
+}
+
+/* Keep the same Commercial content usable in the existing tablet/mobile menu. */
+@media (max-width:1280px){
+  .nav-panel.commercial-mega{display:none!important;grid-template-columns:1fr!important;gap:14px!important;padding:8px 0 18px!important}
+  .main-nav>.nav-group.expanded>.nav-panel.commercial-mega{display:grid!important}
+  .commercial-mega-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 14px}
+  .commercial-mega-links h3{grid-column:1/-1;margin:4px 0 6px;color:var(--navy);font-size:18px}
+  .commercial-mega-links>a{display:flex;justify-content:space-between;gap:8px;padding:9px 0;border-bottom:1px solid var(--line);color:var(--navy);font-size:14px;font-weight:700}
+  .commercial-mega-featured{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .commercial-mega-card{display:block;color:var(--navy);min-width:0}
+  .commercial-mega-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px}
+  .commercial-mega-card strong{display:block;margin-top:6px;font-size:13px;line-height:1.2}
+  .commercial-mega-card>span{display:none}
+  .commercial-mega-all{display:flex;gap:8px;align-items:center;padding-top:10px;border-top:1px solid var(--line);color:var(--navy);font-size:14px;font-weight:800}
+}
+@media (max-width:600px){
+  .commercial-mega-links{grid-template-columns:1fr}
+  .commercial-mega-featured{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+
+/* v42: photo-card-only Residential and Commercial mega menus. No side list or descriptions. */
+@media (min-width:1281px){
+  .nav-panel.commercial-mega{width:min(1120px,calc(100vw - 48px))!important;max-width:1120px!important;grid-template-columns:1fr!important;}
+  .nav-panel.commercial-mega .commercial-mega-featured{grid-column:1/-1!important;grid-row:1!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:14px 16px!important;}
+  .nav-panel.residential-mega{width:min(940px,calc(100vw - 48px))!important;max-width:940px!important;}
+  .nav-panel.residential-mega .commercial-mega-featured{grid-template-columns:repeat(4,minmax(0,1fr))!important;}
+  .nav-panel.commercial-mega .commercial-mega-card{grid-template-rows:112px auto!important;}
+  .nav-panel.commercial-mega .commercial-mega-card img{height:112px!important;}
+}
+@media (max-width:1280px){
+  .nav-panel.commercial-mega .commercial-mega-featured{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+}
+@media (max-width:600px){
+  .nav-panel.commercial-mega .commercial-mega-featured{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+}
+
+
+/* v43: show complete mega-menu photos without cropping. */
+@media (min-width:1281px){
+  .nav-panel.commercial-mega .commercial-mega-card{grid-template-rows:150px auto!important;}
+  .nav-panel.commercial-mega .commercial-mega-card img{width:100%!important;height:150px!important;object-fit:contain!important;object-position:center!important;background:#fff!important;}
+}
+@media (max-width:1280px){
+  .nav-panel.commercial-mega .commercial-mega-card img{width:100%!important;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;background:#fff!important;}
+}
+
+/* v45: highlight Residential and Commercial photo-card menu options on hover/focus. */
+.commercial-mega-card{
+  border-radius:8px;
+  transition:background-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+.commercial-mega-card:hover,
+.commercial-mega-card:focus-visible{
+  background:#f2f6ec;
+  box-shadow:0 0 0 2px var(--olive),0 8px 18px rgba(4,50,91,.12);
+  transform:translateY(-2px);
+}
+.commercial-mega-card:hover strong,
+.commercial-mega-card:focus-visible strong{
+  color:var(--olive);
+}
+
+
+/* v46: Contact dropdown matches the photo-card mega menus and stays inside the viewport. */
+@media (min-width:1281px){
+  .main-nav>.nav-group:last-child>.nav-panel.contact-mega{
+    left:auto!important;
+    right:0!important;
+    transform:none!important;
+    width:min(520px,calc(100vw - 48px))!important;
+    max-width:520px!important;
+    padding:18px!important;
+    overflow:visible!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-featured{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:16px!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card{
+    grid-template-rows:auto auto!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card img{
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:4/3!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    background:transparent!important;
+  }
+}
+@media (max-width:1280px){
+  .nav-panel.contact-mega .commercial-mega-featured{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card img{
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:4/3!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    background:transparent!important;
+  }
+}
+
+
+/* v48: uniform Commercial mega-menu photo sizing */
+@media (min-width:901px){
+  .nav-panel.commercial-mega:not(.residential-mega):not(.contact-mega) .commercial-mega-card{grid-template-rows:112px auto!important;}
+  .nav-panel.commercial-mega:not(.residential-mega):not(.contact-mega) .commercial-mega-card img{width:100%!important;height:112px!important;aspect-ratio:16/9!important;object-fit:cover!important;object-position:center!important;background:transparent!important;}
+}
+
+/* v49: Commercial mega-menu cards keep a true 16:9 box so 16:9 source photos are never vertically cropped. */
+@media (min-width: 821px){
+  .nav-panel.commercial-mega:not(.residential-mega):not(.contact-mega) .commercial-mega-card{
+    grid-template-rows:auto auto!important;
+  }
+  .nav-panel.commercial-mega:not(.residential-mega):not(.contact-mega) .commercial-mega-card img{
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:16/9!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    background:transparent!important;
+  }
+}
+
+
+/* v50: Commercial menu images: never crop people. Equal card image boxes, full source photo visible, no blur/gray fill. */
+@media (min-width:821px){
+  .nav-panel.commercial-mega:not(.residential-mega):not(.contact-mega) .commercial-mega-card{
+    grid-template-rows:112px auto!important;
+  }
+  .nav-panel.commercial-mega:not(.residential-mega):not(.contact-mega) .commercial-mega-card img{
+    display:block!important;
+    width:100%!important;
+    height:112px!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    object-position:center center!important;
+    background:transparent!important;
+  }
+}

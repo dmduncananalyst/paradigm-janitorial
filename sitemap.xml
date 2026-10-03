@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.paradigmjanitorial.net/about.html</loc>
@@ -209,5 +209,20 @@
     <image:image>
       <image:loc>https://www.paradigmjanitorial.net/assets/images/jan-glass.webp</image:loc>
     </image:image>
+  </url>
+  <url>
+    <loc>https://www.paradigmjanitorial.net/medical-dental-office-cleaning.html</loc>
+  </url>
+  <url>
+    <loc>https://www.paradigmjanitorial.net/retail-storefront-cleaning.html</loc>
+  </url>
+  <url>
+    <loc>https://www.paradigmjanitorial.net/post-construction-renovation-cleaning.html</loc>
+  </url>
+  <url>
+    <loc>https://www.paradigmjanitorial.net/clean-spaces-medical-dental-daytime-cleaning.html</loc>
+  </url>
+  <url>
+    <loc>https://www.paradigmjanitorial.net/clean-spaces-retail-storefront-daytime-cleaning.html</loc>
   </url>
 </urlset>

@@ -292,7 +292,7 @@
     'What city is the property in?'
   ];
   const universalChoices = {
-    'What type of property do you have?': ['Estate', 'Apartment Building', 'Office', 'Retail / Storefront', 'Restaurant', 'Warehouse / Industrial', 'Learning Facility', 'Construction Site', 'Other'],
+    'What type of property do you have?': ['Estate', 'Apartment Building', 'Office', 'Medical / Dental', 'Retail / Storefront', 'Restaurant', 'Warehouse / Industrial', 'Learning Facility', 'Construction Site', 'Other'],
     'What are you looking to have done?': ['Janitorial Cleaning', 'Porter Service', 'Power Washing', 'Window Cleaning', 'Floor Care', 'Move-In / Move-Out Cleaning', 'Post-Construction Cleaning', 'Other']
   };
   const multiSelectQuestions = new Set();
