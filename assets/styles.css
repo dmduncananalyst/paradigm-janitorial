@@ -1153,3 +1153,123 @@ img[src$="about-hero-wide.webp"],img[src$="about-hero-wide.webp"],img[src$="floo
 .blog-references li{margin:8px 0;line-height:1.5}
 .blog-references a{color:#07345c;text-decoration:underline;text-underline-offset:3px}
 .blog-references a:hover,.blog-references a:focus{color:#58782d}
+
+/* v59: Mobile Contact submenu labels match the primary mobile navigation text size. */
+@media (max-width:600px){
+  .nav-panel.contact-mega .commercial-mega-card strong{
+    font-size:19px!important;
+    line-height:1.3!important;
+    font-weight:800!important;
+    margin-top:8px!important;
+  }
+}
+
+/* v60: Mobile Contact submenu uses full-size navigation rows, matching the primary menu. */
+@media (max-width:600px){
+  .nav-panel.contact-mega{
+    padding:0 0 10px!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-featured{
+    display:block!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card{
+    display:block!important;
+    width:100%!important;
+    padding:13px 0!important;
+    margin:0!important;
+    border-radius:0!important;
+    background:transparent!important;
+    box-shadow:none!important;
+    transform:none!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card img{
+    display:none!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card strong{
+    display:block!important;
+    margin:0!important;
+    font-size:19px!important;
+    line-height:1.3!important;
+    font-weight:700!important;
+    color:var(--navy)!important;
+  }
+}
+
+/* v61: Mobile Contact submenu stays photo-card based. Make the photos full-size like the other mega-menu cards. */
+@media (max-width:600px){
+  .nav-panel.contact-mega{
+    width:100%!important;
+    max-width:none!important;
+    padding:8px 0 18px!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-featured{
+    display:grid!important;
+    width:100%!important;
+    grid-column:1 / -1!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:12px!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card{
+    display:block!important;
+    width:100%!important;
+    min-width:0!important;
+    padding:0!important;
+    margin:0!important;
+    border-radius:8px!important;
+    background:transparent!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:4 / 3!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    border-radius:8px!important;
+    background:transparent!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card strong{
+    display:block!important;
+    margin-top:8px!important;
+    font-size:19px!important;
+    line-height:1.2!important;
+    font-weight:800!important;
+    color:var(--navy)!important;
+  }
+}
+
+/* v62: Mobile Contact photo cards use the exact same sizing rules as the other mobile mega-menu photo cards. */
+@media (max-width:600px){
+  .nav-panel.contact-mega .commercial-mega-featured{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:12px!important;
+    width:100%!important;
+    max-width:none!important;
+    grid-column:1 / -1!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card{
+    display:block!important;
+    width:100%!important;
+    min-width:0!important;
+    padding:0!important;
+    margin:0!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    border-radius:6px!important;
+    background:#fff!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card strong{
+    display:block!important;
+    margin-top:6px!important;
+    font-size:13px!important;
+    line-height:1.2!important;
+    font-weight:700!important;
+  }
+}
