@@ -1273,3 +1273,21 @@ img[src$="about-hero-wide.webp"],img[src$="about-hero-wide.webp"],img[src$="floo
     font-weight:700!important;
   }
 }
+
+/* v64: Five blog cards, three on the first row and two centered on the second row. */
+@media (min-width:981px){
+  .page-blog-index .blog-grid{
+    display:flex!important;
+    flex-wrap:wrap!important;
+    justify-content:center!important;
+    gap:28px!important;
+  }
+  .page-blog-index .blog-card{
+    flex:0 1 calc((100% - 56px) / 3)!important;
+    max-width:calc((100% - 56px) / 3)!important;
+  }
+}
+
+/* Publish-now home hero autoplay hardening. The poster remains visible until video playback actually starts. */
+.home-page-hero>video.video-show-poster{opacity:0!important;pointer-events:none}
+.home-page-hero>video:not(.video-show-poster){opacity:1}

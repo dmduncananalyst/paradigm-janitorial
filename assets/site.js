@@ -175,7 +175,21 @@
         if (video.readyState >= 2) showVideo();
       });
     }
-    if (reducedMotion.matches) video.pause();
+    const isHomeHero = !!video.closest('.home-page-hero');
+    const tryAutoplay = () => {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.playsInline = true;
+      const attempt = video.play();
+      if (attempt && typeof attempt.catch === 'function') attempt.catch(() => {});
+    };
+    if (isHomeHero) {
+      tryAutoplay();
+      window.addEventListener('load', tryAutoplay, {once:true});
+      window.addEventListener('pageshow', tryAutoplay);
+      document.addEventListener('visibilitychange', () => { if (!document.hidden) tryAutoplay(); });
+      ['touchstart','pointerdown','keydown'].forEach(event => document.addEventListener(event, tryAutoplay, {once:true, passive:true}));
+    } else if (reducedMotion.matches) video.pause();
     else video.play().catch(() => {});
     const control = video.parentElement.querySelector('.video-toggle');
     const sync = () => {
