@@ -1,0 +1,128 @@
+[
+  {
+    "city": "Los Angeles",
+    "slug": "los-angeles",
+    "hero_image": "a_crisp_high_resolution_golden_hour_cityscape_la.png",
+    "cleaning_image": "wide_realistic_high_resolution_indoor_scene_of_a.png"
+  },
+  {
+    "city": "Hollywood",
+    "slug": "hollywood",
+    "hero_image": "wide_cinematic_sunlit_urban_landscape_scene_of_t.png",
+    "cleaning_image": "street_level_city_scene_with_a_realistic_high_res.png"
+  },
+  {
+    "city": "West LA",
+    "slug": "west-la",
+    "hero_image": "wide_crisp_high_resolution_landscape_cityscape_p.png",
+    "cleaning_image": "a_wide_realistic_high_resolution_indoor_commerci.png"
+  },
+  {
+    "city": "Mid City",
+    "slug": "mid-city",
+    "hero_image": "a_wide_street_level_twilight_sunset_city_scene_o.png",
+    "cleaning_image": "a_clean_realistic_high_resolution_indoor_commerc.png"
+  },
+  {
+    "city": "Culver City",
+    "slug": "culver-city",
+    "hero_image": "a_crisp_photorealistic_wide_angle_street_plaza_s.png",
+    "cleaning_image": "a_realistic_high_resolution_indoor_office_cleanin.png"
+  },
+  {
+    "city": "Downtown LA",
+    "slug": "downtown-la",
+    "hero_image": "wide_crisp_high_resolution_cityscape_architectur.png",
+    "cleaning_image": "wide_indoor_commercial_office_cleaning_scene_in_a.png"
+  },
+  {
+    "city": "Burbank",
+    "slug": "burbank",
+    "hero_image": "wide_cinematic_urban_street_scene_at_golden_hour_d.png",
+    "cleaning_image": "a_wide_cinematic_realistic_photo_of_a_modern_aud.png"
+  },
+  {
+    "city": "Glendale",
+    "slug": "glendale",
+    "hero_image": "wide_sunny_outdoor_urban_shopping_dining_promenad.png",
+    "cleaning_image": "a_bright_modern_gym_interior_with_large_windows_a.png"
+  },
+  {
+    "city": "Pasadena",
+    "slug": "pasadena",
+    "hero_image": "wide_cinematic_high_resolution_landscape_urban_n.png",
+    "cleaning_image": "wide_interior_scene_of_a_modern_library_or_study_a.png"
+  },
+  {
+    "city": "South LA",
+    "slug": "south-la",
+    "hero_image": "wide_vibrant_street_scene_in_south_los_angeles.png",
+    "cleaning_image": "a_realistic_high_resolution_indoor_commercial_me.png"
+  },
+  {
+    "city": "Santa Monica",
+    "slug": "santa-monica",
+    "hero_image": "wide_cinematic_coastal_sunset_scene_a_picturesqu.png",
+    "cleaning_image": "a_crisp_realistic_high_resolution_outdoor_cleani.png"
+  },
+  {
+    "city": "San Bernardino",
+    "slug": "san-bernardino",
+    "hero_image": "wide_crisp_sunlit_architectural_scene_of_a_histo.png",
+    "cleaning_image": "wide_realistic_high_resolution_warehouse_industr.png"
+  },
+  {
+    "city": "Rancho Cucamonga",
+    "slug": "rancho-cucamonga",
+    "hero_image": "wide_crisp_sunlit_outdoor_scene_of_a_modern_sout.png",
+    "cleaning_image": "wide_angle_well_lit_commercial_kitchen_cleaning_s.png"
+  },
+  {
+    "city": "Ontario",
+    "slug": "ontario",
+    "hero_image": "modern_airport_terminal_with_mountain_views.png",
+    "cleaning_image": "wide_realistic_high_resolution_outdoor_scene_of.png"
+  },
+  {
+    "city": "Fontana",
+    "slug": "fontana",
+    "hero_image": "wide_crisp_daytime_architectural_landscape_photo.png",
+    "cleaning_image": "a_realistic_high_resolution_daytime_outdoor_comme.png"
+  },
+  {
+    "city": "Redlands",
+    "slug": "redlands",
+    "hero_image": "wide_crisp_sunlit_street_view_scene_of_historic.png",
+    "cleaning_image": "a_wide_realistic_high_resolution_indoor_scene_of.png"
+  },
+  {
+    "city": "Chino",
+    "slug": "chino",
+    "hero_image": "wide_bright_daytime_outdoor_scene_of_a_city_entra.png",
+    "cleaning_image": "wide_realistic_high_resolution_photo_of_an_indus.png"
+  },
+  {
+    "city": "Chino Hills",
+    "slug": "chino-hills",
+    "hero_image": "wide_crisp_high_resolution_outdoor_landscape_ent.png",
+    "cleaning_image": "wide_realistic_photo_of_a_professional_cleaning_c.png"
+  },
+  {
+    "city": "Upland",
+    "slug": "upland",
+    "hero_image": "a_crisp_wide_street_level_daylight_photograph_of.png",
+    "cleaning_image": "a_crisp_realistic_high_resolution_indoor_mall_of.png"
+  },
+  {
+    "city": "Rialto",
+    "slug": "rialto",
+    "hero_image": "a_crisp_wide_angle_daytime_motel_scene_under_a_cl.png",
+    "cleaning_image": "wide_outdoor_semiexterior_commercial_building_scen.png"
+  },
+  {
+    "city": "Colton",
+    "slug": "colton",
+    "hero_image": "a_crisp_high_resolution_eye_level_architectural.png",
+    "cleaning_image": "wide_cinematic_realistic_photo_of_a_commercial_i.png"
+  }
+]

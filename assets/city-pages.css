@@ -1,0 +1,56 @@
+/* Paradigm city-area pages: reuse the established hero, section, split-media and action-band design. */
+.city-page .city-page-hero{--hero-ratio:1.5}
+.city-page .city-page-hero > img{object-fit:contain;object-position:center center}
+.city-page .city-page-hero .hero-copy h1{max-width:960px}
+.city-page .city-county-link{font-size:14px;font-weight:700;color:var(--olive);display:inline-block;margin:0 0 28px;text-decoration:underline;text-underline-offset:4px}
+.city-page .city-county-link:hover{color:var(--navy)}
+.city-page .city-intro .split-media{gap:clamp(24px,4vw,60px);align-items:center}
+.city-page .city-intro .split-media .section-copy-block p{max-width:660px;font-size:18px;line-height:1.75;color:var(--muted)}
+.city-page .city-intro .city-cleaning-photo{width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;display:block;max-width:none}
+.city-page .city-services .callout-list{align-items:stretch}
+.city-page .city-services .callout{box-shadow:var(--shadow);border-left:0;border-top:5px solid var(--olive)}
+.city-page .city-services .callout h3{margin-bottom:12px}
+.city-page .city-services .callout p{color:var(--muted);line-height:1.65}
+.city-page .city-planning .content-card{max-width:1080px}
+.city-page .city-planning .content-card p{font-size:17px;line-height:1.75}
+.city-page .city-planning .city-request-link{margin-top:12px}
+@media(max-width:760px){
+  .city-page .city-page-hero{width:100%;--hero-ratio:1.5}
+  .city-page .city-page-hero .hero-copy h1{font-size:clamp(24px,5cqw,42px)}
+  .city-page .city-page-hero .hero-overlay{padding:16px 5cqw 22px}
+  .city-page .city-page-hero .hero-actions{margin-top:12px}
+  .city-page .city-page-hero .button{min-height:40px;padding:8px 12px;font-size:13px}
+  .city-page .city-intro .split-media{grid-template-columns:minmax(0,1fr)}
+  .city-page .city-services .callout-list{grid-template-columns:minmax(0,1fr)}
+  .city-page .city-planning .content-card{padding:20px}
+}
+
+/* Keep heading and all paragraphs beside the image instead of vertically centering sparse copy. */
+.city-page .city-intro {padding-top:clamp(28px,3vw,45px);padding-bottom:clamp(32px,3.5vw,52px);}
+.city-page .city-intro-layout{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:clamp(24px,4vw,58px);align-items:start;}
+.city-page .city-intro-text{min-width:0;align-self:start;}
+.city-page .city-intro-text .city-county-link{margin:0 0 26px;}
+.city-page .city-intro-text .section-heading{margin:0 0 18px;max-width:100%;}
+.city-page .city-intro-text .section-heading h2{font-size:clamp(29px,2.7vw,43px);line-height:1.14;}
+.city-page .city-intro-text .section-heading p{font-size:17px;line-height:1.65;max-width:660px;}
+.city-page .city-intro-text > p {font-size:17px;line-height:1.7;color:var(--muted);max-width:660px;margin:0 0 15px;}
+.city-page .city-intro-photo-wrap{min-width:0;margin:0;align-self:start;}
+.city-page .city-intro-photo-wrap .city-cleaning-photo{width:100%;aspect-ratio:3/2;height:auto;object-fit:contain;display:block;background:#e9eff3;}
+@media(max-width:880px){.city-page .city-intro-layout{grid-template-columns:1fr;gap:22px}.city-page .city-intro-photo-wrap{max-width:780px}.city-page .city-intro-text .city-county-link{margin-bottom:20px}}
+
+/* Local service content: scoped enhancements only; existing imagery and navigation unchanged. */
+.city-page .city-prep-list{margin:12px 0 18px;padding-left:23px;line-height:1.7;color:var(--muted)}
+.city-page .city-prep-list li{margin:0 0 8px;padding-left:4px}
+.city-page .city-scope-note{font-size:14px!important;line-height:1.6!important;color:var(--muted);margin-top:16px}
+.city-page .city-faq-list{display:grid;gap:12px;max-width:1080px}
+.city-page .city-faq-item{border:1px solid #dce4ea;background:#fff;padding:18px 22px;box-shadow:0 4px 15px rgba(1,25,44,.045)}
+.city-page .city-faq-item summary{cursor:pointer;font-weight:750;color:var(--navy);font-size:18px;line-height:1.4}
+.city-page .city-faq-item[open] summary{margin-bottom:12px}
+.city-page .city-faq-item p{margin:0;color:var(--muted);font-size:16px;line-height:1.7}
+.city-page .city-resources-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;list-style:none;margin:22px 0 0;padding:0}
+.city-page .city-resource-item{min-width:0;border:1px solid #dce4ea;background:#fff;padding:20px;box-shadow:0 4px 15px rgba(1,25,44,.055)}
+.city-page .city-resource-item a{color:var(--navy);font-size:17px;font-weight:750;line-height:1.4;text-underline-offset:3px;overflow-wrap:anywhere}
+.city-page .city-resource-item a:hover,.city-page .city-resource-item a:focus-visible{color:var(--olive)}
+.city-page .city-resource-item p{font-size:15px;line-height:1.65;color:var(--muted);margin:10px 0 0}
+@media(max-width:880px){.city-page .city-resources-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:570px){.city-page .city-resources-grid{grid-template-columns:1fr}.city-page .city-faq-item{padding:16px}.city-page .city-resource-item{padding:18px}}
