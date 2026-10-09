@@ -1341,3 +1341,140 @@ img[src$="about-hero-wide.webp"],img[src$="about-hero-wide.webp"],img[src$="floo
 /* Static service-area photo cards on county pages: no city-page links or hover controls. */
 .city-photo-card{display:flex;flex-direction:column;min-width:0;background:#fff;color:var(--navy);overflow:hidden;border:1px solid #dbe3ea;box-shadow:0 9px 22px rgba(1,25,44,.10)}
 .city-photo-card img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;object-position:center;background:transparent}
+
+/* Minimized-window Commercial dropdown: use the same full-width,
+   two-column photo cards as the approved Residential dropdown. */
+@media (max-width:1280px){
+  .main-nav .nav-panel.commercial-mega:not(.residential-mega):not(.contact-mega) .commercial-mega-featured{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:12px!important;
+    width:100%!important;
+  }
+  .main-nav .nav-panel.commercial-mega:not(.residential-mega):not(.contact-mega) .commercial-mega-card{
+    display:block!important;
+    width:100%!important;
+    min-width:0!important;
+    text-align:left!important;
+  }
+  .main-nav .nav-panel.commercial-mega:not(.residential-mega):not(.contact-mega) .commercial-mega-card img{
+    display:block!important;
+    width:100%!important;
+    max-width:none!important;
+    height:auto!important;
+    aspect-ratio:4/3!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    background:transparent!important;
+    border-radius:6px!important;
+  }
+  .main-nav .nav-panel.commercial-mega:not(.residential-mega):not(.contact-mega) .commercial-mega-card strong{
+    display:block!important;
+    margin-top:6px!important;
+    font-size:13px!important;
+    line-height:1.2!important;
+  }
+}
+
+
+/* Blog photos: show the complete original photo within larger, uniform cards. */
+.page-blog-index .blog-card > a:first-child {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 6 / 5 !important;
+  overflow: hidden !important;
+  background: #fff !important;
+}
+.page-blog-index .blog-card > a:first-child img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+
+/* Blog card fix: equal-size cards and larger equal-size image boxes with full photos visible */
+.page-blog-index .blog-grid{
+  align-items:stretch;
+}
+.page-blog-index .blog-card{
+  display:flex !important;
+  flex-direction:column !important;
+  height:100% !important;
+}
+.page-blog-index .blog-card > a:first-child{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:100% !important;
+  aspect-ratio: 4 / 3 !important;
+  overflow:hidden !important;
+  background:#fff !important;
+  flex:0 0 auto !important;
+}
+.page-blog-index .blog-card > a:first-child img{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:#fff !important;
+}
+.page-blog-index .blog-card-copy{
+  display:flex !important;
+  flex-direction:column !important;
+  flex:1 1 auto !important;
+}
+.page-blog-index .blog-card-copy .text-link{
+  margin-top:auto !important;
+}
+@media (max-width: 900px){
+  .page-blog-index .blog-card > a:first-child{
+    aspect-ratio: 4 / 3 !important;
+  }
+}
+
+
+/* Final blog card sizing fix: every preview image box and card is uniform */
+.page-blog-index .blog-grid {
+  align-items: stretch !important;
+}
+.page-blog-index .blog-card {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+.page-blog-index .blog-card > a:first-child {
+  display: block !important;
+  width: 100% !important;
+  aspect-ratio: 6 / 5 !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  flex: 0 0 auto !important;
+}
+.page-blog-index .blog-card > a:first-child img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  background: transparent !important;
+}
+.page-blog-index .blog-card-copy {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+}
+.page-blog-index .blog-card-copy .text-link {
+  margin-top: auto !important;
+}
+
+
+/* Blog image cleanup */
+.page-blog-index .blog-card > a:first-child{line-height:0 !important;font-size:0 !important;padding:0 !important;margin:0 !important;}
+.page-blog-index .blog-card > a:first-child img{vertical-align:top !important;}
