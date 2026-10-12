@@ -1,0 +1,97 @@
+{
+  "dir": [
+    "California janitorial provider registration",
+    "https://www.dir.ca.gov/dlse/Janitorial_Providers_Contractors.html",
+    "Use the official California registration information when checking which janitorial requirements apply to a provider."
+  ],
+  "dirfaq": [
+    "California janitorial registration questions",
+    "https://www.dir.ca.gov/dlse/Janitorial_Registration_FAQs.html",
+    "This reference explains the state registration program. It does not verify a particular company’s staffing, screening or access policies."
+  ],
+  "cdc": [
+    "CDC guidance for cleaning a facility",
+    "https://www.cdc.gov/hygiene/about/when-and-how-to-clean-and-disinfect-a-facility.html",
+    "Consult this guidance for the distinction between cleaning and disinfection and for considering a facility’s surfaces and use."
+  ],
+  "hazcom": [
+    "OSHA chemical hazard communication",
+    "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.1200",
+    "This is a primary reference for workplace chemical information, labeling and relevant worker training requirements."
+  ],
+  "chemical": [
+    "OSHA guidance for workers using cleaning chemicals",
+    "https://www.osha.gov/sites/default/files/publications/OSHA3512.pdf",
+    "Use this worker safety resource when discussing chemical handling and suitable precautions, rather than assuming every cleaning product is harmless."
+  ],
+  "safer": [
+    "EPA Safer Choice product search",
+    "https://www.epa.gov/saferchoice/products",
+    "Check an exact product in the official list instead of assuming an environmental marketing claim establishes certification."
+  ],
+  "saferfaq": [
+    "EPA Safer Choice questions",
+    "https://www.epa.gov/saferchoice/frequently-asked-questions-safer-choice",
+    "This reference explains the program and supports informed questions about certified products and their intended use."
+  ],
+  "walk": [
+    "OSHA requirements for walking surfaces",
+    "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.22/",
+    "This reference addresses workplace walking surface conditions. It is relevant when cleaning affects access or creates a temporarily restricted area."
+  ],
+  "mold": [
+    "EPA guidance on mold and moisture",
+    "https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home",
+    "Use this resource for understanding why a moisture problem can require attention beyond removing a visible surface mark."
+  ],
+  "moldcontrol": [
+    "EPA explanation of mold control",
+    "https://www.epa.gov/mold/how-do-i-get-rid-mold",
+    "This resource identifies moisture control as central to mold control. Exterior washing should not be confused with resolving every building moisture problem."
+  ],
+  "foodguide": [
+    "Los Angeles County retail food inspection guide",
+    "https://publichealth.lacounty.gov/eh/inspection/retail-food-inspection-guide.htm",
+    "Restaurant operators can use the local guide to understand inspection concerns and distinguish cleaning work from their wider operating responsibilities."
+  ],
+  "foodinspect": [
+    "Los Angeles County restaurant inspection information",
+    "https://publichealth.lacounty.gov/eh/inspection/restaurant-retail-food-inspection.htm",
+    "Consult the local inspection information rather than relying on a cleaning provider’s promise of a particular inspection result."
+  ],
+  "cri": [
+    "Carpet and Rug Institute cleaning standards",
+    "https://carpet-rug.org/resources/cleaning-standards/",
+    "Review the applicable carpet maintenance standard alongside the carpet manufacturer’s care information and the property’s use."
+  ],
+  "criguide": [
+    "Commercial carpet maintenance resources",
+    "https://carpet-rug.org/carpet-for-business/cleaning-and-maintenance/",
+    "This industry resource provides context for a commercial carpet maintenance program. It does not establish one interval suitable for every property."
+  ],
+  "hardie": [
+    "James Hardie siding cleaning guidance",
+    "https://www.jameshardie.com/blog/siding-durability/tips-for-cleaning-your-siding/",
+    "This manufacturer guidance illustrates why an exterior material’s own care instructions matter when choosing a cleaning approach."
+  ],
+  "hardiefaq": [
+    "James Hardie care questions",
+    "https://www.jameshardie.com/faq/",
+    "Consult the manufacturer information for its products. Do not apply a recommendation for one material automatically to other building surfaces."
+  ],
+  "storm": [
+    "City of Los Angeles pollutant discharge requirements",
+    "https://codelibrary.amlegal.com/codes/los_angeles/latest/lamc/0-0-0-162721",
+    "Use the local requirements when reviewing wash water responsibilities. The service plan should reflect the actual site and applicable rules."
+  ],
+  "windowrules": [
+    "California window cleaning safety requirements",
+    "https://www.dir.ca.gov/Title8/3282.html",
+    "This primary safety reference concerns window cleaning operations. Glass coatings and finishes also need their own manufacturer care information."
+  ],
+  "windowladder": [
+    "California window cleaning ladder requirements",
+    "https://www.dir.ca.gov/title8/3287.html",
+    "Review the relevant access requirements with a qualified provider rather than assuming every window can be reached using the same equipment."
+  ]
+}

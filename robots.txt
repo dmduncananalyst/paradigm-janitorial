@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.paradigmjanitorial.net/sitemap.xml
+Sitemap: https://paradigmjanitorial.net/sitemap.xml

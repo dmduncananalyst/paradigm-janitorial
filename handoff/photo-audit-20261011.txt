@@ -1,0 +1,24 @@
+Photo updates, October 11, 2026
+
+Replaced the medical and dental, estate, and office service page hero images. The office hero now uses a photograph rather than the previous video.
+Replaced both homepage Power Washing card photos with outdoor spray lance pressure washing scenes.
+Replaced the homepage Window Cleaning card's close up squeegee photo with a commercial storefront window cleaning crew. Kept the existing multistory lift photo.
+All six new assets were generated with the built in image generator. WebP copies are lossless and retain the full source dimensions.
+The patio image was edited to show the complete pressure washer, wheels, handle, worker, boots, and spray lance within the frame.
+
+Audit scope
+Reviewed contact sheets of 209 active photo assets and inspected selected candidates at full size. This is a visual quality review, not verification that generated scenes depict actual Paradigm employees or locations.
+
+Additional candidates for a later replacement round
+assets/images/industry-medical-dental-question.webp, visibly soft faces and skin detail, and a white strip along the bottom.
+The existing medical and dental secondary overview photograph repeats the older hero photograph and should be reviewed for the same softness.
+assets/images/aeo/power-01-frequency.webp, the cleaning activity may read as indoor floor care rather than outdoor pressure washing.
+assets/images/city-hero-west-la.webp, heavily saturated, glossy skyline appearance. Review the other generated city illustrations for consistency and geographic accuracy before replacing them.
+
+These additional candidates remain unchanged in this update.
+
+Clean Spaces layout correction
+Question grid carousel layout is now present in the initial HTML so it does not switch layout after the page first paints. Verified Power Washing and Restaurant Cleaning question pages at mobile and desktop widths, including mobile next controls.
+
+Homepage service card size correction
+All eight Complete Cleaning Services cards use equal width image columns and the same 4:3 photo frames, matching the Janitorial, Residential, Porter, and Restaurant cards. Wider source images fit inside these frames without cropping.

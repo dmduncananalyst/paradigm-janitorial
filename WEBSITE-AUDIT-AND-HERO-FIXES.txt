@@ -1,0 +1,79 @@
+PARADIGM JANITORIAL — COMPLETED WEBSITE CHANGES
+October 11, 2026 | Complete upload package, including all website assets
+
+COMPLETED IN THE FILES
+- Corrected blue hero bands on Medical/Dental, Post-Construction/Renovation,
+  and Warehouse/Industrial pages; removed the shared blue background/tint.
+- Aligned all canonical tags, social URLs, schema URLs, sitemap URLs,
+  robots.txt and internal host references to https://paradigmjanitorial.net.
+- Applied the requested homepage title and H1 verbatim.
+- Added service/location titles and one service/location H1 on each service
+  page. Location text uses a smaller line inside the same H1.
+- Replaced generic business schema with consistent LocalBusiness data on all
+  43 active pages: business name, footer phone, office address, both service
+  counties, and supplied contact hours (Monday-Sunday, 8am-8pm).
+- Linked service entities to the same business ID; preserved existing article,
+  breadcrumb and FAQ data.
+- Added four visible homepage FAQs with identical FAQPage questions/answers.
+  Insurance/bonding wording follows the existing supplied FAQ page.
+- Compressed homepage MP4 to 1280 × 720, 717,334 bytes (about 0.7 MB), removed
+  its audio track, enabled metadata preload and retained muted/playsinline.
+- Compressed the homepage poster to 1280 × 720 and preloaded that image.
+- Mobile below 768px uses the poster without loading/autoplaying the video.
+  Reduced-motion users also receive the poster. Desktop retains video playback.
+- Added llms.txt with services, contact details, official URLs and a clear
+  distinction from the similarly named San Francisco business.
+- Standardized the text business name to Paradigm Janitorial as requested.
+- Removed 11 off-topic HTML blog posts, their sitemap entries, index cards,
+  internal references, and unused associated blog pictures. No redirect files
+  were created for those removed posts; missing pages can return 404.
+- Retained the two existing cleaning-related posts: Porter Service and Office
+  Checklist. No new blogs were created.
+- Updated blog-index metadata and its two-item collection schema.
+- Updated social-preview image dimensions and MIME types to match the files.
+
+BLOG FILES REMOVED
+- blog-best-vacations-with-kids.html
+- blog-contractors-vs-employees.html
+- blog-dodgers-playoff-baseball-los-angeles.html
+- blog-employee-401k-benefits.html
+- blog-fishing-los-angeles-county.html
+- blog-football-sundays-los-angeles.html
+- blog-going-through-a-divorce.html
+- blog-halloween-kids-los-angeles.html
+- blog-san-diego-summer-fishing-2026.html
+- blog-social-security-explained.html
+- blog-whats-on-the-menu-holiday-season.html
+
+The deletion PDF named six files and requested 11 off-topic posts in total.
+The remaining five were identified from the ZIP: divorce, two fishing posts,
+Halloween outings, and worker classification. Together these are the 11
+non-cleaning-topic posts in the original package.
+
+VALIDATION
+43 active pages; 3 pre-existing noindex legacy redirect pages; 43 sitemap URLs.
+No broken local href/src/poster/data-src targets or deleted-post references.
+One H1 per active page; distinct active titles; schema JSON parses; visible
+FAQ text matches schema; business data is identical wherever repeated.
+86 desktop/mobile page renders: no hero image bands or clipped hero headings
+or buttons. Homepage video verification passed at widths 390, 767, 768 and 1920px:
+zero mobile/reduced-motion video requests; desktop MP4 plays at 1280 × 720.
+
+AFTER UPLOADING
+1. Remove the 11 old HTML files from the hosting repository as well as uploading
+   the remaining files. Uploading a ZIP's contents alone does not delete files
+   that were already in GitHub. The removed filenames are listed above.
+2. Submit https://paradigmjanitorial.net/sitemap.xml in Search Console.
+3. Verify live www-to-non-www HTTPS redirects preserve paths, llms.txt returns
+   200, and deleted blog URLs return 404.
+4. Validate deployed schema and measure mobile performance/PageSpeed. A local
+   package cannot certify live redirect status, LCP, indexing or rich results.
+5. Confirm the Google Business Profile name/address/phone, update directory
+   descriptions, and use the verified business-pin coordinates/profile URLs
+   to complete geo and sameAs. No coordinates or social/profile URLs were
+   guessed or copied from another business. Those exact verified details were
+   not supplied and could not be established from public search.
+
+EXTERNAL CHANGES ARE NOT INCLUDED IN A ZIP
+Search Console submission, hosting redirects, Business Profile and directory
+updates, and post-deployment measurements require the relevant live accounts.

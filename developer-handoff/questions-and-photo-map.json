@@ -1,0 +1,392 @@
+[
+  {
+    "category": "office-cleaning",
+    "question": "Are commercial cleaning companies licensed?",
+    "asset": "office-01-licensing.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "office-cleaning",
+    "question": "Can a cleaning company provide references?",
+    "asset": "office-11-references.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "office-cleaning",
+    "question": "Do cleaning companies bring their own supplies?",
+    "asset": "office-06-supplies-equipment.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "office-cleaning",
+    "question": "Do cleaning companies do background checks?",
+    "asset": "office-02-background-checks.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "office-cleaning",
+    "question": "Do you use employees or subcontractors?",
+    "asset": "office-12-employees-vs-subcontractors.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "office-cleaning",
+    "question": "Do you use green cleaning products?",
+    "asset": "office-07-green-cleaning.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "office-cleaning",
+    "question": "How do cleaning companies inspect work quality?",
+    "asset": "office-05-quality-inspection.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "office-cleaning",
+    "question": "How do you handle keys, fobs, and alarm codes?",
+    "asset": "office-13-keys-fobs.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "office-cleaning",
+    "question": "How often should an office be professionally cleaned?",
+    "asset": "office-09-how-often.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "office-cleaning",
+    "question": "Should office cleaning happen during or after hours?",
+    "asset": "office-10-during-vs-after-hours.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "office-cleaning",
+    "question": "What is the difference between office cleaning and janitorial services?",
+    "asset": "office-08-office-vs-janitorial.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "office-cleaning",
+    "question": "What training does cleaning staff receive?",
+    "asset": "office-14-staff-training.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "office-cleaning",
+    "question": "Will the same cleaning team come each visit?",
+    "asset": "office-03-same-team.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "office-cleaning",
+    "question": "Who do I contact after hours for urgent cleaning?",
+    "asset": "office-04-after-hours.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "window-cleaning",
+    "question": "Are frames, screens, tracks, and sills included?",
+    "asset": "window-07-frames-tracks.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "window-cleaning",
+    "question": "Bad weather policy for window cleaning",
+    "asset": "window-09-bad-weather.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "window-cleaning",
+    "question": "Can window cleaning scratch glass?",
+    "asset": "window-04-scratch-prevention.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "window-cleaning",
+    "question": "Can you remove hard water stains?",
+    "asset": "window-08-hard-water-stains.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "window-cleaning",
+    "question": "Do I need to be present during window cleaning?",
+    "asset": "window-10-presence.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "window-cleaning",
+    "question": "Do storefronts need more frequent window cleaning?",
+    "asset": "window-02-storefront-vs-office.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "window-cleaning",
+    "question": "Do you clean interior and exterior windows?",
+    "asset": "window-06-interior-exterior.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "window-cleaning",
+    "question": "How often should commercial windows be cleaned?",
+    "asset": "window-01-frequency.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "window-cleaning",
+    "question": "What methods for commercial window cleaning?",
+    "asset": "window-05-methods.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "porter-service",
+    "question": "Can porter schedules fit busiest hours?",
+    "asset": "porter-08-scheduling.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "porter-service",
+    "question": "Difference between porter service and janitorial service",
+    "asset": "porter-02-porter-vs-janitorial.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "porter-service",
+    "question": "Does porter service include restroom restocking?",
+    "asset": "porter-09-restroom-restocking.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "porter-service",
+    "question": "Do you offer evening porter service?",
+    "asset": "porter-06-evening.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "porter-service",
+    "question": "Full-time or part-time porter service?",
+    "asset": "porter-05-fulltime-vs-parttime.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "porter-service",
+    "question": "How many hours of porter coverage?",
+    "asset": "porter-04-coverage-hours.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "porter-service",
+    "question": "What does a day porter do?",
+    "asset": "porter-01-what-porter-does.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "porter-service",
+    "question": "What should be in porter scope of work?",
+    "asset": "porter-07-scope-of-work.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "porter-service",
+    "question": "Which properties need a day porter?",
+    "asset": "porter-03-properties-needing.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "restaurant-cleaning",
+    "question": "Can restaurant cleaning be scheduled around operating hours?",
+    "asset": "restaurant-09-scheduling.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "restaurant-cleaning",
+    "question": "Difference between deep cleaning and regular restaurant cleaning",
+    "asset": "restaurant-02-deep-vs-regular.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "restaurant-cleaning",
+    "question": "Do you clean exhaust hoods and grease behind appliances?",
+    "asset": "restaurant-04-exhaust-hoods.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "restaurant-cleaning",
+    "question": "Do you move equipment during deep cleaning?",
+    "asset": "restaurant-07-moving-equipment.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "restaurant-cleaning",
+    "question": "Does professional cleaning help pass health inspections?",
+    "asset": "restaurant-08-passing-inspections.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "restaurant-cleaning",
+    "question": "How long does restaurant deep cleaning take?",
+    "asset": "restaurant-03-duration.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "restaurant-cleaning",
+    "question": "How often should a restaurant kitchen be deep cleaned?",
+    "asset": "restaurant-01-kitchen-frequency.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "restaurant-cleaning",
+    "question": "Which kitchen areas get deep cleaned?",
+    "asset": "restaurant-06-kitchen-areas.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "restaurant-cleaning",
+    "question": "Can cleaning help prepare for health inspection?",
+    "asset": "restaurant-05-inspection-prep.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "power-washing",
+    "question": "Best time of year for power washing",
+    "asset": "power-02-best-time.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "power-washing",
+    "question": "Can power washing damage building surfaces?",
+    "asset": "power-03-damage-prevention.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "power-washing",
+    "question": "Does power washing prevent mold and mildew?",
+    "asset": "power-09-mold-prevention.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "power-washing",
+    "question": "How long does power washing take?",
+    "asset": "power-06-duration.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "power-washing",
+    "question": "How often should a commercial building be power washed?",
+    "asset": "power-01-frequency.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "power-washing",
+    "question": "Is power washing environmentally safe?",
+    "asset": "power-07-environmental.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "power-washing",
+    "question": "What is included in commercial power washing?",
+    "asset": "power-05-inclusions.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "power-washing",
+    "question": "What is soft washing and when is it used?",
+    "asset": "power-04-soft-washing.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "power-washing",
+    "question": "What surfaces can be power washed?",
+    "asset": "power-08-surfaces.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "floor-care",
+    "question": "Are your floor technicians certified?",
+    "asset": "floor-07-certification.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "floor-care",
+    "question": "Do you do floor care after hours?",
+    "asset": "floor-06-after-hours.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "floor-care",
+    "question": "How long for floors to dry after cleaning?",
+    "asset": "floor-05-drying-time.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "floor-care",
+    "question": "How often should commercial carpets be deep cleaned?",
+    "asset": "floor-01-carpet-frequency.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "floor-care",
+    "question": "How often should tile be stripped, waxed, and polished?",
+    "asset": "floor-02-tile-strip-wax.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "floor-care",
+    "question": "What types of flooring do you maintain?",
+    "asset": "floor-03-floor-types.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "floor-care",
+    "question": "Will floor care disrupt business operations?",
+    "asset": "floor-04-disruption.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "residential-apartment",
+    "question": "Do you clean vacant apartment properties?",
+    "asset": "residential-05-vacant.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "residential-apartment",
+    "question": "Do you do post-renovation cleaning for apartments?",
+    "asset": "residential-06-post-renovation.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "residential-apartment",
+    "question": "Do you do turnover cleaning between tenants?",
+    "asset": "residential-04-turnover.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "residential-apartment",
+    "question": "How often should apartment common areas be cleaned?",
+    "asset": "residential-03-frequency.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "residential-apartment",
+    "question": "What is included in apartment common area cleaning?",
+    "asset": "residential-01-common-inclusions.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "residential-apartment",
+    "question": "Which apartment spaces do you clean?",
+    "asset": "residential-02-spaces.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "residential-apartment",
+    "question": "Do you handle emergency cleanups?",
+    "asset": "office-15-emergency-cleanups.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  },
+  {
+    "category": "residential-apartment",
+    "question": "What is included vs billed separately?",
+    "asset": "office-16-included-vs-billed.png",
+    "status": "Assigned to the matching article, full source frame displayed without CSS cropping"
+  }
+]

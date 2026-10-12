@@ -1,0 +1,5 @@
+Upload the contents of this folder to the website root.
+
+The homepage now uses a real, high priority fallback image rather than a stylesheet-relative background URL. It remains underneath the video during loading. The fallback is the video’s first frame.
+
+All previous changes, centered menus, matching service pictures, small photo gaps, articles and stable initial layouts remain included.

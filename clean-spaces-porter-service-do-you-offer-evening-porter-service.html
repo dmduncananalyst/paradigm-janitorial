@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><style id="site-initial-layout">/* Paradigm Janitorial Services, approved design with final audit corrections. */
+:root{--navy:#04325b;--navy-deep:#022746;--olive:#566b32;--ink:#171b1f;--muted:#566069;--line:#dde4e9;--white:#fff;--section-alt:#f4f7fa;--shadow:0 12px 32px rgba(4,50,91,.10);--header-height:106px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-height) + 20px)}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.65}
+body.chat-open{overflow:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+button:disabled{cursor:wait;opacity:.65}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid #7f9caf;outline-offset:4px}
+h1,h2,h3,h4{line-height:1.12;margin:0 0 18px}
+h1{font-size:clamp(38px,4.7vw,70px);letter-spacing:-.035em}
+h2{font-size:clamp(28px,2.7vw,40px);letter-spacing:-.02em;color:var(--navy)}
+h3{font-size:22px;color:var(--navy)}
+p{margin:0 0 18px}
+p:last-child{margin-bottom:0}
+[hidden]{display:none!important}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.skip-link{position:fixed;left:12px;top:-100px;background:#fff;color:var(--navy);padding:12px;z-index:10001}
+.skip-link:focus{top:12px}
+.eyebrow{text-transform:uppercase;letter-spacing:.1em;font-size:15px;font-weight:800;color:var(--olive)}
+.section{padding:54px 5vw}
+.section.compact{padding:44px 5vw}
+main>.section{position:relative;background:#fff}
+main>.section:nth-of-type(even){background:var(--section-alt)}
+main>.section+.section{border-top:1px solid var(--line)}
+.section-heading{max-width:980px;margin:0 0 26px}
+.section-heading:before{content:"";display:block;width:68px;height:5px;background:var(--olive);margin-bottom:18px}
+.section-heading h2{margin:0 0 12px}
+.section-heading p,.section-subtitle{font-size:18px;line-height:1.65;color:var(--muted);max-width:860px;margin:0}
+.section-heading .eyebrow{font-size:14px;margin-bottom:10px;color:var(--olive)}
+.section-copy-block{max-width:1080px}
+.section-copy-block>p{font-size:18px;max-width:920px;color:var(--muted)}
+/* One spacing rule for every top-level item; disclosure panels touch the parent. */
+.site-header{height:var(--header-height);padding:10px 3vw;display:flex;align-items:center;gap:28px;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:1000}
+.brand{flex:0 1 290px;min-width:205px;max-width:24vw}
+.brand img{width:100%;height:82px;object-fit:contain;object-position:left center}
+.main-nav{display:flex;align-items:stretch;justify-content:flex-end;gap:clamp(14px,1.6vw,28px);margin-left:auto;height:100%}
+.main-nav>a,.nav-group>a{display:flex;align-items:center;padding:0;font-size:14px;font-weight:700;color:var(--navy);white-space:nowrap;position:relative}
+.main-nav>a:after,.nav-group>a:after{content:"";position:absolute;left:0;right:0;bottom:14px;height:2px;background:var(--olive);transform:scaleX(0);transition:transform .2s}
+.main-nav>a:hover:after,.nav-group:hover>a:after,.main-nav [aria-current=page]:after{transform:scaleX(1)}
+.nav-group{position:relative;display:flex;align-items:stretch}
+.nav-panel{position:absolute;top:100%;left:0;width:300px;max-height:calc(100dvh - var(--header-height) - 16px);overflow:auto;background:#fff;padding:10px;border:1px solid var(--line);box-shadow:var(--shadow);display:none}
+.nav-group.expanded>.nav-panel{display:block}
+.main-nav>.nav-group:last-child>.nav-panel{left:auto;right:0}
+.nav-photo{position:relative;display:block;margin:0 0 10px;overflow:hidden;background:none}
+.nav-photo:last-child{margin:0}
+.nav-photo img{width:100%;height:auto;object-fit:cover}
+.nav-photo:after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(transparent,rgba(2,30,53,.92));pointer-events:none}
+.nav-photo span{position:absolute;left:12px;right:12px;bottom:12px;z-index:2;color:#fff;font-size:16px;font-weight:800;line-height:1.2;text-shadow:0 1px 3px #123}
+.menu-button{display:none;background:none;border:0;width:44px;min-height:44px;padding:8px}
+.menu-button span{display:block;height:2px;background:var(--navy);margin:7px 0}
+/* Fit the complete source frame below the header, without stretching or cropping. */
+.hero,.page-hero{position:relative;display:block;width:min(100%,calc((100svh - var(--header-height) - 1px) * var(--hero-ratio,1.777777778)));aspect-ratio:var(--hero-ratio,1.777777778);margin-inline:auto;overflow:hidden;background:transparent;isolation:isolate;container-type:inline-size}
+.hero>img,.hero>video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.42),transparent 48%);z-index:1;pointer-events:none}
+.hero-overlay{position:absolute;left:0;right:0;bottom:0;padding:clamp(18px,4cqw,60px) 5cqw;z-index:2;display:flex;flex-direction:column;gap:22px}
+.hero-copy{color:#fff;max-width:1050px}
+.hero-copy h1{color:#fff;font-size:clamp(24px,4.8cqw,70px);line-height:1.02;max-width:920px;margin:0;text-shadow:0 2px 12px rgba(0,0,0,.22)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 22px;background:var(--olive);color:#fff;border:1px solid var(--olive);font-size:16px;font-weight:800;line-height:1.35;text-align:center;transition:background .2s}
+.button:hover{background:#425426;border-color:#425426}
+.home-page-hero .hero-overlay{bottom:auto;top:50%;transform:translateY(-50%)}
+.power-page-hero .hero-overlay{top:0;bottom:auto;align-items:flex-end}
+.power-page-hero .hero-copy{max-width:62%;text-align:right}
+.power-page-hero .hero-actions{justify-content:flex-end}
+.faq-page-hero .hero-overlay{top:0;bottom:auto}
+.faq-page-hero .hero-copy{max-width:62%}
+.home-page-title{max-width:1100px!important}
+.home-service-ribbon{display:flex;gap:10px;flex-wrap:wrap;position:relative;width:100%;margin:0;padding:0;background:transparent}
+.home-service-ribbon a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 14px;background:rgba(255,255,255,.94);color:var(--navy);font-size:14px;font-weight:800;line-height:1.2;text-align:center;transition:background .2s,color .2s}
+.home-service-ribbon a:hover{background:var(--olive);color:white}
+.video-toggle{position:absolute;top:14px;right:16px;background:rgba(2,27,48,.75);border:1px solid rgba(255,255,255,.6);color:#fff;font-size:12px;padding:6px 10px;z-index:3}
+/* Photos occupy exactly their own area, with no colored frame or duplicate backdrop. */
+.media-band{display:grid;grid-template-columns:var(--photo-columns,repeat(2,minmax(0,1fr)));gap:20px;align-items:start}
+.media-band img,.media-band video,.about-wide-media img,.home-about-media img,.split-media img{width:100%;height:auto;min-height:0;object-fit:cover;background:none}
+.about-wide-media,.home-about-media{padding:0;border:0;box-shadow:none;background:none;overflow:hidden}
+.split-media{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px;align-items:center}
+.about-approach-copy h2{font-size:clamp(28px,2.4vw,38px)}
+.about-approach-copy p{color:var(--muted);font-size:18px;line-height:1.7}
+.home-about-layout{grid-template-columns:1.1fr .9fr}
+.content-card{padding:28px;background:#fff;border-top:5px solid var(--olive);box-shadow:var(--shadow)}
+.content-card p{color:var(--muted)}
+.content-card h3{font-size:28px}
+.hub-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:20px;align-items:stretch}
+.hub-card{grid-column:span 4;display:flex;flex-direction:column;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+.hub-card:nth-child(1){grid-column:span 6}
+.hub-card:nth-child(2){grid-column:span 6}
+.commercial-property-grid .hub-card:nth-child(n){grid-column:span 4}
+.hub-card img{position:static;width:100%;height:auto;object-fit:cover}
+.hub-copy{padding:22px 24px}
+.hub-copy h3{font-size:25px;line-height:1.13;margin-bottom:12px}
+.hub-copy p{color:var(--muted);font-size:16px;line-height:1.6}
+.card-cta,.text-link{display:inline-block;color:var(--navy);font-size:15px;font-weight:800;text-decoration:underline;text-decoration-color:var(--olive);text-underline-offset:5px}
+.card-cta{margin-top:10px}
+.service-static-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;align-items:stretch}
+.service-tile{overflow:hidden;background:white;box-shadow:var(--shadow)}
+.service-tile img{width:100%;height:auto}
+.service-tile .card-body{padding:18px}
+.service-tile h3{font-size:20px;margin:0}
+.panel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;align-items:stretch}
+.panel-card{display:flex;flex-direction:column;overflow:hidden;background:white;box-shadow:var(--shadow)}
+.panel-card img{position:static;width:100%;height:auto}
+.panel-label{position:static;padding:20px}
+.panel-label h3{font-size:22px;margin-bottom:10px}
+.panel-label p{font-size:15px;color:var(--muted);line-height:1.55}
+.service-carousel{overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#9fb0b9 transparent;padding:6px 0 18px}
+.carousel-track{display:flex;align-items:stretch;gap:24px;width:max-content}
+.service-card{width:560px;max-width:82vw;flex:none;display:flex;flex-direction:column;background:#fff;box-shadow:var(--shadow);overflow:hidden}
+.service-card>img{width:100%;height:auto}
+.slide-collage{display:grid;align-items:start;gap:4px;background:none;padding:0}
+.slide-collage.one{grid-template-columns:1fr}
+.slide-collage.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.slide-collage img{width:100%;height:auto;object-fit:cover;background:none}
+.service-card .card-body{padding:22px 24px;min-height:0;display:block}
+.service-card h3{font-size:27px;margin-bottom:12px}
+.service-card p{font-size:16px;color:var(--muted);margin-bottom:14px}
+.carousel-controls{display:flex;justify-content:flex-end;gap:8px;margin-top:10px}
+.carousel-controls button{min-width:44px;min-height:38px;padding:6px 12px;border:1px solid var(--line);background:white;color:var(--navy);font-weight:700}
+.values-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;align-items:start}
+.value{background:#fff;padding:26px;border-top:4px solid var(--olive)}
+.value h3{font-size:22px}
+.callout-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.callout{background:#fff;padding:24px;border-left:5px solid var(--olive)}
+.callout h3{font-size:23px}
+.simple-service-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 32px;margin-top:15px}
+.simple-service-list span{position:relative;padding:15px 0 15px 20px;border-bottom:1px solid var(--line);font-weight:700;color:var(--navy)}
+.simple-service-list span:before{content:"";position:absolute;left:0;top:25px;width:6px;height:6px;border-radius:50%;background:var(--olive)}
+.clean-question-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;align-items:stretch}
+.home-clean-spaces-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.clean-question-card,.story-card{display:flex;flex-direction:column;background:#fff;box-shadow:var(--shadow);overflow:hidden}
+.clean-question-card img,.story-card img{width:100%;height:auto;object-fit:cover}
+.clean-question-card>div,.story-copy{padding:20px;display:block}
+.clean-question-card h3,.story-copy h3{font-size:19px;line-height:1.35;margin:0 0 12px}
+.clean-question-card .card-cta,.story-copy .card-cta{margin:0}
+.clean-question-card:hover h3,.story-card:hover h3{color:var(--olive)}
+.clean-spaces-more{margin-top:28px}
+.story-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;align-items:stretch;max-width:1080px}
+.county-cards,.area-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.county-card,.area-card{padding:28px;background:#fff;border-top:5px solid var(--olive)}
+.county-card h3{font-size:28px}
+.county-card p,.area-card p{color:var(--muted);font-size:17px}
+.county-button{margin-top:8px}
+.location-list{columns:2;column-gap:36px;padding-left:22px}
+.location-list li{margin-bottom:8px}
+.action-band{background:var(--navy);color:white;padding:52px 5vw;margin:0}
+.action-band-inner{max-width:1280px;margin:auto;display:flex;justify-content:center;align-items:center}
+.action-band h2{font-size:clamp(28px,2.4vw,36px);color:white;margin-bottom:12px}
+.action-band p{font-size:18px;line-height:1.6;color:#dae3e9;margin:0}
+.action-band-actions{max-width:340px;width:100%;text-align:center}
+.article{max-width:1060px;margin:auto;padding:60px 5vw 0}
+.article-title{font-size:clamp(30px,2.7vw,40px);line-height:1.15;letter-spacing:-.02em;margin-bottom:26px}
+.article .answer-box{font-size:20px;line-height:1.65;background:var(--section-alt);border-left:5px solid var(--olive);padding:24px 28px;margin:28px 0}
+.article h2{font-size:30px;margin-top:38px}
+.article h3{font-size:24px;margin-top:28px}
+.article p,.article li{font-size:18px;color:#414b54}
+.article figure{margin:30px 0}
+.article figure img{width:100%;height:auto}
+.article figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.article a:not(.button){color:var(--navy);text-decoration:underline;text-underline-offset:4px}
+.article-related{margin:28px 0}
+.article-action-band{margin:40px calc(-1 * max(5vw, (100vw - 1060px) / 2 + 5vw)) 0;padding:48px 5vw}
+.article-action-band .action-band-inner{max-width:960px}
+.article-action-band h2{margin-top:0;font-size:30px}
+.article-action-band p{color:#dae3e9}
+.faq-list{max-width:980px;margin:auto}
+.faq-item{border-bottom:1px solid var(--line);padding:24px 0}
+.faq-item h3{font-size:24px}
+.form-wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:28px;align-items:start}
+.contact-card{background:var(--navy);color:#fff;padding:34px}
+.contact-card h2{color:#fff}
+.contact-card .eyebrow{color:#d6dfba}
+.contact-card a{display:block;font-size:clamp(16px,1.8vw,24px);font-weight:800;margin:12px 0;overflow-wrap:anywhere}
+.contact-card p{color:#fff}
+.quote-form{padding:28px;background:#fff;box-shadow:var(--shadow);min-width:0}
+.hs-form-frame{width:100%;min-width:0}
+.hs-form-frame iframe{width:100%;border:0}
+.form-status{color:var(--muted);font-size:16px}
+.form-fallback{font-size:15px;color:var(--muted);margin-top:18px}
+.form-fallback a{text-decoration:underline;font-weight:bold;color:var(--navy)}
+.footer{background:#0c1721;color:#e9eef2;padding:54px 5vw 20px}
+.footer-grid{display:grid;grid-template-columns:1.2fr .9fr .9fr 1fr;gap:30px}
+.footer-grid>div{min-width:0}
+.footer h3{font-size:16px;text-transform:uppercase;letter-spacing:.12em;color:#d6dfba}
+.footer a{display:block;margin:8px 0;overflow-wrap:anywhere}
+.footer p{color:#bac6ce}
+.footer-logo{width:340px;max-width:100%;height:auto;background:transparent;margin-bottom:16px}
+.footer-bottom{border-top:1px solid #ffffff29;margin-top:36px;padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;font-size:13px}
+.footer-bottom a{display:inline;color:#fff;text-decoration:underline}
+/* Centered dialog, with readable prompts and a contained scroll area. */
+.chat-overlay{position:fixed;inset:0;background:rgba(3,20,34,.68);display:none;align-items:center;justify-content:center;z-index:10000;padding:24px}
+.chat-overlay.open{display:flex}
+.chat-panel{width:min(700px,100%);max-height:calc(100dvh - 48px);overflow:auto;background:#fff;border-top:6px solid var(--olive);padding:32px;box-shadow:0 24px 80px #0005;overscroll-behavior:contain}
+.chat-top{display:flex;justify-content:space-between;gap:24px;align-items:flex-start;margin-bottom:22px}
+.chat-kicker{font-size:13px;letter-spacing:.08em;font-weight:800;text-transform:uppercase;color:var(--olive);margin:0}
+.chat-close{background:none;border:0;color:var(--navy);min-width:40px;min-height:40px;font-size:32px;line-height:1;margin:-10px -10px 0 0}
+.chat-question{display:block;font-size:clamp(21px,2vw,26px);line-height:1.35;font-weight:700;color:var(--navy);margin:0 0 20px}
+.chat-input{width:100%;border:1px solid #aebcc6;padding:15px;font-size:17px;line-height:1.55;min-height:138px;resize:vertical;background:#fff}
+.chat-input:focus{outline:2px solid var(--olive);outline-offset:2px}
+.chat-controls{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-top:18px}
+.chat-controls .chat-next{margin-left:auto}
+.chat-back{border:0;background:none;color:var(--navy);font-weight:800;padding:10px 0;text-decoration:underline}
+.chat-progress{color:var(--muted);font-size:13px;margin:0 0 10px}
+.chat-summary{margin:0 0 20px;border-bottom:1px solid var(--line);padding-bottom:15px}
+.chat-summary summary{cursor:pointer;font-weight:700;color:var(--navy)}
+.chat-summary pre{font-family:inherit;white-space:pre-wrap;font-size:14px;line-height:1.6;max-height:180px;overflow:auto}
+.chat-form-title{font-size:26px;margin-bottom:18px}
+.chat-form-error{color:#963b2a;font-size:15px;margin:12px 0}
+@media(max-width:1280px){
+ :root{--header-height:86px}
+ .site-header{padding:8px 24px;gap:20px}
+ .brand{width:270px;min-width:0;max-width:65vw;flex:0 1 270px}
+ .brand img{height:66px}
+ .menu-button{display:block;margin-left:auto}
+ .main-nav{display:none;position:absolute;top:100%;left:0;right:0;height:auto;max-height:calc(100dvh - var(--header-height));overflow:auto;background:#fff;padding:12px 24px 24px;flex-direction:column;gap:0;margin:0;border-bottom:1px solid var(--line)}
+ .main-nav.open{display:flex}
+ .main-nav>a,.nav-group>a{padding:13px 0;font-size:19px;line-height:1.3;white-space:normal}
+ .nav-group{display:grid;grid-template-columns:minmax(0,1fr);align-items:center}
+ .main-nav>a:after,.nav-group>a:after{display:none}
+ .nav-panel,.main-nav>.nav-group:last-child>.nav-panel{position:static;grid-column:1/-1;width:100%;max-height:none;box-shadow:none;border:0;padding:6px 0 16px;display:none;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+ .nav-group:hover>.nav-panel,.nav-group:focus-within>.nav-panel{display:none}
+ .main-nav>.nav-group.expanded>.nav-panel{display:grid}
+ .nav-photo{margin:0;align-self:start}
+ .values-grid{grid-template-columns:1fr 1fr}
+ .clean-question-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .service-static-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+ .hero-overlay{padding:28px 4vw;gap:16px}
+ .hero-copy h1{font-size:clamp(24px,4.6cqw,46px)}
+ .hero-actions{margin-top:16px}
+ .home-service-ribbon{flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;padding:0 0 5px;scrollbar-width:thin;scrollbar-color:#dae3e9 transparent}
+ .home-service-ribbon a{white-space:nowrap;flex:none;font-size:13px;min-height:40px;padding:8px 12px}
+ .section,.section.compact{padding:40px 4vw}
+ .split-media,.home-about-layout,.form-wrap{grid-template-columns:1fr;gap:24px}
+ .about-wide-media{max-width:720px}
+ .hub-card:nth-child(n){grid-column:span 6}
+ .commercial-property-grid .hub-card:nth-child(n){grid-column:span 6}
+ .simple-service-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .clean-question-grid,.home-clean-spaces-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .action-band-inner{display:flex;justify-content:center}
+ .action-band-actions{max-width:none;width:100%;text-align:center}
+ .article{padding-top:44px}
+}
+@media(max-width:600px){
+ :root{--header-height:76px}
+ .site-header{padding:6px 18px}
+ .brand{flex-basis:240px}.brand img{height:62px}
+ .main-nav{padding:10px 18px 20px}
+ .nav-panel{grid-template-columns:1fr 1fr}
+ .nav-photo span{font-size:13px;left:8px;right:8px;bottom:8px}
+ .hero-overlay{padding:16px 18px;gap:12px}
+ .hero-copy h1{font-size:clamp(24px,6.5cqw,37px);line-height:1.05;max-width:95%}
+ .hero-actions{margin-top:12px}
+ .hero-actions .button{font-size:13px;min-height:42px;padding:9px 14px}
+ .home-page-hero .hero-overlay{padding:14px 18px 8px;gap:10px}
+ .home-page-title{font-size:clamp(24px,6.3vw,36px)!important;max-width:85%!important}
+ .home-service-ribbon a{font-size:11px;min-height:36px;padding:7px 10px}
+ .video-toggle{font-size:10px;top:8px;right:10px;padding:4px 7px}
+ .section,.section.compact{padding:36px 20px}
+ .section-heading h2{font-size:30px}
+ .section-heading p{font-size:17px}
+ .media-band,.county-cards,.area-grid,.callout-list{grid-template-columns:1fr}
+ .service-static-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+ .service-tile h3{font-size:18px;line-height:1.2}
+ .service-tile .card-body{padding:14px}
+ .hub-grid{display:grid;grid-template-columns:1fr}
+ .hub-card:nth-child(n){grid-column:auto}
+ .commercial-property-grid .hub-card:nth-child(n){grid-column:auto}
+ .clean-question-grid,.home-clean-spaces-grid,.values-grid,.simple-service-list{grid-template-columns:1fr}
+ .panel-grid{grid-template-columns:1fr}
+ .service-card{width:84vw;max-width:84vw}
+ .service-card .card-body{padding:20px}
+ .service-card h3{font-size:24px}
+ .slide-collage.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .county-card,.area-card{padding:24px}
+ .county-card h3{font-size:26px}
+ .county-button{width:100%}
+ .location-list{columns:1}
+ .action-band{padding:38px 20px}
+ .action-band .button{width:100%}
+ .article{padding:36px 20px 0}
+ .article-title{font-size:28px;line-height:1.18}
+ .article .answer-box{padding:20px;font-size:18px}
+ .article h2{font-size:27px}
+ .article-action-band{margin:36px -20px 0;padding:36px 20px}
+ .contact-card,.quote-form{padding:24px}
+ .contact-card a{font-size:17px}
+ .footer{padding:40px 20px 20px}
+ .footer-grid{grid-template-columns:1fr;gap:28px}
+ .footer-logo{width:280px}
+ .chat-overlay{padding:12px}
+ .chat-panel{padding:24px 20px;width:100%;max-height:calc(100dvh - 24px)}
+ .chat-top{margin-bottom:18px}
+ .chat-question{font-size:22px}
+}
+@media(max-width:360px){
+ .home-page-hero .hero-overlay{padding:8px 14px 6px;gap:6px}
+ .home-page-title{font-size:23px!important}
+ .home-page-hero .hero-actions{margin-top:8px}
+ .home-page-hero .hero-actions .button{min-height:38px;padding:7px 10px;font-size:12px}
+ .hero-copy h1{font-size:24px}
+ .hero-overlay{padding:12px 14px}
+ .service-static-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* The same four visitor fields are used for quote and chat requests. */
+.cleaning-quote-form{display:grid;gap:18px}
+.quote-field label{display:block;color:var(--navy);font-weight:700;margin-bottom:6px}
+.quote-field input,.quote-field textarea{display:block;width:100%;padding:12px 14px;border:1px solid #aebcc6;border-radius:0;background:#fff;color:var(--ink);font-size:17px;line-height:1.5}
+.quote-field textarea{resize:vertical;min-height:150px}
+.quote-field input:focus,.quote-field textarea:focus{outline:2px solid var(--olive);outline-offset:2px}
+.quote-submit{justify-self:start}
+.quote-error{color:#963b2a;font-size:15px}
+.quote-confirmation{font-size:20px;color:var(--navy);padding:18px 0}
+
+/* A single 4:3 photo area aligns image bottoms across every card group. */
+.nav-photo img,.hub-card img,.service-tile img,.panel-card img,.service-card>img,
+.slide-collage img,.clean-question-card img,.story-card img{aspect-ratio:4/3;width:100%;height:auto;object-fit:cover;flex:none}
+.hub-copy,.panel-label,.service-card .card-body,.clean-question-card>div,.story-copy{display:flex;flex-direction:column;flex:1}
+.hub-copy .card-cta,.service-card .text-link,.clean-question-card .card-cta,.story-copy .card-cta{margin-top:auto;align-self:flex-start}
+.clean-question-grid,.story-grid{grid-auto-rows:1fr}
+.media-band{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+.media-band img,.media-band video{aspect-ratio:4/3;object-fit:cover;height:auto}
+img[src$="power-driveways.webp"]{object-position:left center}
+@media(max-width:600px){.media-band{grid-template-columns:1fr}.power-page-hero .hero-copy{max-width:65%}}
+@media(max-height:480px) and (min-width:601px){
+ .hero-overlay{padding:18px 5cqw;gap:12px}
+ .hero-copy h1{font-size:clamp(22px,4.8cqw,38px)}
+ .hero-actions{margin-top:12px}
+ .hero-actions .button{min-height:40px;font-size:13px;padding:9px 14px}
+}
+
+/* Crawlable page hierarchy, placed below the hero so it does not reduce media space. */
+.breadcrumbs{margin:0 0 24px;color:var(--muted);font-size:14px;line-height:1.5}
+.breadcrumbs ol{display:flex;flex-wrap:wrap;gap:6px 10px;list-style:none;padding:0;margin:0}
+.breadcrumbs li{display:inline;font-size:inherit;color:inherit}
+.breadcrumbs li+li:before{content:"/";padding-right:10px;color:#87939b}
+.breadcrumbs a{color:var(--navy);text-decoration:underline;text-underline-offset:3px}
+.breadcrumbs [aria-current=page]{overflow-wrap:anywhere}
+
+/* Keep people and equipment in view when wide photos share a 4:3 card row. */
+img[src$="about-hero-wide.webp"],img[src$="about-hero-wide.webp"],img[src$="floor-tile-clean.webp"],img[src$="jan-dusting-clean.webp"],img[src$="slider-power-1.webp"],img[src$="slider-window-1.webp"],img[src$="slider-window-2.webp"],img[src$="win-int-ext.webp"],img[src$="win-multi.webp"],img[src$="win-screen-clean.webp"]{object-position:left center}
+
+
+/* v25 requested corrections: exact dropdown anchoring + complete dropdown imagery */
+@media (min-width:1281px){
+  .nav-group{position:relative!important;display:flex!important;align-items:stretch!important}
+  .nav-group>a{height:100%!important;display:flex!important;align-items:center!important}
+  .nav-panel{
+    top:100%!important;
+    left:50%!important;
+    right:auto!important;
+    transform:translateX(-50%)!important;
+    margin-top:0!important;
+    width:300px!important;
+    max-width:300px!important;
+    padding:10px!important;
+  }
+  .nav-group.expanded>.nav-panel{display:block!important}
+  .main-nav>.nav-group:last-child>.nav-panel{
+    left:auto!important;
+    right:0!important;
+    transform:none!important;
+  }
+  .nav-photo{height:auto!important;background:#fff!important}
+  .nav-photo img{
+    width:100%!important;
+    height:auto!important;
+    object-fit:contain!important;
+    object-position:center center!important;
+    background:#fff!important;
+  }
+}
+
+/* v26: user requested no carousel playback/navigation control bar */
+.carousel-controls{display:none!important}
+
+
+/* v27 conversational AI-style request chat */
+.ai-chat-panel{width:min(720px,calc(100vw - 36px));padding:0;overflow:hidden;display:grid;grid-template-rows:auto minmax(260px,1fr) auto;max-height:86vh;background:#fff;border-top:5px solid var(--olive)}
+.ai-chat-panel .chat-top{padding:22px 24px 16px;border-bottom:1px solid var(--line);background:#fff;align-items:flex-start}
+.ai-chat-panel .chat-kicker{margin:0;color:var(--olive);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:900}
+.ai-chat-panel .chat-subtitle{margin:5px 0 0;color:#566069;font-size:15px}
+.ai-chat-log{padding:24px;overflow:auto;background:#f5f8fb;display:flex;flex-direction:column;gap:14px;min-height:300px}
+.ai-bubble{max-width:82%;display:flex;flex-direction:column;gap:4px}
+.ai-bubble.assistant{align-self:flex-start}
+.ai-bubble.user{align-self:flex-end}
+.ai-bubble-label{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#6b7680;padding:0 4px}
+.ai-bubble.user .ai-bubble-label{text-align:right}
+.ai-bubble-text{padding:13px 16px;border-radius:16px;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}
+.ai-bubble.assistant .ai-bubble-text{background:#fff;color:var(--navy);border:1px solid #dfe6eb;border-top-left-radius:4px}
+.ai-bubble.user .ai-bubble-text{background:var(--navy);color:#fff;border-top-right-radius:4px}
+.ai-chat-composer{padding:16px 18px 18px;background:#fff;border-top:1px solid var(--line)}
+.ai-composer-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:end}
+.ai-chat-input,.ai-contact-input{width:100%;border:1px solid #b9c6d0;border-radius:12px;padding:13px 14px;font:inherit;color:#17212b;background:#fff;outline:none}
+.ai-chat-input{resize:none;min-height:52px;max-height:140px}
+.ai-chat-input:focus,.ai-contact-input:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(4,50,91,.08)}
+.ai-chat-composer .button{border-radius:12px;min-height:50px;padding:11px 18px;white-space:nowrap}
+.ai-chat-composer .chat-back{display:inline-block;margin-top:10px}
+.ai-chat-finished{display:flex;gap:12px;align-items:center;justify-content:flex-start;flex-wrap:wrap}
+.ai-close-finished{margin-top:0!important}
+.ai-chat-panel .chat-form-error{margin:8px 0 0;color:#9b1c1c;font-weight:700;font-size:14px}
+@media(max-width:600px){
+ .ai-chat-panel{width:calc(100vw - 20px);max-height:90vh}
+ .ai-chat-panel .chat-top{padding:18px 18px 14px}
+ .ai-chat-log{padding:18px;min-height:260px}
+ .ai-bubble{max-width:92%}
+ .ai-composer-row{grid-template-columns:1fr}
+ .ai-chat-composer .button{width:100%}
+}
+
+
+/* v28 chat brand header */
+.ai-chat-panel .chat-top{display:flex!important;align-items:center!important;justify-content:space-between!important;padding:16px 20px!important;margin:0!important}
+.chat-brand-lockup{display:flex;align-items:center;gap:12px;min-width:0}
+.chat-brand-logo{width:54px;height:42px;object-fit:contain;object-position:left center;flex:0 0 auto}
+.chat-brand-name{margin:0;color:var(--navy);font-size:18px;font-weight:800;line-height:1.2;letter-spacing:0;text-transform:none}
+.ai-chat-panel .chat-kicker,.ai-chat-panel .chat-subtitle{display:none!important}
+@media(max-width:600px){.chat-brand-logo{width:46px;height:36px}.chat-brand-name{font-size:16px}}
+
+
+/* v29: eliminate first-hover dropdown flash and normalize hero CTA placement */
+@media (min-width:1281px){
+  .nav-photo{height:138px;display:block;overflow:hidden;background:#fff}
+  .nav-photo img{width:100%;height:100%;object-fit:contain;object-position:center center;background:#fff}
+  .nav-photo span{font-family:Arial,Helvetica,sans-serif;font-weight:800}
+  .nav-panel{top:100%;margin-top:0}
+}
+
+/* Do not pin service hero copy to the top. Keep title + CTA in a consistent lower position. */
+.power-page-hero .hero-overlay,
+.faq-page-hero .hero-overlay{
+  top:auto!important;
+  bottom:0!important;
+  align-items:flex-start!important;
+  transform:none!important;
+}
+.power-page-hero .hero-copy,
+.faq-page-hero .hero-copy{
+  max-width:920px!important;
+  text-align:left!important;
+}
+.power-page-hero .hero-actions,
+.faq-page-hero .hero-actions{
+  justify-content:flex-start!important;
+}
+
+/* Keep hero buttons comfortably below the page title on every service page. */
+.page-hero:not(.home-page-hero) .hero-overlay{padding-bottom:clamp(28px,5cqw,72px)}
+.page-hero:not(.home-page-hero) .hero-actions{margin-top:18px}
+
+@media (max-width:1280px){
+  .power-page-hero .hero-overlay,
+  .faq-page-hero .hero-overlay{top:auto!important;bottom:0!important;align-items:flex-start!important}
+  .power-page-hero .hero-copy,
+  .faq-page-hero .hero-copy{max-width:92%!important;text-align:left!important}
+  .power-page-hero .hero-actions,
+  .faq-page-hero .hero-actions{justify-content:flex-start!important}
+}
+
+
+/* v30 MOBILE-ONLY card and hero service navigation fixes */
+@media(max-width:600px){
+  /* Show every home service without horizontal scrolling. */
+  .home-service-ribbon{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:8px!important;
+    width:100%!important;
+    overflow:visible!important;
+    padding:0!important;
+    scrollbar-width:none!important;
+  }
+  .home-service-ribbon::-webkit-scrollbar{display:none!important}
+  .home-service-ribbon a{
+    width:100%!important;
+    white-space:normal!important;
+    min-height:42px!important;
+    padding:8px 7px!important;
+    font-size:11px!important;
+    line-height:1.15!important;
+  }
+  .home-service-ribbon a:last-child:nth-child(odd){grid-column:1/-1!important}
+  .home-page-hero .hero-overlay{padding-bottom:12px!important}
+
+  /* No video pause button on mobile. */
+  .video-toggle{display:none!important}
+
+  /* One-card-at-a-time mobile carousels. Desktop remains untouched. */
+  .service-carousel,
+  .mobile-card-carousel{
+    width:100%!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    scroll-snap-type:x mandatory!important;
+    overscroll-behavior-x:contain!important;
+    scroll-behavior:smooth!important;
+    scrollbar-width:none!important;
+    -ms-overflow-style:none!important;
+    padding:0!important;
+  }
+  .service-carousel::-webkit-scrollbar,
+  .mobile-card-carousel::-webkit-scrollbar{display:none!important}
+  .service-carousel .carousel-track{
+    width:100%!important;
+    display:flex!important;
+    gap:0!important;
+  }
+  .service-carousel .service-card,
+  .mobile-card-carousel > *{
+    flex:0 0 100%!important;
+    width:100%!important;
+    max-width:100%!important;
+    scroll-snap-align:start!important;
+    scroll-snap-stop:always!important;
+    margin:0!important;
+  }
+  .service-carousel .service-card{box-shadow:none!important;border:1px solid var(--line)!important}
+
+  /* Convert visual card grids to mobile carousels instead of stacking long rows. */
+  .hub-grid.mobile-card-carousel,
+  .panel-grid.mobile-card-carousel,
+  .clean-question-grid.mobile-card-carousel,
+  .story-grid.mobile-card-carousel,
+  .service-static-grid.mobile-card-carousel,
+  .county-cards.mobile-card-carousel{
+    display:flex!important;
+    gap:0!important;
+    grid-template-columns:none!important;
+    grid-auto-rows:auto!important;
+  }
+  .mobile-card-carousel .hub-card,
+  .mobile-card-carousel .panel-card,
+  .mobile-card-carousel .clean-question-card,
+  .mobile-card-carousel .story-card,
+  .mobile-card-carousel .service-tile,
+  .mobile-card-carousel .county-card{
+    min-width:100%!important;
+    min-height:0!important;
+  }
+
+  /* Simple arrow controls only; no play/pause. */
+  .mobile-card-nav{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:12px!important;
+    margin:14px 0 0!important;
+  }
+  .mobile-card-nav button{
+    width:48px!important;
+    height:44px!important;
+    border:1px solid var(--line)!important;
+    background:#fff!important;
+    color:var(--navy)!important;
+    font-size:24px!important;
+    line-height:1!important;
+    font-weight:800!important;
+    cursor:pointer!important;
+  }
+  .mobile-card-nav .mobile-card-count{
+    flex:1!important;
+    text-align:center!important;
+    color:var(--muted)!important;
+    font-size:14px!important;
+    font-weight:700!important;
+  }
+}
+
+
+/* v31 MOBILE ONLY: keep home video visible, move service links below video, and show obvious carousel arrows */
+@media(max-width:600px){
+  /* Keep the home video and title visible; move the service links and CTA below it. */
+  .home-page-hero{
+    overflow:hidden!important;
+  }
+  .home-page-hero .hero-overlay{
+    padding:14px 18px 18px!important;
+  }
+  .home-page-hero .home-service-ribbon{
+    display:none!important;
+  }
+
+  /* Mobile service boxes placed immediately below the home video. */
+  .mobile-home-services{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:8px!important;
+    padding:12px 16px 16px!important;
+    background:#fff!important;
+  }
+  .mobile-home-services a{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    min-height:48px!important;
+    padding:10px 8px!important;
+    background:var(--navy)!important;
+    color:#fff!important;
+    border:0!important;
+    text-align:center!important;
+    font-size:12px!important;
+    line-height:1.15!important;
+    font-weight:800!important;
+    text-decoration:none!important;
+  }
+  .mobile-home-services a:last-child:nth-child(odd){grid-column:1/-1!important}
+  .mobile-home-cta{
+    display:flex;
+    justify-content:center;
+    padding:0 16px 22px;
+    background:#fff;
+  }
+  .mobile-home-cta .hero-actions{
+    display:flex;
+    justify-content:center;
+    width:100%;
+    margin:0;
+  }
+
+  /* One visible card at a time. */
+  .service-carousel,
+  .mobile-card-carousel{
+    position:relative!important;
+    width:100%!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    scroll-snap-type:x mandatory!important;
+    scrollbar-width:none!important;
+    -ms-overflow-style:none!important;
+  }
+  .service-carousel::-webkit-scrollbar,
+  .mobile-card-carousel::-webkit-scrollbar{display:none!important}
+  .service-carousel .carousel-track{width:100%!important;gap:0!important}
+  .service-carousel .service-card,
+  .mobile-card-carousel > :not(.mobile-card-nav){
+    flex:0 0 100%!important;
+    min-width:100%!important;
+    max-width:100%!important;
+    scroll-snap-align:start!important;
+  }
+
+  /* Highly visible left/right controls below every mobile carousel. */
+  .mobile-card-nav{
+    position:relative!important;
+    z-index:20!important;
+    display:grid!important;
+    grid-template-columns:54px 1fr 54px!important;
+    align-items:center!important;
+    gap:12px!important;
+    width:100%!important;
+    margin:14px 0 6px!important;
+    padding:0 2px!important;
+    visibility:visible!important;
+    opacity:1!important;
+  }
+  .mobile-card-nav button{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    width:54px!important;
+    height:48px!important;
+    padding:0!important;
+    border:0!important;
+    background:var(--navy)!important;
+    color:#fff!important;
+    font-size:30px!important;
+    line-height:1!important;
+    font-weight:900!important;
+    cursor:pointer!important;
+    visibility:visible!important;
+    opacity:1!important;
+  }
+  .mobile-card-nav .mobile-card-count{
+    display:block!important;
+    text-align:center!important;
+    color:var(--navy)!important;
+    font-size:14px!important;
+    font-weight:800!important;
+  }
+
+  /* User does not want video controls on mobile. */
+  .video-toggle{display:none!important}
+}
+
+/* v32: show the approved apartment image complete, with equal article photo frames. */
+.apartment-gallery{display:block!important;}
+.apartment-gallery>img{display:block;width:100%!important;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;}
+
+/* Mobile only: prevent scroll anchoring from pushing an opened nav label out of view. */
+@media(max-width:600px){.main-nav{overflow-anchor:none!important}.nav-group,.nav-panel{overflow-anchor:none!important}}
+
+/* Mobile CTA buttons: keep the button itself centered. Desktop unchanged. */
+@media(max-width:600px){
+  .action-band-actions{display:flex;justify-content:center;align-items:center;width:100%;}
+  .action-band .button{width:auto;max-width:100%;margin-left:auto;margin-right:auto;}
+}
+
+/* Chat quick-choice buttons */
+.ai-choice-grid{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.ai-choice-grid .ai-choice{width:auto;max-width:100%;text-align:center}
+@media (max-width:760px){
+  .ai-choice-grid{justify-content:center}
+  .ai-choice-grid .ai-choice{flex:0 0 auto;margin:0 auto}
+}
+
+/* v33: mobile Contact submenu cards match other two-column nav cards */
+@media (max-width:600px){
+  .main-nav > .nav-group:last-child > .nav-panel{
+    position:static!important;
+    left:auto!important;
+    right:auto!important;
+    transform:none!important;
+    width:100%!important;
+    max-width:none!important;
+    padding:6px 0 16px!important;
+    margin:0!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:12px!important;
+  }
+  .main-nav > .nav-group:last-child.expanded > .nav-panel{
+    display:grid!important;
+  }
+  .main-nav > .nav-group:last-child > .nav-panel .nav-photo{
+    width:100%!important;
+    height:110px!important;
+    margin:0!important;
+    overflow:hidden!important;
+  }
+  .main-nav > .nav-group:last-child > .nav-panel .nav-photo img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+  }
+  .main-nav > .nav-group:last-child > .nav-panel .nav-photo span{
+    font-size:13px!important;
+    left:8px!important;
+    right:8px!important;
+    bottom:8px!important;
+  }
+}
+
+/* VERIFIED MOBILE NAV FIX: desktop uses justify-content:flex-end. When the mobile
+   nav switches to a column and Commercial expands taller than the viewport,
+   flex-end pushes the beginning of the menu above the visible area. Always
+   anchor mobile/tablet navigation content at the top instead. */
+@media (max-width:1280px){
+  .main-nav{
+    justify-content:flex-start!important;
+    align-items:stretch!important;
+  }
+}
+
+/* Desktop audit: mobile carousel position controls must never appear above 600px. */
+@media (min-width: 601px){
+  .mobile-card-nav{
+    display:none!important;
+  }
+}
+
+/* v33 approved quote flow + embedded contact-page chat */
+.ai-choice.selected{outline:3px solid var(--olive);outline-offset:2px}
+.ai-choice-continue{margin-top:14px}
+.ai-other-wrap{margin-top:12px;display:flex;gap:10px;align-items:center}
+.ai-other-wrap[hidden]{display:none!important}
+.page-contact .chat-overlay.chat-embedded{position:static;inset:auto;display:block;background:transparent;padding:0;width:100%;z-index:auto}
+.page-contact .chat-overlay.chat-embedded .chat-panel{width:min(760px,100%);max-height:none;margin:0 auto;box-shadow:var(--shadow);border:1px solid var(--line);border-top:5px solid var(--olive)}
+.page-contact .chat-overlay.chat-embedded .ai-chat-log{min-height:240px;max-height:420px}
+.page-contact #quote-form .form-wrap{display:block}
+
+/* v40: mobile embedded quote chat breathing room */
+@media (max-width:600px){
+  .page-contact #quote-form{padding-left:12px!important;padding-right:12px!important;}
+  .page-contact .chat-overlay.chat-embedded{padding:0 4px 24px!important;}
+  .page-contact .chat-overlay.chat-embedded .chat-panel{
+    width:calc(100% - 8px)!important;
+    margin:12px auto 0!important;
+    grid-template-rows:auto minmax(120px,170px) auto;
+  }
+  .page-contact .chat-overlay.chat-embedded .ai-chat-panel .chat-top{
+    padding:18px 18px 16px!important;
+  }
+  .page-contact .chat-overlay.chat-embedded .ai-chat-log{
+    padding:14px 18px!important;
+    min-height:120px!important;
+    max-height:170px!important;
+    overflow-y:auto;
+  }
+  .page-contact .chat-overlay.chat-embedded .ai-chat-composer{
+    padding:12px 18px 18px!important;
+  }
+  .page-contact .chat-overlay.chat-embedded .ai-choice-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px!important;
+    padding:2px 0!important;
+  }
+  .page-contact .chat-overlay.chat-embedded .ai-choice{
+    width:100%;
+    min-width:0;
+    margin:0;
+    white-space:normal;
+    padding:8px!important;
+    line-height:1.25!important;
+  }
+}
+
+/* Keep every quick answer reachable inside the phone chat dialog. */
+@media (max-width:600px){
+  .chat-overlay:not(.chat-embedded){padding:8px;}
+  .chat-overlay:not(.chat-embedded) .ai-chat-panel{
+    width:100%;
+    height:auto;
+    max-height:calc(100dvh - 16px);
+    grid-template-rows:auto minmax(120px,28dvh) minmax(0,auto);
+  }
+  .chat-overlay:not(.chat-embedded) .ai-chat-log{
+    min-height:120px;
+    max-height:28dvh;
+    overflow-y:auto;
+  }
+  .chat-overlay:not(.chat-embedded) .ai-chat-composer{
+    min-height:0;
+    max-height:calc(100dvh - 216px);
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    padding:14px 14px calc(14px + env(safe-area-inset-bottom));
+  }
+  .chat-overlay:not(.chat-embedded) .ai-choice-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px;
+    align-items:stretch;
+  }
+  .chat-overlay:not(.chat-embedded) .ai-choice-grid .ai-choice{
+    width:100%;
+    max-width:none;
+    min-height:46px;
+    margin:0;
+    padding:8px;
+    font-size:14px;
+    line-height:1.2;
+    white-space:normal;
+  }
+  .chat-overlay:not(.chat-embedded) .ai-choice-grid .ai-choice:last-child:nth-child(odd){grid-column:1/-1;}
+}
+@media (min-width:601px) and (max-height:600px){
+  .chat-overlay:not(.chat-embedded){padding:6px;}
+  .chat-overlay:not(.chat-embedded) .ai-chat-panel{
+    height:auto;
+    max-height:calc(100dvh - 12px);
+    grid-template-rows:auto minmax(60px,20dvh) minmax(0,auto);
+  }
+  .chat-overlay:not(.chat-embedded) .ai-chat-log{
+    min-height:60px;
+    max-height:20dvh;
+    overflow-y:auto;
+  }
+  .chat-overlay:not(.chat-embedded) .ai-chat-composer{
+    min-height:0;
+    max-height:calc(100dvh - 140px);
+    overflow-y:auto;
+    overscroll-behavior:contain;
+  }
+}
+
+/* Home mobile content exists in HTML on first paint, independent of JavaScript. */
+.mobile-home-services,.mobile-home-cta{display:none}
+@media(max-width:600px){.home-page-hero .hero-actions{display:none!important}.mobile-home-services{display:grid!important}.mobile-home-cta{display:flex!important}}
+
+/* Quote page: photo and conversation share the arrival section. */
+.page-contact .quote-page{padding-top:24px;padding-bottom:40px}
+.page-contact .quote-page .breadcrumbs{margin-bottom:12px}
+.page-contact .quote-page .section-heading{margin-bottom:20px}
+.page-contact .quote-page h1{font-size:clamp(28px,3vw,42px);margin:0;color:var(--navy)}
+.page-contact .quote-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:start}
+.page-contact .quote-picture img{display:block;width:100%;height:auto}
+.page-contact .quote-layout .form-wrap{min-width:0}
+.page-contact .quote-layout .chat-panel{width:100%;margin:0;grid-template-rows:auto auto auto;max-height:none}
+.page-contact .quote-layout .ai-chat-log{min-height:100px;max-height:180px;padding:14px 18px}
+.page-contact .quote-layout .ai-choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.page-contact .quote-layout .ai-choice{width:100%;min-width:0;margin:0;padding:10px 8px;white-space:normal;line-height:1.25;font-size:16px}
+@media(max-width:760px){
+ .page-contact .quote-layout{grid-template-columns:1fr;gap:16px}
+ .page-contact .quote-page{padding-top:12px}
+ .page-contact .quote-page .section-heading{margin-bottom:12px}
+ .page-contact .quote-picture img{max-height:26svh;object-fit:contain}
+ .page-contact .quote-layout .chat-panel{margin:0 auto!important;grid-template-rows:auto auto auto}
+ .page-contact .quote-layout .ai-chat-log{min-height:80px!important;max-height:140px!important}
+}
+.page-contact .quote-layout .chat-overlay.chat-embedded .ai-chat-log{min-height:100px!important;max-height:180px!important}
+@media(max-width:760px){.page-contact .quote-layout .chat-overlay.chat-embedded .ai-chat-log{min-height:80px!important;max-height:140px!important}}
+/* Keep late image loads from shifting a manually positioned photo row. */
+.service-carousel,.service-carousel *{overflow-anchor:none}
+@media(min-width:601px){
+ .service-carousel{scroll-behavior:auto!important;scroll-snap-type:none!important;scrollbar-width:auto;overflow-y:hidden}
+ .service-carousel::-webkit-scrollbar{height:18px}
+ .service-carousel::-webkit-scrollbar-track{background:#e8edf0;border-radius:9px}
+ .service-carousel::-webkit-scrollbar-thumb{background:#8a9da9;border:3px solid #e8edf0;border-radius:9px}
+ .service-carousel .carousel-track{flex-wrap:nowrap}
+ .service-carousel .service-card{flex:0 0 min(560px,82vw)}
+ .service-carousel .slide-collage img{aspect-ratio:4/3;object-fit:contain}
+}
+
+/* Keep the home hero visible while the video buffers or restarts. */
+.home-page-hero{background-image:none;background-position:center;background-repeat:no-repeat;background-size:contain}
+.home-page-hero>video{background:transparent}
+.home-page-hero>video.video-show-poster{opacity:0}
+
+
+/* Industry expansion: AEO article visuals and text-only industry question links. */
+.article-visual{margin:24px 0 32px}
+.article-visual img{display:block;width:100%;height:auto;max-height:560px;object-fit:cover}
+.industry-question-link{display:block;padding:24px;border-top:4px solid var(--green);background:#fff}
+.industry-question-link>div{padding:0}
+.industry-question-link h3{margin-top:0}
+@media(max-width:600px){
+  .article-visual{margin:18px 0 24px}
+  .industry-question-link{padding:18px}
+}
+
+
+/* v41: Commercial desktop mega-menu, approved 4-industry photo layout. */
+@media (min-width:1281px){
+  .nav-panel.commercial-mega{
+    width:min(940px,calc(100vw - 48px))!important;
+    max-width:940px!important;
+    max-height:calc(100dvh - var(--header-height) - 18px)!important;
+    padding:18px!important;
+    display:none!important;
+    grid-template-columns:270px minmax(0,1fr)!important;
+    gap:18px 22px!important;
+    overflow:auto!important;
+    border-radius:10px!important;
+  }
+  .nav-group.expanded>.nav-panel.commercial-mega{display:grid!important}
+  .commercial-mega-links{grid-row:1;grid-column:1;display:flex;flex-direction:column;border-right:1px solid var(--line);padding-right:18px}
+  .commercial-mega-links h3{margin:0 0 8px;color:var(--navy);font-size:20px;line-height:1.2}
+  .commercial-mega-links>a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);color:var(--navy);font-size:14px;font-weight:700;line-height:1.25}
+  .commercial-mega-links>a span{font-size:22px;line-height:1;color:var(--navy)}
+  .commercial-mega-featured{grid-row:1;grid-column:2;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 16px}
+  .commercial-mega-card{display:grid;grid-template-rows:118px auto auto;align-content:start;min-width:0;color:var(--navy)}
+  .commercial-mega-card img{display:block;width:100%;height:118px;object-fit:cover;border-radius:7px;background:#f2f4f5}
+  .commercial-mega-card strong{display:block;margin-top:7px;font-size:15px;line-height:1.2}
+  .commercial-mega-card>span{display:block;margin-top:2px;color:var(--muted);font-size:12px;line-height:1.3}
+  .commercial-mega-all{grid-column:1/-1;display:flex;align-items:center;gap:10px;padding-top:12px;border-top:1px solid var(--line);color:var(--navy);font-size:14px;font-weight:800}
+  .commercial-mega-all span{font-size:20px}
+}
+
+/* Keep the same Commercial content usable in the existing tablet/mobile menu. */
+@media (max-width:1280px){
+  .nav-panel.commercial-mega{display:none!important;grid-template-columns:1fr!important;gap:14px!important;padding:8px 0 18px!important}
+  .main-nav>.nav-group.expanded>.nav-panel.commercial-mega{display:grid!important}
+  .commercial-mega-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 14px}
+  .commercial-mega-links h3{grid-column:1/-1;margin:4px 0 6px;color:var(--navy);font-size:18px}
+  .commercial-mega-links>a{display:flex;justify-content:space-between;gap:8px;padding:9px 0;border-bottom:1px solid var(--line);color:var(--navy);font-size:14px;font-weight:700}
+  .commercial-mega-featured{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .commercial-mega-card{display:block;color:var(--navy);min-width:0}
+  .commercial-mega-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px}
+  .commercial-mega-card strong{display:block;margin-top:6px;font-size:13px;line-height:1.2}
+  .commercial-mega-card>span{display:none}
+  .commercial-mega-all{display:flex;gap:8px;align-items:center;padding-top:10px;border-top:1px solid var(--line);color:var(--navy);font-size:14px;font-weight:800}
+}
+@media (max-width:600px){
+  .commercial-mega-links{grid-template-columns:1fr}
+  .commercial-mega-featured{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+
+/* v42: photo-card-only Residential and Commercial mega menus. No side list or descriptions. */
+@media (min-width:1281px){
+  .nav-panel.commercial-mega{width:min(1120px,calc(100vw - 48px))!important;max-width:1120px!important;grid-template-columns:1fr!important;}
+  .nav-panel.commercial-mega .commercial-mega-featured{grid-column:1/-1!important;grid-row:1!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:14px 16px!important;}
+  .nav-panel.residential-mega{width:min(940px,calc(100vw - 48px))!important;max-width:940px!important;}
+  .nav-panel.residential-mega .commercial-mega-featured{grid-template-columns:repeat(4,minmax(0,1fr))!important;}
+  .nav-panel.commercial-mega .commercial-mega-card{grid-template-rows:112px auto!important;}
+  .nav-panel.commercial-mega .commercial-mega-card img{height:112px!important;}
+}
+@media (max-width:1280px){
+  .nav-panel.commercial-mega .commercial-mega-featured{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+}
+@media (max-width:600px){
+  .nav-panel.commercial-mega .commercial-mega-featured{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+}
+
+
+/* v43: show complete mega-menu photos without cropping. */
+@media (min-width:1281px){
+  .nav-panel.commercial-mega .commercial-mega-card{grid-template-rows:150px auto!important;}
+  .nav-panel.commercial-mega .commercial-mega-card img{width:100%!important;height:150px!important;object-fit:contain!important;object-position:center!important;background:#fff!important;}
+}
+@media (max-width:1280px){
+  .nav-panel.commercial-mega .commercial-mega-card img{width:100%!important;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;background:#fff!important;}
+}
+
+/* v45: highlight Residential and Commercial photo-card menu options on hover/focus. */
+.commercial-mega-card{
+  border-radius:8px;
+  transition:background-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+.commercial-mega-card:hover,
+.commercial-mega-card:focus-visible{
+  background:#f2f6ec;
+  box-shadow:0 0 0 2px var(--olive),0 8px 18px rgba(4,50,91,.12);
+  transform:translateY(-2px);
+}
+.commercial-mega-card:hover strong,
+.commercial-mega-card:focus-visible strong{
+  color:var(--olive);
+}
+
+
+/* v46: Contact dropdown matches the photo-card mega menus and stays inside the viewport. */
+@media (min-width:1281px){
+  .main-nav>.nav-group:last-child>.nav-panel.contact-mega{
+    left:auto!important;
+    right:0!important;
+    transform:none!important;
+    width:min(520px,calc(100vw - 48px))!important;
+    max-width:520px!important;
+    padding:18px!important;
+    overflow:visible!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-featured{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:16px!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card{
+    grid-template-rows:auto auto!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card img{
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:4/3!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    background:transparent!important;
+  }
+}
+@media (max-width:1280px){
+  .nav-panel.contact-mega .commercial-mega-featured{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card img{
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:4/3!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    background:transparent!important;
+  }
+}
+
+
+/* v48: uniform Commercial mega-menu photo sizing */
+@media (min-width:901px){
+  .nav-panel.commercial-mega:not(.residential-mega):not(.contact-mega) .commercial-mega-card{grid-template-rows:112px auto!important;}
+  .nav-panel.commercial-mega:not(.residential-mega):not(.contact-mega) .commercial-mega-card img{width:100%!important;height:112px!important;aspect-ratio:16/9!important;object-fit:cover!important;object-position:center!important;background:transparent!important;}
+}
+
+/* v49: Commercial mega-menu cards keep a true 16:9 box so 16:9 source photos are never vertically cropped. */
+@media (min-width: 821px){
+  .nav-panel.commercial-mega:not(.residential-mega):not(.contact-mega) .commercial-mega-card{
+    grid-template-rows:auto auto!important;
+  }
+  .nav-panel.commercial-mega:not(.residential-mega):not(.contact-mega) .commercial-mega-card img{
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:16/9!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    background:transparent!important;
+  }
+}
+
+
+/* v50: Commercial menu images: never crop people. Equal card image boxes, full source photo visible, no blur/gray fill. */
+@media (min-width:821px){
+  .nav-panel.commercial-mega:not(.residential-mega):not(.contact-mega) .commercial-mega-card{
+    grid-template-rows:112px auto!important;
+  }
+  .nav-panel.commercial-mega:not(.residential-mega):not(.contact-mega) .commercial-mega-card img{
+    display:block!important;
+    width:100%!important;
+    height:112px!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    object-position:center center!important;
+    background:transparent!important;
+  }
+}
+
+/* Blog section, October 2026 */
+.blog-hero{padding:70px 5vw 48px;background:var(--navy-deep);color:#fff}
+.blog-hero-inner{max-width:1180px;margin:0 auto}
+.blog-hero .eyebrow{color:#b8c99a;margin-bottom:10px}
+.blog-hero h1{color:#fff;max-width:900px;margin-bottom:12px}
+.blog-hero p{max-width:760px;color:#e5edf3;font-size:18px}
+.blog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;max-width:1180px}
+.blog-card{display:flex;flex-direction:column;background:#fff;box-shadow:var(--shadow);overflow:hidden}
+.blog-card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.blog-card-copy{padding:24px 26px 28px}
+.blog-date{display:block;margin-bottom:10px;color:var(--olive);font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.05em}
+.blog-card h2{font-size:30px;margin-bottom:12px}
+.blog-card p{color:var(--muted);font-size:16px;line-height:1.65}
+.blog-card .text-link{margin-top:4px}
+.blog-article{max-width:920px;margin:0 auto;padding:58px 5vw 72px}
+.blog-breadcrumb{font-size:14px;color:var(--muted);margin-bottom:24px}
+.blog-breadcrumb a{color:var(--navy);font-weight:700}
+.blog-article-header{margin-bottom:28px}
+.blog-article-header .blog-date{margin-bottom:12px}
+.blog-article-header h1{font-size:clamp(36px,4.3vw,58px);color:var(--navy);max-width:900px}
+.blog-lead{font-size:21px;line-height:1.7;color:var(--muted);max-width:820px}
+.blog-featured-image{width:100%;height:auto;margin:28px 0 36px}
+.blog-body{max-width:820px}
+.blog-body h2{font-size:30px;margin-top:38px;margin-bottom:14px}
+.blog-body p{font-size:18px;line-height:1.78;color:#303840}
+@media(max-width:760px){.blog-hero{padding:48px 20px 36px}.blog-grid{grid-template-columns:1fr}.blog-article{padding:40px 20px 56px}.blog-card h2{font-size:26px}.blog-article-header h1{font-size:36px}.blog-lead,.blog-body p{font-size:17px}}
+
+/* Blog index: title only */
+.page-blog-index .blog-index-heading{padding-top:48px;padding-bottom:12px;background:#fff;color:var(--navy-deep)}
+.page-blog-index .blog-index-heading h1{margin:0;color:var(--navy-deep);text-align:center}
+
+@media(max-width:980px){.blog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.blog-grid{grid-template-columns:1fr}}
+
+/* Blog landing page, three balanced cards */
+.page-blog-index .blog-index-heading{padding:44px 5vw 20px;background:#f4f7fa;color:var(--navy-deep)}
+.page-blog-index .blog-index-heading .section-inner{max-width:1440px;margin:0 auto}
+.page-blog-index .blog-index-heading h1{margin:0;text-align:center;color:var(--navy-deep);font-size:46px;line-height:1.1}
+.page-blog-index .blog-index-heading + .section{padding-top:24px}
+.page-blog-index .blog-grid{width:100%;max-width:1440px;margin:0 auto;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;align-items:stretch}
+.page-blog-index .blog-card{min-width:0;height:100%;border-radius:0}
+.page-blog-index .blog-card>a:first-child{display:block;width:100%;height:250px;overflow:hidden}
+.page-blog-index .blog-card>a:first-child img{display:block;width:100%!important;height:250px!important;max-height:250px!important;aspect-ratio:auto!important;object-fit:cover!important;object-position:center!important}
+.page-blog-index .blog-card-copy{display:flex;flex-direction:column;flex:1;padding:22px 24px 26px}
+.page-blog-index .blog-card h2{font-size:27px;line-height:1.15;margin:0 0 12px}
+.page-blog-index .blog-card p{margin:0 0 18px}
+.page-blog-index .blog-card .text-link{margin-top:auto}
+@media(max-width:980px){.page-blog-index .blog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.page-blog-index .blog-card>a:first-child,.page-blog-index .blog-card>a:first-child img{height:230px!important;max-height:230px!important}}
+@media(max-width:760px){.page-blog-index .blog-grid{grid-template-columns:1fr}.page-blog-index .blog-index-heading h1{font-size:38px}.page-blog-index .blog-card>a:first-child,.page-blog-index .blog-card>a:first-child img{height:220px!important;max-height:220px!important}}
+
+
+/* Blog references */
+.blog-references{margin-top:42px;padding-top:24px;border-top:1px solid #d7dee5}
+.blog-references h2{font-size:1.35rem;margin:0 0 14px;color:#07345c}
+.blog-references ul{margin:0;padding-left:20px}
+.blog-references li{margin:8px 0;line-height:1.5}
+.blog-references a{color:#07345c;text-decoration:underline;text-underline-offset:3px}
+.blog-references a:hover,.blog-references a:focus{color:#58782d}
+
+/* v59: Mobile Contact submenu labels match the primary mobile navigation text size. */
+@media (max-width:600px){
+  .nav-panel.contact-mega .commercial-mega-card strong{
+    font-size:19px!important;
+    line-height:1.3!important;
+    font-weight:800!important;
+    margin-top:8px!important;
+  }
+}
+
+/* v60: Mobile Contact submenu uses full-size navigation rows, matching the primary menu. */
+@media (max-width:600px){
+  .nav-panel.contact-mega{
+    padding:0 0 10px!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-featured{
+    display:block!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card{
+    display:block!important;
+    width:100%!important;
+    padding:13px 0!important;
+    margin:0!important;
+    border-radius:0!important;
+    background:transparent!important;
+    box-shadow:none!important;
+    transform:none!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card img{
+    display:none!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card strong{
+    display:block!important;
+    margin:0!important;
+    font-size:19px!important;
+    line-height:1.3!important;
+    font-weight:700!important;
+    color:var(--navy)!important;
+  }
+}
+
+/* v61: Mobile Contact submenu stays photo-card based. Make the photos full-size like the other mega-menu cards. */
+@media (max-width:600px){
+  .nav-panel.contact-mega{
+    width:100%!important;
+    max-width:none!important;
+    padding:8px 0 18px!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-featured{
+    display:grid!important;
+    width:100%!important;
+    grid-column:1 / -1!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:12px!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card{
+    display:block!important;
+    width:100%!important;
+    min-width:0!important;
+    padding:0!important;
+    margin:0!important;
+    border-radius:8px!important;
+    background:transparent!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:4 / 3!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    border-radius:8px!important;
+    background:transparent!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card strong{
+    display:block!important;
+    margin-top:8px!important;
+    font-size:19px!important;
+    line-height:1.2!important;
+    font-weight:800!important;
+    color:var(--navy)!important;
+  }
+}
+
+/* v62: Mobile Contact photo cards use the exact same sizing rules as the other mobile mega-menu photo cards. */
+@media (max-width:600px){
+  .nav-panel.contact-mega .commercial-mega-featured{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:12px!important;
+    width:100%!important;
+    max-width:none!important;
+    grid-column:1 / -1!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card{
+    display:block!important;
+    width:100%!important;
+    min-width:0!important;
+    padding:0!important;
+    margin:0!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    border-radius:6px!important;
+    background:#fff!important;
+  }
+  .nav-panel.contact-mega .commercial-mega-card strong{
+    display:block!important;
+    margin-top:6px!important;
+    font-size:13px!important;
+    line-height:1.2!important;
+    font-weight:700!important;
+  }
+}
+
+/* v64: Five blog cards, three on the first row and two centered on the second row. */
+@media (min-width:981px){
+  .page-blog-index .blog-grid{
+    display:flex!important;
+    flex-wrap:wrap!important;
+    justify-content:center!important;
+    gap:28px!important;
+  }
+  .page-blog-index .blog-card{
+    flex:0 1 calc((100% - 56px) / 3)!important;
+    max-width:calc((100% - 56px) / 3)!important;
+  }
+}
+
+/* Publish-now home hero autoplay hardening. The poster remains visible until video playback actually starts. */
+.home-page-hero>video.video-show-poster{opacity:0!important;pointer-events:none}
+.home-page-hero>video:not(.video-show-poster){opacity:1}
+
+
+/* October 8: blog grid, image framing, city cards and contractor comparison improvements. */
+.page-blog-index .blog-card>a:first-child { background:#eaf0f4!important; }
+.page-blog-index .blog-card>a:first-child img {object-fit:cover!important;object-position:center 38%!important;}
+.page-blog-index .blog-card h2 {font-size:clamp(21px,1.65vw,26px);line-height:1.22;overflow-wrap:normal;}
+.page-blog-index .blog-card a:focus-visible {outline:3px solid var(--olive);outline-offset:3px;}
+.employment-table-wrap {max-width:100%;overflow-x:auto;margin:22px 0 28px;border:1px solid #dbe2e8;}
+.employment-table {border-collapse:collapse;min-width:610px;width:100%;font-size:16px;line-height:1.55;}
+.employment-table th,.employment-table td {padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid #dfe5eb;}
+.employment-table thead th{background:var(--navy);color:#fff;font-weight:700;}
+.employment-table tbody th{background:#f4f7f9;font-weight:700;color:var(--navy);width:24%;}
+.employment-table tbody tr:nth-child(even) td{background:#f7f9fa;}
+.city-photo-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:19px;}
+.city-photo-link{display:flex;flex-direction:column;min-width:0;background:#fff;color:var(--navy);text-decoration:none;overflow:hidden;border:1px solid #dbe3ea;box-shadow:0 9px 22px rgba(1,25,44,.10);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;}
+.city-photo-link img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;object-position:center;background:transparent;}
+.city-photo-info{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:5px 10px;align-items:center;padding:16px 17px 18px;border-top:none;}
+.city-photo-info strong{display:block;font-size:19px;line-height:1.15;font-weight:750;grid-column:1;}
+.city-photo-action{color:var(--muted);font-size:13px;line-height:1.3;grid-column:1;}
+.city-photo-arrow{grid-column:2;grid-row:1/3;display:grid;place-items:center;width:36px;height:36px;background:var(--navy);color:#fff;font-size:23px;font-weight:700;border-radius:50%;transition:background .2s ease;}
+.city-photo-link:hover,.city-photo-link:focus-visible{transform:translateY(-3px);border-color:var(--olive);box-shadow:0 14px 29px rgba(1,25,44,.17);}
+.city-photo-link:hover .city-photo-arrow,.city-photo-link:focus-visible .city-photo-arrow{background:var(--olive);}
+.city-photo-link:focus-visible{outline:3px solid var(--olive);outline-offset:3px;}
+@media(max-width:1150px){.city-photo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.city-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.city-photo-info{padding:12px}.city-photo-info strong{font-size:16px}.city-photo-action{font-size:12px}.city-photo-arrow{width:30px;height:30px;font-size:18px}.employment-table{min-width:590px}}
+@media(max-width:420px){.city-photo-grid{grid-template-columns:1fr 1fr}.city-photo-info{grid-template-columns:minmax(0,1fr) auto}.city-photo-info strong{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.city-photo-link,.city-photo-arrow{transition:none}.city-photo-link:hover{transform:none}}
+
+/* Keep the image blocks equally sized and full bleed; city cards read as links without arrow icons. */
+.city-photo-info{grid-template-columns:minmax(0,1fr);}
+.city-photo-link:hover .city-photo-action,.city-photo-link:focus-visible .city-photo-action{text-decoration:underline;text-underline-offset:3px;color:var(--navy);}
+
+/* Keep blog cards flush with the light background: remove the side shadow strip. */
+.page-blog-index .blog-card{box-shadow:none;}
+
+/* Topic-specific links back to Paradigm cleaning services, without changing editorial content. */
+.page-blog-article .blog-cleaning-connection{background:#f4f7fa;border:1px solid #e1e7ec;margin:36px 0 30px;padding:22px 26px}
+.page-blog-article .blog-cleaning-connection h2{font-size:clamp(22px,2.2vw,26px);line-height:1.25;margin:0 0 10px;color:var(--navy)}
+.page-blog-article .blog-cleaning-connection p{font-size:16px;line-height:1.68;margin:0 0 14px}
+.page-blog-article .blog-cleaning-connection .blog-cleaning-links{margin:0;font-weight:700;font-size:15px}
+.page-blog-article .blog-cleaning-connection .blog-cleaning-links a{color:var(--navy);text-underline-offset:3px}
+.page-blog-article .blog-cleaning-connection .blog-cleaning-links a:hover{color:var(--olive)}
+.page-blog-article .blog-connection-separator{padding:0 9px;color:#4d5d68}
+.page-blog-index .blog-index-intro{max-width:850px;margin:18px auto 0;line-height:1.6;text-align:center;color:#344859;font-size:16px}
+.page-blog-index .blog-index-intro a{color:var(--navy);font-weight:650;text-underline-offset:3px}
+@media(max-width:570px){.page-blog-article .blog-cleaning-connection{padding:18px}.page-blog-article .blog-connection-separator{padding:0 5px}}
+
+/* Static service-area photo cards on county pages: no city-page links or hover controls. */
+.city-photo-card{display:flex;flex-direction:column;min-width:0;background:#fff;color:var(--navy);overflow:hidden;border:1px solid #dbe3ea;box-shadow:0 9px 22px rgba(1,25,44,.10)}
+.city-photo-card img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;object-position:center;background:transparent}
+
+/* Minimized-window Commercial dropdown: use the same full-width,
+   two-column photo cards as the approved Residential dropdown. */
+@media (max-width:1280px){
+  .main-nav .nav-panel.commercial-mega:not(.residential-mega):not(.contact-mega) .commercial-mega-featured{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:12px!important;
+    width:100%!important;
+  }
+  .main-nav .nav-panel.commercial-mega:not(.residential-mega):not(.contact-mega) .commercial-mega-card{
+    display:block!important;
+    width:100%!important;
+    min-width:0!important;
+    text-align:left!important;
+  }
+  .main-nav .nav-panel.commercial-mega:not(.residential-mega):not(.contact-mega) .commercial-mega-card img{
+    display:block!important;
+    width:100%!important;
+    max-width:none!important;
+    height:auto!important;
+    aspect-ratio:4/3!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    background:transparent!important;
+    border-radius:6px!important;
+  }
+  .main-nav .nav-panel.commercial-mega:not(.residential-mega):not(.contact-mega) .commercial-mega-card strong{
+    display:block!important;
+    margin-top:6px!important;
+    font-size:13px!important;
+    line-height:1.2!important;
+  }
+}
+
+
+/* Blog photos: show the complete original photo within larger, uniform cards. */
+.page-blog-index .blog-card > a:first-child {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 6 / 5 !important;
+  overflow: hidden !important;
+  background: #fff !important;
+}
+.page-blog-index .blog-card > a:first-child img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+
+/* Blog card fix: equal-size cards and larger equal-size image boxes with full photos visible */
+.page-blog-index .blog-grid{
+  align-items:stretch;
+}
+.page-blog-index .blog-card{
+  display:flex !important;
+  flex-direction:column !important;
+  height:100% !important;
+}
+.page-blog-index .blog-card > a:first-child{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:100% !important;
+  aspect-ratio: 4 / 3 !important;
+  overflow:hidden !important;
+  background:#fff !important;
+  flex:0 0 auto !important;
+}
+.page-blog-index .blog-card > a:first-child img{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:#fff !important;
+}
+.page-blog-index .blog-card-copy{
+  display:flex !important;
+  flex-direction:column !important;
+  flex:1 1 auto !important;
+}
+.page-blog-index .blog-card-copy .text-link{
+  margin-top:auto !important;
+}
+@media (max-width: 900px){
+  .page-blog-index .blog-card > a:first-child{
+    aspect-ratio: 4 / 3 !important;
+  }
+}
+
+
+/* Final blog card sizing fix: every preview image box and card is uniform */
+.page-blog-index .blog-grid {
+  align-items: stretch !important;
+}
+.page-blog-index .blog-card {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+.page-blog-index .blog-card > a:first-child {
+  display: block !important;
+  width: 100% !important;
+  aspect-ratio: 6 / 5 !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  flex: 0 0 auto !important;
+}
+.page-blog-index .blog-card > a:first-child img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  background: transparent !important;
+}
+.page-blog-index .blog-card-copy {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+}
+.page-blog-index .blog-card-copy .text-link {
+  margin-top: auto !important;
+}
+
+
+/* Blog image cleanup */
+.page-blog-index .blog-card > a:first-child{line-height:0 !important;font-size:0 !important;padding:0 !important;margin:0 !important;}
+.page-blog-index .blog-card > a:first-child img{vertical-align:top !important;}
+
+/* Service location lines belong to the H1 while retaining the hero hierarchy. */
+.hero-location{display:block;font-size:clamp(15px,1.9cqw,27px);line-height:1.25;margin-top:10px;font-weight:600}
+.homepage-faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 36px;margin:26px 0}
+.homepage-faq-item{border-top:3px solid var(--olive);padding-top:18px}
+.homepage-faq-item h3{font-size:22px;line-height:1.25;margin:0 0 12px}
+.homepage-faq-item p{margin:0;line-height:1.65}
+@media(max-width:767px){
+  .home-page-hero>video{display:none!important}
+  .home-page-hero .video-toggle{display:none!important}
+  .home-page-hero .home-page-title{font-size:clamp(20px,5vw,32px)!important;max-width:100%!important;line-height:1.08!important}
+  .hero-location{font-size:clamp(11px,2.9cqw,16px);line-height:1.2;margin-top:6px}
+  .homepage-faq-grid{grid-template-columns:1fr;gap:22px}
+  .homepage-faq-item h3{font-size:21px}
+}
+@media(max-width:600px){
+  .page-hero:not(.home-page-hero) .hero-copy h1{font-size:clamp(18px,5.8cqw,28px)}
+  .page-hero:not(.home-page-hero) .hero-overlay{padding:12px 18px 16px}
+  .page-hero:not(.home-page-hero) .hero-actions{margin-top:10px}
+}
+
+
+
+
+/* Preserve complete photographs in cards, dropdowns and article figures. */
+#full-photo-layout .commercial-mega-card img,
+#full-photo-layout .clean-question-card img,#full-photo-layout .blog-card img,#full-photo-layout .city-photo-card img,#full-photo-layout .city-photo-link img,
+#full-photo-layout .service-card img,#full-photo-layout .article-visual img,#full-photo-layout .aeo-article img{
+ display:block!important;width:100%!important;height:auto!important;max-height:none!important;
+ aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;
+ transform:none!important;clip-path:none!important;background:transparent!important;
+}
+#full-photo-layout .clean-question-card,#full-photo-layout .commercial-mega-card,#full-photo-layout .article-visual{overflow:visible!important;height:auto!important;min-height:0!important}
+#full-photo-layout .blog-card>a:first-child{height:auto!important;aspect-ratio:auto!important;overflow:visible!important}
+#full-photo-layout .clean-spaces-mega{width:min(900px,calc(100vw - 32px))!important}
+.clean-spaces-mega{max-height:75vh;overflow-y:auto!important}
+.main-nav .nav-panel.clean-spaces-mega .commercial-mega-featured{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important}
+.aeo-category{scroll-margin-top:120px;margin-top:52px}.aeo-category-jump{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}
+.aeo-category-jump a{padding:10px 14px;border:1px solid #d8dde2;border-radius:6px}
+.aeo-article{max-width:880px;margin:auto}.aeo-article .article-opening{font-size:1.16rem;line-height:1.8;background:none;border:0;padding:0;color:inherit}
+.aeo-article h2{margin-top:36px;font-size:1.5rem}.aeo-article p{line-height:1.85}.article-resources li{margin-bottom:18px}.article-resources li p{margin-top:5px;font-size:.95rem}
+.aeo-article .article-visual{margin:28px 0}.aeo-article .article-title{font-size:clamp(1.75rem,4vw,3rem);line-height:1.22}
+@media(max-width:900px){.main-nav .nav-panel.clean-spaces-mega .commercial-mega-featured{grid-template-columns:repeat(2,minmax(0,1fr))!important}.clean-spaces-mega{width:100%!important}}
+@media(max-width:480px){.aeo-article{padding:0 4px}.main-nav .nav-panel.clean-spaces-mega .commercial-mega-card{min-width:0!important}.main-nav .nav-panel.clean-spaces-mega .commercial-mega-card strong{font-size:.85rem!important}}
+
+#full-photo-layout .commercial-mega-card{display:block!important;grid-template-rows:auto auto!important}
+#full-photo-layout .clean-spaces-mega{position:fixed!important;left:50%!important;right:auto!important;top:var(--header-height,105px)!important;transform:translateX(-50%)!important;display:none!important;max-width:calc(100vw - 32px)!important;max-height:calc(100svh - var(--header-height,105px) - 24px)!important;overflow-x:hidden!important;grid-template-columns:none!important}
+#full-photo-layout .clean-spaces-nav-group:hover>.clean-spaces-mega,#full-photo-layout .clean-spaces-nav-group:focus-within>.clean-spaces-mega,#full-photo-layout .clean-spaces-nav-group.expanded>.clean-spaces-mega{display:block!important}
+#full-photo-layout .clean-spaces-mega .commercial-mega-featured{grid-column:auto!important;grid-row:auto!important;width:100%!important}
+@media(max-width:1280px){#full-photo-layout .clean-spaces-mega{position:static!important;left:auto!important;top:auto!important;transform:none!important;width:100%!important;max-width:100%!important;max-height:none!important;overflow:visible!important}#full-photo-layout .clean-spaces-nav-group:hover>.clean-spaces-mega,#full-photo-layout .clean-spaces-nav-group:focus-within>.clean-spaces-mega{display:none!important}#full-photo-layout .clean-spaces-nav-group.expanded>.clean-spaces-mega{display:block!important}}
+
+/* Home hero height and reachable Clean Spaces menu correction. */
+#full-photo-layout .hero,#full-photo-layout .page-hero{max-height:calc(var(--visible-window-height,100dvh) - var(--measured-header-height,var(--header-height)) - 12px)!important;min-height:0!important}
+#full-photo-layout .matched-power-photos{grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:start!important}
+#full-photo-layout .matched-power-photos img{width:100%!important;height:auto!important;aspect-ratio:3/2!important;object-fit:contain!important}
+
+.category-question-page h1{font-size:clamp(28px,4vw,44px);line-height:1.2}
+.category-question-page .clean-question-card h2{font-size:22px;line-height:1.3;margin:0 0 20px}
+
+/* All navigation dropdowns share the Commercial photo card layout. */
+#full-photo-layout .main-nav .nav-panel.commercial-mega{
+ padding:18px!important;grid-template-columns:1fr!important;
+ overflow-x:hidden!important;
+}
+#full-photo-layout .main-nav .nav-panel.commercial-mega .commercial-mega-featured{
+ display:grid!important;grid-column:1/-1!important;grid-row:1!important;
+ gap:14px 16px!important;width:100%!important;
+}
+#full-photo-layout .main-nav .nav-panel.commercial-mega .commercial-mega-card{
+ display:block!important;grid-template-columns:none!important;grid-template-rows:none!important;
+ padding:0!important;gap:0!important;min-width:0!important;text-align:left!important;
+}
+#full-photo-layout .main-nav .nav-panel.commercial-mega .commercial-mega-card img{
+ display:block!important;width:100%!important;max-width:none!important;
+ height:auto!important;aspect-ratio:3/2!important;object-fit:contain!important;
+ object-position:center!important;border-radius:7px!important;background:transparent!important;
+}
+#full-photo-layout .main-nav .nav-panel.commercial-mega .commercial-mega-card strong{
+ display:block!important;margin:7px 0 0!important;font-size:15px!important;line-height:1.2!important;
+}
+@media(min-width:1281px){
+ #full-photo-layout .site-header .brand{flex:0 0 205px;min-width:205px;max-width:205px}
+ #full-photo-layout .site-header .main-nav{
+  position:absolute!important;left:50%!important;transform:translateX(-50%)!important;
+  margin:0!important;justify-content:center!important;gap:14px!important;
+ }
+ #full-photo-layout .main-nav .nav-panel.commercial-mega{
+  position:absolute!important;top:100%!important;left:var(--centered-panel-left,0px)!important;
+  right:auto!important;transform:none!important;width:min(1120px,calc(100vw - 48px))!important;
+  max-width:1120px!important;
+  max-height:calc(var(--visible-window-height,100dvh) - var(--measured-header-height,var(--header-height)) - 18px)!important;
+  overflow-y:auto!important;
+ }
+ #full-photo-layout .main-nav .nav-panel.commercial-mega .commercial-mega-featured{
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+ }
+}
+@media(max-width:1280px){
+ #full-photo-layout .main-nav .nav-panel.commercial-mega{
+  position:static!important;width:100%!important;max-width:100%!important;
+  left:auto!important;right:auto!important;transform:none!important;max-height:none!important;
+ }
+ #full-photo-layout .main-nav .nav-panel.commercial-mega .commercial-mega-featured{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+ }
+}
+
+.blog-date-line{font-size:14px!important;color:#465969!important;line-height:1.5!important;margin:12px 0 18px!important}.blog-date-line .blog-date{display:inline!important;font:inherit!important;color:inherit!important;margin:0!important}
+
+/* Keep hero shading inside the complete video frame, leaving side margins clear. */
+#full-photo-layout .home-page-hero::after{left:var(--video-side-gap,0px)!important;right:var(--video-side-gap,0px)!important}
+
+/* Home uses the logo already displayed on the video. Keep mobile menu on the right. */
+.home-header .menu-button{margin-left:auto}
+
+/* Reserve question photo frames before images load; carousel layout exists in the HTML from first paint. */
+#full-photo-layout .clean-question-card img{aspect-ratio:3/2!important;object-fit:contain!important}
+
+/* Equal window photo frames preserve both complete source images. */
+#full-photo-layout .matched-window-photos{grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:start!important}
+#full-photo-layout .matched-window-photos img{width:100%!important;height:auto!important;aspect-ratio:3/2!important;object-fit:contain!important;background:#fff!important}
+
+/* One shared photo size across every homepage service card. */
+#full-photo-layout .home-services-section .service-carousel .slide-collage{grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:start!important}
+#full-photo-layout .home-services-section .service-carousel .slide-collage img{width:100%!important;height:auto!important;aspect-ratio:4/3!important;object-fit:contain!important;object-position:center!important;background:transparent!important}
+
+/* Keep article calls to action within their reading column at every viewport. */
+.aeo-article .article-action-band{margin:40px 0 0;padding:28px 20px}
+.aeo-article .article-resources{overflow-wrap:anywhere}
+
+/* Identical Janitorial-sized service photos, touching with no gutters or letterboxing. */
+#full-photo-layout .home-services-section .service-carousel .slide-collage{
+ grid-template-columns:repeat(2,minmax(0,1fr))!important;
+ gap:0!important;padding:0!important;margin:0!important;align-items:stretch!important;
+}
+#full-photo-layout .home-services-section .service-carousel .slide-collage img{
+ width:100%!important;height:auto!important;aspect-ratio:4/3!important;
+ object-fit:contain!important;margin:0!important;padding:0!important;border:0!important;
+ display:block!important;max-width:none!important;
+}
+/* A dropdown fits its own cards and opens below its own label. */
+@media(min-width:1281px){
+ #full-photo-layout .main-nav .nav-panel.commercial-mega{
+  width:var(--dropdown-width,682px)!important;
+  max-width:calc(100vw - 48px)!important;
+  left:var(--dropdown-left,0px)!important;right:auto!important;
+  top:100%!important;transform:none!important;
+ }
+ #full-photo-layout .main-nav .nav-panel.commercial-mega .commercial-mega-featured{
+  grid-template-columns:repeat(var(--dropdown-columns,3),minmax(0,1fr))!important;
+ }
+ #full-photo-layout .main-nav .nav-panel.contact-mega{--dropdown-width:462px;--dropdown-columns:2}
+ #full-photo-layout .main-nav .nav-panel.residential-mega{--dropdown-width:902px;--dropdown-columns:4}
+ #full-photo-layout .main-nav .nav-panel.clean-spaces-mega{--dropdown-width:682px;--dropdown-columns:3}
+}
+/* Reserve media size before decoding and avoid startup card transforms. */
+#full-photo-layout .clean-question-card img{aspect-ratio:3/2!important;object-fit:contain!important}
+#full-photo-layout .article-visual img{display:block!important;width:100%!important;height:auto!important;object-fit:contain!important}
+.category-question-page .clean-question-card,.category-directory .clean-question-card{animation:none!important;transition:none!important;transform:none!important}
+
+/* A narrow white separator between equal, complete homepage photographs. */
+#full-photo-layout .home-services-section .service-carousel .slide-collage{gap:4px!important;background:#fff!important}
+
+/* Real fallback media replaces a stylesheet-relative background image. */
+#full-photo-layout .home-page-hero{background-image:none!important}
+#full-photo-layout .home-page-hero::before{content:"";position:absolute;top:0;bottom:0;left:50%;height:100%;aspect-ratio:16/9;max-width:100%;transform:translateX(-50%);background:#171b1f;z-index:-1;pointer-events:none}
+#full-photo-layout .home-page-hero > .home-video-fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:0;pointer-events:none}
+#full-photo-layout .home-page-hero > video{z-index:0;transition:none!important}
+</style><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VEBR4QQKJ5"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VEBR4QQKJ5');</script><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Do you offer evening porter service? | Paradigm Janitorial</title><meta content="Evening porter service may be available when the provider can support the property's requested hours and duties." name="description"/><link href="https://paradigmjanitorial.net/clean-spaces-porter-service-do-you-offer-evening-porter-service.html" rel="canonical"/><meta content="Do you offer evening porter service? | Paradigm Janitorial" property="og:title"/><meta content="Evening porter service may be available when the provider can support the property's requested hours and duties." property="og:description"/><meta content="article" property="og:type"/><link href="assets/styles.css?v=real-poster-20261011" rel="stylesheet"/><meta content="noindex,follow" name="robots"/><meta content="https://paradigmjanitorial.net/clean-spaces-porter-service-do-you-offer-evening-porter-service.html" property="og:url"/><meta content="Paradigm Janitorial" property="og:site_name"/><meta content="en_US" property="og:locale"/><meta content="https://paradigmjanitorial.net/assets/images/aeo/porter-06-evening.webp" property="og:image"/><meta content="https://paradigmjanitorial.net/assets/images/aeo/porter-06-evening.webp" property="og:image:secure_url"/><meta content="1536" property="og:image:width"/><meta content="1024" property="og:image:height"/><meta content="image/webp" property="og:image:type"/><meta content="Do you offer evening porter service?" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="Do you offer evening porter service? | Paradigm Janitorial" name="twitter:title"/><meta content="Evening porter service may be available when the provider can support the property's requested hours and duties." name="twitter:description"/><meta content="https://paradigmjanitorial.net/assets/images/aeo/porter-06-evening.webp" name="twitter:image"/><meta content="Do you offer evening porter service?" name="twitter:image:alt"/><link href="sitemap.xml" rel="sitemap" type="application/xml"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Do you offer evening porter service?", "description": "Evening porter service may be available when the provider can support the property's requested hours and duties.", "mainEntityOfPage": "https://paradigmjanitorial.net/clean-spaces-porter-service-do-you-offer-evening-porter-service.html", "url": "https://paradigmjanitorial.net/clean-spaces-porter-service-do-you-offer-evening-porter-service.html", "image": "https://paradigmjanitorial.net/assets/images/aeo/porter-06-evening.webp", "inLanguage": "en-US", "author": {"@type": "Organization", "name": "Paradigm Janitorial"}, "publisher": {"@type": "Organization", "name": "Paradigm Janitorial", "url": "https://paradigmjanitorial.net/"}, "isPartOf": {"@type": "CollectionPage", "name": "Clean Spaces", "url": "https://paradigmjanitorial.net/clean-spaces.html"}, "citation": ["https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.22/"]}</script><link as="image" href="assets/images/aeo/porter-06-evening.webp" rel="preload"/></head><body class="page-clean-spaces-business-open-late-opens-early" id="full-photo-layout"><a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+<a aria-label="Paradigm Janitorial home" class="brand" href="index.html"><img alt="Paradigm Janitorial" decoding="async" height="887" src="assets/images/paradigm-logo.png" width="1774"/></a>
+<button aria-controls="main-nav" aria-expanded="false" aria-label="Open menu" class="menu-button" type="button"><span></span><span></span></button>
+<nav aria-label="Main navigation" class="main-nav" id="main-nav">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<div class="nav-group"><a aria-controls="submenu-0" aria-expanded="false" aria-haspopup="true" href="residential.html">Residential</a><div class="nav-panel commercial-mega residential-mega" id="submenu-0"><div class="commercial-mega-featured"><a class="commercial-mega-card" href="residential.html"><img alt="Apartment building common area cleaning" decoding="async" fetchpriority="low" loading="eager" src="assets/images/residential-common-area.webp"/><strong>Residential Overview</strong></a><a class="commercial-mega-card" href="estates.html"><img alt="Cleaning team maintaining an estate entrance" decoding="async" fetchpriority="low" loading="eager" src="assets/images/estate-menu-v32.webp"/><strong>Estates</strong></a><a class="commercial-mega-card" href="apartment-buildings.html"><img alt="Apartment building exterior and common areas" decoding="async" fetchpriority="low" loading="eager" src="assets/images/updated-06-menu-apartment.webp"/><strong>Apartment Buildings</strong></a><a class="commercial-mega-card" href="floor-care.html"><img alt="Professional floor care service" decoding="async" fetchpriority="low" loading="eager" src="assets/images/menu-floor-clean.webp"/><strong>Floor Care</strong></a></div></div></div>
+<div class="nav-group"><a aria-controls="submenu-1" aria-expanded="false" aria-haspopup="true" href="commercial.html">Commercial</a><div class="nav-panel commercial-mega" id="submenu-1"><div class="commercial-mega-featured"><a class="commercial-mega-card" href="commercial.html"><img alt="Commercial cleaning industries overview" decoding="async" fetchpriority="low" loading="eager" src="assets/images/updated-05-menu-commercial.webp"/><strong>Industries Overview</strong></a><a class="commercial-mega-card" href="medical-dental-office-cleaning.html"><img alt="Bright medical and dental treatment room" decoding="async" fetchpriority="low" loading="eager" src="assets/images/uniform-commercial-dropdown-medical-dental-v2.webp"/><strong>Medical &amp; Dental</strong></a><a class="commercial-mega-card" href="retail-storefront-cleaning.html"><img alt="Commercial cleaning team maintaining a clothing retail store" decoding="async" fetchpriority="low" height="941" loading="eager" src="assets/images/retail-storefront-cleaning-photo-20261011.webp" width="1672"/><strong>Retail &amp; Storefront</strong></a><a class="commercial-mega-card" href="warehouse-industrial-cleaning.html"><img alt="Clean organized warehouse aisle" decoding="async" fetchpriority="low" loading="eager" src="assets/images/uniform-commercial-dropdown-warehouse-industrial-v2.webp"/><strong>Warehouse &amp; Industrial</strong></a><a class="commercial-mega-card" href="post-construction-renovation-cleaning.html"><img alt="Post-construction interior ready for final cleaning" decoding="async" fetchpriority="low" loading="eager" src="assets/images/uniform-commercial-dropdown-post-construction-v2.webp"/><strong>Post-Construction &amp; Renovation</strong></a><a class="commercial-mega-card" href="office-cleaning.html"><img alt="Clean office building interior" decoding="async" fetchpriority="low" loading="eager" src="assets/images/updated-02-menu-office.webp"/><strong>Office Cleaning</strong></a><a class="commercial-mega-card" href="learning-facility-cleaning.html"><img alt="Clean learning facility hallway" decoding="async" fetchpriority="low" loading="eager" src="assets/images/menu-learning.webp"/><strong>Learning Facility Cleaning</strong></a><a class="commercial-mega-card" href="restaurant-cleaning.html"><img alt="Clean restaurant interior" decoding="async" fetchpriority="low" loading="eager" src="assets/images/restaurant-dropdown.webp"/><strong>Restaurant Cleaning</strong></a><a class="commercial-mega-card" href="day-night-porter-service.html"><img alt="Professional porter service" decoding="async" fetchpriority="low" loading="eager" src="assets/images/porter-dropdown.webp"/><strong>Day/Night Porter Service</strong></a><a class="commercial-mega-card" href="floor-care.html"><img alt="Professional floor care service" decoding="async" fetchpriority="low" loading="eager" src="assets/images/menu-floor-clean.webp"/><strong>Floor Care</strong></a></div></div></div>
+<a href="power-washing.html">Power Washing</a>
+<a href="window-cleaning.html">Window Cleaning</a>
+<div class="nav-group clean-spaces-nav-group"><a aria-controls="submenu-clean-spaces" aria-expanded="false" aria-haspopup="true" href="clean-spaces.html">Clean Spaces</a><div class="nav-panel commercial-mega clean-spaces-mega" id="submenu-clean-spaces"><div class="commercial-mega-featured"><a class="commercial-mega-card" href="business-commercial-questions.html"><img alt="Business and Commercial Properties Questions" decoding="async" fetchpriority="low" height="941" loading="eager" src="assets/images/office-cleaning-hero-20261011.webp" width="1672"/><strong>Business and Commercial Properties Questions</strong></a><a class="commercial-mega-card" href="estates-apartment-questions.html"><img alt="Estates and Apartment Properties Questions" decoding="async" fetchpriority="low" height="941" loading="eager" src="assets/images/estate-cleaning-hero-20261011.webp" width="1672"/><strong>Estates and Apartment Properties Questions</strong></a><a class="commercial-mega-card" href="construction-renovation-questions.html"><img alt="Construction and Renovation Questions" decoding="async" fetchpriority="low" height="1086" loading="eager" src="assets/images/construction-final-dust-cleanup.webp" width="1448"/><strong>Construction and Renovation Questions</strong></a></div></div></div><a href="blog.html">Blog</a><div class="nav-group"><a aria-controls="submenu-2" aria-expanded="false" aria-haspopup="true" href="contact.html">Contact</a><div class="nav-panel commercial-mega contact-mega" id="submenu-2"><div class="commercial-mega-featured"><a class="commercial-mega-card" href="contact.html"><img alt="Contact Paradigm Janitorial for a cleaning quote" decoding="async" fetchpriority="low" loading="eager" src="assets/images/updated-01-menu-contact.webp"/><strong>Get a Quote</strong></a><a class="commercial-mega-card" href="faq.html"><img alt="Paradigm Janitorial frequently asked questions" decoding="async" fetchpriority="low" loading="eager" src="assets/images/updated-recovered-24.webp"/><strong>FAQ</strong></a></div></div></div>
+</nav>
+</header><main id="main-content"><article class="article aeo-article"><p class="eyebrow"><a href="business-commercial-questions.html">Clean Spaces, Porter Service</a></p><h1 class="article-title">Do you offer evening porter service?</h1><p class="article-opening">Evening porter service may be available when the provider can support the property's requested hours and duties. It is useful for buildings that remain occupied into the evening and need shared area upkeep between broader cleaning visits.</p><figure class="article-visual"><img alt="Do you offer evening porter service?" decoding="async" fetchpriority="high" height="1024" loading="eager" src="assets/images/aeo/porter-06-evening.webp" style=";aspect-ratio:1536/1024 !important;" width="1536"/></figure><h2>Consider who still uses the property</h2><p>Evening demand can come from late office occupants, residents, customers or events. An office tower that empties early has different needs from a residential community with activity after work. Identify which spaces remain in use and which concerns continue during those periods. Evening porter coverage should have a clear purpose rather than extend a daytime schedule without reviewing demand.</p><h2>Distinguish upkeep from a closing clean</h2><p>A porter supporting occupants may need to keep entrances, restrooms and bins usable while people are present. A closing cleaning visit can have a different scope and access arrangement. Decide whether the property needs one, the other or both. Do not expect a limited evening upkeep assignment to replace every task in the recurring janitorial agreement.</p><h2>Confirm coverage and communication</h2><p>Ask the provider to confirm available hours and the person responsible for service concerns. Building security, lighting and access rules may differ after normal management hours. Explain those conditions before scheduling. If events or tenant hours change, request a review rather than assume the provider can add time without notice.</p><h2>Consider the evening building environment</h2><p>Lighting, security and the person authorized to approve requests may differ after the management office closes. Share these conditions with the provider before coverage is arranged. The service should have a clear purpose and a dependable way to resolve access questions during the agreed period.</p><p>A late event can create additional demand without automatically expanding the recurring assignment. Discuss it before the date and confirm availability. Evening support should not be presented as continuous overnight emergency response unless the company has expressly confirmed that separate capability.</p><h2>Connect the role to property management</h2><p>Porter service works within a broader property arrangement. Management still handles tenant instructions, repairs and decisions about shared facilities, while the porter supports the agreed upkeep. For example, a laundry room can need surface attention and an appliance repair at the same time. Those are separate responsibilities even though the concern appears in one space. Identify who receives reports and who can approve requests outside the assignment. If occupants repeatedly ask for another task, review the scope rather than let informal instructions gradually change it. This keeps the role useful and understandable without turning it into an unlimited maintenance or emergency service.</p><h2>A practical example</h2><p>An apartment lobby may remain busy when residents return home, while the management office is closed. Evening upkeep can focus on the occupied shared areas if the provider confirms that coverage and scope.</p><section class="article-resources"><h2>Resources</h2><p>These resources provide additional context. Property specific requirements and the provider’s actual capabilities should be confirmed for the work being requested.</p><ul><li><a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.22/" rel="noopener">OSHA requirements for walking surfaces</a><p>This reference addresses workplace walking surface conditions. It is relevant when cleaning affects access or creates a temporarily restricted area.</p></li></ul></section><h2>Discuss your property</h2><p>For a property in Los Angeles County or San Bernardino County, contact Paradigm Janitorial to discuss the actual spaces, access conditions and service needs. Confirm the proposed scope and availability before scheduling, and keep any property specific instructions with the authorized contact.</p><p><a href="day-night-porter-service.html">Explore Porter Service</a>, or <a href="contact.html">contact Paradigm Janitorial</a>.</p><nav aria-label="Related articles" class="article-related"><h2>Related questions</h2><ul><li><a href="clean-spaces-porter-service-can-porter-schedules-fit-busiest-hours.html">Can porter schedules fit busiest hours?</a></li><li><a href="clean-spaces-porter-service-difference-between-porter-service-and-janitorial-service.html">Difference between porter service and janitorial service</a></li><li><a href="clean-spaces-porter-service-does-porter-service-include-restroom-restocking.html">Does porter service include restroom restocking?</a></li></ul></nav></article></main>
+<footer class="footer">
+<div class="footer-grid">
+<div><img alt="Paradigm Janitorial" class="footer-logo" decoding="async" height="887" loading="lazy" src="assets/images/paradigm-logo.png" width="1774"/><p>A higher standard of cleaning for estates, businesses, and managed properties.</p></div>
+<div><h3>Services</h3><a href="residential.html">Residential</a><a href="commercial.html">Commercial</a><a href="restaurant-cleaning.html">Restaurant Cleaning</a><a href="day-night-porter-service.html">Day/Night Porter</a><a href="power-washing.html">Power Washing</a><a href="window-cleaning.html">Window Cleaning</a><a href="floor-care.html">Floor Care</a></div>
+<div class="footer-locations"><h3>Locations</h3><a href="los-angeles-county.html">Los Angeles County</a><a href="san-bernardino-county.html">San Bernardino County</a></div>
+<div><h3>Contact</h3><a href="tel:8187465432">818-746-5432</a><p>Monday through Sunday, 8am to 8pm</p><h3>Office</h3><p>7108 De Soto Avenue, Ste. 201A<br/>Canoga Park, CA 91303</p></div>
+</div>
+<div class="footer-bottom"><span>2026 @ All Rights Reserved Paradigm Janitorial</span><span>Website Design and SEO by <a href="https://startweb7.com" rel="noopener" target="_blank">StartWeb7</a></span></div>
+</footer><script>window.PARADIGM_PAGE_CHAT = {"source": "clean-spaces-business-open-late-opens-early.html", "title": "My business stays open late and opens early, how can I still get the space cleaned?", "questions": ["What time does the business open and close?", "When is customer or employee traffic usually lowest?", "Which cleaning tasks cannot happen while people are using the space?"]};</script><script src="assets/site.js?v=real-poster-20261011"></script></body></html>

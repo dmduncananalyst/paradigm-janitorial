@@ -53,9 +53,9 @@ main>.section+.section{border-top:1px solid var(--line)}
 .menu-button{display:none;background:none;border:0;width:44px;min-height:44px;padding:8px}
 .menu-button span{display:block;height:2px;background:var(--navy);margin:7px 0}
 /* Fit the complete source frame below the header, without stretching or cropping. */
-.hero,.page-hero{position:relative;display:block;width:min(100%,calc((100svh - var(--header-height) - 1px) * var(--hero-ratio,1.777777778)));aspect-ratio:var(--hero-ratio,1.777777778);margin-inline:auto;overflow:hidden;background:#04325b;isolation:isolate;container-type:inline-size}
+.hero,.page-hero{position:relative;display:block;width:min(100%,calc((100svh - var(--header-height) - 1px) * var(--hero-ratio,1.777777778)));aspect-ratio:var(--hero-ratio,1.777777778);margin-inline:auto;overflow:hidden;background:transparent;isolation:isolate;container-type:inline-size}
 .hero>img,.hero>video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,27,48,.70),rgba(2,27,48,.22) 60%,transparent),linear-gradient(0deg,rgba(2,27,48,.4),transparent 50%);z-index:1;pointer-events:none}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.42),transparent 48%);z-index:1;pointer-events:none}
 .hero-overlay{position:absolute;left:0;right:0;bottom:0;padding:clamp(18px,4cqw,60px) 5cqw;z-index:2;display:flex;flex-direction:column;gap:22px}
 .hero-copy{color:#fff;max-width:1050px}
 .hero-copy h1{color:#fff;font-size:clamp(24px,4.8cqw,70px);line-height:1.02;max-width:920px;margin:0;text-shadow:0 2px 12px rgba(0,0,0,.22)}
@@ -908,7 +908,7 @@ img[src$="about-hero-wide.webp"],img[src$="about-hero-wide.webp"],img[src$="floo
 }
 
 /* Keep the home hero visible while the video buffers or restarts. */
-.home-page-hero{background-image:url("images/home-video-poster.jpg");background-position:center;background-repeat:no-repeat;background-size:contain}
+.home-page-hero{background-image:none;background-position:center;background-repeat:no-repeat;background-size:contain}
 .home-page-hero>video{background:transparent}
 .home-page-hero>video.video-show-poster{opacity:0}
 
@@ -1478,3 +1478,171 @@ img[src$="about-hero-wide.webp"],img[src$="about-hero-wide.webp"],img[src$="floo
 /* Blog image cleanup */
 .page-blog-index .blog-card > a:first-child{line-height:0 !important;font-size:0 !important;padding:0 !important;margin:0 !important;}
 .page-blog-index .blog-card > a:first-child img{vertical-align:top !important;}
+
+/* Service location lines belong to the H1 while retaining the hero hierarchy. */
+.hero-location{display:block;font-size:clamp(15px,1.9cqw,27px);line-height:1.25;margin-top:10px;font-weight:600}
+.homepage-faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 36px;margin:26px 0}
+.homepage-faq-item{border-top:3px solid var(--olive);padding-top:18px}
+.homepage-faq-item h3{font-size:22px;line-height:1.25;margin:0 0 12px}
+.homepage-faq-item p{margin:0;line-height:1.65}
+@media(max-width:767px){
+  .home-page-hero>video{display:none!important}
+  .home-page-hero .video-toggle{display:none!important}
+  .home-page-hero .home-page-title{font-size:clamp(20px,5vw,32px)!important;max-width:100%!important;line-height:1.08!important}
+  .hero-location{font-size:clamp(11px,2.9cqw,16px);line-height:1.2;margin-top:6px}
+  .homepage-faq-grid{grid-template-columns:1fr;gap:22px}
+  .homepage-faq-item h3{font-size:21px}
+}
+@media(max-width:600px){
+  .page-hero:not(.home-page-hero) .hero-copy h1{font-size:clamp(18px,5.8cqw,28px)}
+  .page-hero:not(.home-page-hero) .hero-overlay{padding:12px 18px 16px}
+  .page-hero:not(.home-page-hero) .hero-actions{margin-top:10px}
+}
+
+
+
+
+/* Preserve complete photographs in cards, dropdowns and article figures. */
+#full-photo-layout .commercial-mega-card img,
+#full-photo-layout .clean-question-card img,#full-photo-layout .blog-card img,#full-photo-layout .city-photo-card img,#full-photo-layout .city-photo-link img,
+#full-photo-layout .service-card img,#full-photo-layout .article-visual img,#full-photo-layout .aeo-article img{
+ display:block!important;width:100%!important;height:auto!important;max-height:none!important;
+ aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;
+ transform:none!important;clip-path:none!important;background:transparent!important;
+}
+#full-photo-layout .clean-question-card,#full-photo-layout .commercial-mega-card,#full-photo-layout .article-visual{overflow:visible!important;height:auto!important;min-height:0!important}
+#full-photo-layout .blog-card>a:first-child{height:auto!important;aspect-ratio:auto!important;overflow:visible!important}
+#full-photo-layout .clean-spaces-mega{width:min(900px,calc(100vw - 32px))!important}
+.clean-spaces-mega{max-height:75vh;overflow-y:auto!important}
+.main-nav .nav-panel.clean-spaces-mega .commercial-mega-featured{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important}
+.aeo-category{scroll-margin-top:120px;margin-top:52px}.aeo-category-jump{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}
+.aeo-category-jump a{padding:10px 14px;border:1px solid #d8dde2;border-radius:6px}
+.aeo-article{max-width:880px;margin:auto}.aeo-article .article-opening{font-size:1.16rem;line-height:1.8;background:none;border:0;padding:0;color:inherit}
+.aeo-article h2{margin-top:36px;font-size:1.5rem}.aeo-article p{line-height:1.85}.article-resources li{margin-bottom:18px}.article-resources li p{margin-top:5px;font-size:.95rem}
+.aeo-article .article-visual{margin:28px 0}.aeo-article .article-title{font-size:clamp(1.75rem,4vw,3rem);line-height:1.22}
+@media(max-width:900px){.main-nav .nav-panel.clean-spaces-mega .commercial-mega-featured{grid-template-columns:repeat(2,minmax(0,1fr))!important}.clean-spaces-mega{width:100%!important}}
+@media(max-width:480px){.aeo-article{padding:0 4px}.main-nav .nav-panel.clean-spaces-mega .commercial-mega-card{min-width:0!important}.main-nav .nav-panel.clean-spaces-mega .commercial-mega-card strong{font-size:.85rem!important}}
+
+#full-photo-layout .commercial-mega-card{display:block!important;grid-template-rows:auto auto!important}
+#full-photo-layout .clean-spaces-mega{position:fixed!important;left:50%!important;right:auto!important;top:var(--header-height,105px)!important;transform:translateX(-50%)!important;display:none!important;max-width:calc(100vw - 32px)!important;max-height:calc(100svh - var(--header-height,105px) - 24px)!important;overflow-x:hidden!important;grid-template-columns:none!important}
+#full-photo-layout .clean-spaces-nav-group:hover>.clean-spaces-mega,#full-photo-layout .clean-spaces-nav-group:focus-within>.clean-spaces-mega,#full-photo-layout .clean-spaces-nav-group.expanded>.clean-spaces-mega{display:block!important}
+#full-photo-layout .clean-spaces-mega .commercial-mega-featured{grid-column:auto!important;grid-row:auto!important;width:100%!important}
+@media(max-width:1280px){#full-photo-layout .clean-spaces-mega{position:static!important;left:auto!important;top:auto!important;transform:none!important;width:100%!important;max-width:100%!important;max-height:none!important;overflow:visible!important}#full-photo-layout .clean-spaces-nav-group:hover>.clean-spaces-mega,#full-photo-layout .clean-spaces-nav-group:focus-within>.clean-spaces-mega{display:none!important}#full-photo-layout .clean-spaces-nav-group.expanded>.clean-spaces-mega{display:block!important}}
+
+/* Home hero height and reachable Clean Spaces menu correction. */
+#full-photo-layout .hero,#full-photo-layout .page-hero{max-height:calc(var(--visible-window-height,100dvh) - var(--measured-header-height,var(--header-height)) - 12px)!important;min-height:0!important}
+#full-photo-layout .matched-power-photos{grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:start!important}
+#full-photo-layout .matched-power-photos img{width:100%!important;height:auto!important;aspect-ratio:3/2!important;object-fit:contain!important}
+
+.category-question-page h1{font-size:clamp(28px,4vw,44px);line-height:1.2}
+.category-question-page .clean-question-card h2{font-size:22px;line-height:1.3;margin:0 0 20px}
+
+/* All navigation dropdowns share the Commercial photo card layout. */
+#full-photo-layout .main-nav .nav-panel.commercial-mega{
+ padding:18px!important;grid-template-columns:1fr!important;
+ overflow-x:hidden!important;
+}
+#full-photo-layout .main-nav .nav-panel.commercial-mega .commercial-mega-featured{
+ display:grid!important;grid-column:1/-1!important;grid-row:1!important;
+ gap:14px 16px!important;width:100%!important;
+}
+#full-photo-layout .main-nav .nav-panel.commercial-mega .commercial-mega-card{
+ display:block!important;grid-template-columns:none!important;grid-template-rows:none!important;
+ padding:0!important;gap:0!important;min-width:0!important;text-align:left!important;
+}
+#full-photo-layout .main-nav .nav-panel.commercial-mega .commercial-mega-card img{
+ display:block!important;width:100%!important;max-width:none!important;
+ height:auto!important;aspect-ratio:3/2!important;object-fit:contain!important;
+ object-position:center!important;border-radius:7px!important;background:transparent!important;
+}
+#full-photo-layout .main-nav .nav-panel.commercial-mega .commercial-mega-card strong{
+ display:block!important;margin:7px 0 0!important;font-size:15px!important;line-height:1.2!important;
+}
+@media(min-width:1281px){
+ #full-photo-layout .site-header .brand{flex:0 0 205px;min-width:205px;max-width:205px}
+ #full-photo-layout .site-header .main-nav{
+  position:absolute!important;left:50%!important;transform:translateX(-50%)!important;
+  margin:0!important;justify-content:center!important;gap:14px!important;
+ }
+ #full-photo-layout .main-nav .nav-panel.commercial-mega{
+  position:absolute!important;top:100%!important;left:var(--centered-panel-left,0px)!important;
+  right:auto!important;transform:none!important;width:min(1120px,calc(100vw - 48px))!important;
+  max-width:1120px!important;
+  max-height:calc(var(--visible-window-height,100dvh) - var(--measured-header-height,var(--header-height)) - 18px)!important;
+  overflow-y:auto!important;
+ }
+ #full-photo-layout .main-nav .nav-panel.commercial-mega .commercial-mega-featured{
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+ }
+}
+@media(max-width:1280px){
+ #full-photo-layout .main-nav .nav-panel.commercial-mega{
+  position:static!important;width:100%!important;max-width:100%!important;
+  left:auto!important;right:auto!important;transform:none!important;max-height:none!important;
+ }
+ #full-photo-layout .main-nav .nav-panel.commercial-mega .commercial-mega-featured{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+ }
+}
+
+.blog-date-line{font-size:14px!important;color:#465969!important;line-height:1.5!important;margin:12px 0 18px!important}.blog-date-line .blog-date{display:inline!important;font:inherit!important;color:inherit!important;margin:0!important}
+
+/* Keep hero shading inside the complete video frame, leaving side margins clear. */
+#full-photo-layout .home-page-hero::after{left:var(--video-side-gap,0px)!important;right:var(--video-side-gap,0px)!important}
+
+/* Home uses the logo already displayed on the video. Keep mobile menu on the right. */
+.home-header .menu-button{margin-left:auto}
+
+/* Reserve question photo frames before images load; carousel layout exists in the HTML from first paint. */
+#full-photo-layout .clean-question-card img{aspect-ratio:3/2!important;object-fit:contain!important}
+
+/* Equal window photo frames preserve both complete source images. */
+#full-photo-layout .matched-window-photos{grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:start!important}
+#full-photo-layout .matched-window-photos img{width:100%!important;height:auto!important;aspect-ratio:3/2!important;object-fit:contain!important;background:#fff!important}
+
+/* One shared photo size across every homepage service card. */
+#full-photo-layout .home-services-section .service-carousel .slide-collage{grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:start!important}
+#full-photo-layout .home-services-section .service-carousel .slide-collage img{width:100%!important;height:auto!important;aspect-ratio:4/3!important;object-fit:contain!important;object-position:center!important;background:transparent!important}
+
+/* Keep article calls to action within their reading column at every viewport. */
+.aeo-article .article-action-band{margin:40px 0 0;padding:28px 20px}
+.aeo-article .article-resources{overflow-wrap:anywhere}
+
+/* Identical Janitorial-sized service photos, touching with no gutters or letterboxing. */
+#full-photo-layout .home-services-section .service-carousel .slide-collage{
+ grid-template-columns:repeat(2,minmax(0,1fr))!important;
+ gap:0!important;padding:0!important;margin:0!important;align-items:stretch!important;
+}
+#full-photo-layout .home-services-section .service-carousel .slide-collage img{
+ width:100%!important;height:auto!important;aspect-ratio:4/3!important;
+ object-fit:contain!important;margin:0!important;padding:0!important;border:0!important;
+ display:block!important;max-width:none!important;
+}
+/* A dropdown fits its own cards and opens below its own label. */
+@media(min-width:1281px){
+ #full-photo-layout .main-nav .nav-panel.commercial-mega{
+  width:var(--dropdown-width,682px)!important;
+  max-width:calc(100vw - 48px)!important;
+  left:var(--dropdown-left,0px)!important;right:auto!important;
+  top:100%!important;transform:none!important;
+ }
+ #full-photo-layout .main-nav .nav-panel.commercial-mega .commercial-mega-featured{
+  grid-template-columns:repeat(var(--dropdown-columns,3),minmax(0,1fr))!important;
+ }
+ #full-photo-layout .main-nav .nav-panel.contact-mega{--dropdown-width:462px;--dropdown-columns:2}
+ #full-photo-layout .main-nav .nav-panel.residential-mega{--dropdown-width:902px;--dropdown-columns:4}
+ #full-photo-layout .main-nav .nav-panel.clean-spaces-mega{--dropdown-width:682px;--dropdown-columns:3}
+}
+/* Reserve media size before decoding and avoid startup card transforms. */
+#full-photo-layout .clean-question-card img{aspect-ratio:3/2!important;object-fit:contain!important}
+#full-photo-layout .article-visual img{display:block!important;width:100%!important;height:auto!important;object-fit:contain!important}
+.category-question-page .clean-question-card,.category-directory .clean-question-card{animation:none!important;transition:none!important;transform:none!important}
+
+/* A narrow white separator between equal, complete homepage photographs. */
+#full-photo-layout .home-services-section .service-carousel .slide-collage{gap:4px!important;background:#fff!important}
+
+/* Real fallback media replaces a stylesheet-relative background image. */
+#full-photo-layout .home-page-hero{background-image:none!important}
+#full-photo-layout .home-page-hero::before{content:"";position:absolute;top:0;bottom:0;left:50%;height:100%;aspect-ratio:16/9;max-width:100%;transform:translateX(-50%);background:#171b1f;z-index:-1;pointer-events:none}
+#full-photo-layout .home-page-hero > .home-video-fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:0;pointer-events:none}
+#full-photo-layout .home-page-hero > video{z-index:0;transition:none!important}

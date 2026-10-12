@@ -39,7 +39,7 @@
     });
     group.addEventListener('focusin', () => { if (!compact.matches) setOpen(true); });
     group.addEventListener('focusout', event => {
-      if (!group.contains(event.relatedTarget)) setOpen(false);
+      if (!compact.matches && !group.contains(event.relatedTarget)) setOpen(false);
     });
     // On touch screens the first tap reveals the menu; a second tap follows the overview link.
     link.addEventListener('click', event => {
@@ -153,51 +153,94 @@
 
   document.querySelectorAll('.hero > video').forEach(video => {
     video.muted = true;
-    if (video.closest('.home-page-hero')) {
-      video.defaultMuted = true;
-      video.playsInline = true;
-      video.loop = true;
-      const showPoster = () => video.classList.add('video-show-poster');
-      const showVideo = () => video.classList.remove('video-show-poster');
-      ['waiting', 'seeking', 'emptied', 'error'].forEach(event => video.addEventListener(event, showPoster));
-      video.addEventListener('playing', showVideo);
-      video.addEventListener('seeked', () => {
-        if (video.readyState >= 2) showVideo();
-      });
-      video.addEventListener('ended', () => {
-        showPoster();
-        if (!reducedMotion.matches) {
-          video.currentTime = 0;
-          video.play().catch(showPoster);
-        }
-      });
-      video.addEventListener('loadeddata', () => {
-        if (video.readyState >= 2) showVideo();
-      });
-    }
+    video.defaultMuted = true;
+    video.playsInline = true;
     const isHomeHero = !!video.closest('.home-page-hero');
-    const tryAutoplay = () => {
-      video.muted = true;
-      video.defaultMuted = true;
-      video.playsInline = true;
-      const attempt = video.play();
-      if (attempt && typeof attempt.catch === 'function') attempt.catch(() => {});
-    };
+    const control = video.parentElement.querySelector('.video-toggle');
     if (isHomeHero) {
-      tryAutoplay();
-      window.addEventListener('load', tryAutoplay, {once:true});
+      const mobile = window.matchMedia('(max-width: 767px)');
+      const posterOnly = () => mobile.matches || reducedMotion.matches;
+      let hasPresentedFrame = false;
+      let revealPending = false;
+      let frameCallbackId = null;
+      let playPending = false;
+      const showPoster = () => video.classList.add('video-show-poster');
+      const showVideo = () => {
+        if (posterOnly()) return;
+        hasPresentedFrame = true;
+        video.classList.remove('video-show-poster');
+      };
+      const revealFirstFrame = () => {
+        if (hasPresentedFrame || revealPending || posterOnly()) return;
+        revealPending = true;
+        if (typeof video.requestVideoFrameCallback === 'function') {
+          frameCallbackId = video.requestVideoFrameCallback(() => {
+            frameCallbackId = null;
+            revealPending = false;
+            showVideo();
+          });
+        } else {
+          requestAnimationFrame(() => requestAnimationFrame(() => {
+            revealPending = false;
+            if (video.readyState >= 2 && !video.paused) showVideo();
+          }));
+        }
+      };
+      const tryAutoplay = () => {
+        if (posterOnly() || playPending) return;
+        if (!video.hasAttribute('src')) {
+          video.preload = 'auto';
+          video.src = video.dataset.src;
+          video.load();
+        }
+        if (!video.paused) return;
+        playPending = true;
+        video.play().catch(() => {
+          if (!hasPresentedFrame) showPoster();
+        }).finally(() => { playPending = false; });
+      };
+      const updateMedia = () => {
+        if (posterOnly()) {
+          if (frameCallbackId !== null) video.cancelVideoFrameCallback(frameCallbackId);
+          frameCallbackId = null;
+          revealPending = false;
+          hasPresentedFrame = false;
+          video.pause();
+          video.removeAttribute('autoplay');
+          if (video.hasAttribute('src')) {
+            video.removeAttribute('src');
+            video.load();
+          }
+          showPoster();
+          if (control) control.hidden = true;
+        } else {
+          video.autoplay = true;
+          video.loop = true;
+          if (control) control.hidden = false;
+          tryAutoplay();
+        }
+      };
+      // Buffering and loop seeks retain the last displayed frame instead of flashing the poster.
+      video.addEventListener('playing', revealFirstFrame);
+      video.addEventListener('error', () => {
+        hasPresentedFrame = false;
+        showPoster();
+      });
+      mobile.addEventListener('change', updateMedia);
+      reducedMotion.addEventListener('change', updateMedia);
       window.addEventListener('pageshow', tryAutoplay);
       document.addEventListener('visibilitychange', () => { if (!document.hidden) tryAutoplay(); });
-      ['touchstart','pointerdown','keydown'].forEach(event => document.addEventListener(event, tryAutoplay, {once:true, passive:true}));
+      ['touchstart', 'pointerdown', 'keydown'].forEach(event => document.addEventListener(event, tryAutoplay, {once: true, passive: true}));
+      updateMedia();
     } else if (reducedMotion.matches) video.pause();
     else video.play().catch(() => {});
-    const control = video.parentElement.querySelector('.video-toggle');
     const sync = () => {
       if (!control) return;
       control.textContent = video.paused ? 'Play video' : 'Pause video';
       control.setAttribute('aria-label', video.paused ? 'Play background video' : 'Pause background video');
     };
     control?.addEventListener('click', () => {
+      if (isHomeHero && (window.matchMedia('(max-width: 767px)').matches || reducedMotion.matches)) return;
       if (video.paused) video.play().catch(() => {}); else video.pause();
     });
     video.addEventListener('play', sync);
@@ -564,4 +607,54 @@
       panel.focus();
     });
   });
+})();
+
+// Size hero height against the browser's actual visible window, retaining its existing width.
+(() => {
+ const fitHeroHeights = () => {
+  const header=document.querySelector('.site-header');
+  const headerHeight=header?header.getBoundingClientRect().height:0;
+  const available=Math.max(0,window.innerHeight-headerHeight-12);
+  document.documentElement.style.setProperty('--visible-window-height',window.innerHeight+'px');
+  document.documentElement.style.setProperty('--measured-header-height',headerHeight+'px');
+  document.querySelectorAll('.hero,.page-hero').forEach(hero=>{
+   const ratio=parseFloat(getComputedStyle(hero).getPropertyValue('--hero-ratio'))||16/9;
+   hero.style.height=Math.min(hero.getBoundingClientRect().width/ratio,available)+'px';
+   hero.style.aspectRatio='auto';
+   if(hero.classList.contains('home-page-hero')){
+    const bounds=hero.getBoundingClientRect();
+    const sideGap=Math.max(0,(bounds.width-bounds.height*ratio)/2);
+    hero.style.setProperty('--video-side-gap',sideGap+'px');
+   }
+  });
+ };
+ fitHeroHeights();
+ window.addEventListener('resize',fitHeroHeights);
+ window.addEventListener('pageshow',fitHeroHeights);
+ if(window.visualViewport)window.visualViewport.addEventListener('resize',fitHeroHeights);
+})();
+
+// Fit each dropdown to its cards and anchor it below its own trigger.
+(() => {
+ const placeDropdowns=()=>{
+  if(window.innerWidth<=1280)return;
+  document.querySelectorAll('.main-nav .nav-panel.commercial-mega').forEach(panel=>{
+   const count=panel.querySelectorAll('.commercial-mega-card').length;
+   const trigger=panel.parentElement.querySelector(':scope > a');
+   const triggerBounds=trigger.getBoundingClientRect();
+   const anchorCenter=triggerBounds.left+triggerBounds.width/2;
+   const availableWidth=2*Math.min(anchorCenter-24,window.innerWidth-anchorCenter-24);
+   const columns=Math.min(5,Math.max(1,count),Math.max(1,Math.floor((availableWidth-22)/220)));
+   const width=Math.min(38+columns*204+(columns-1)*16,availableWidth);
+   const groupLeft=panel.parentElement.getBoundingClientRect().left;
+   const viewportLeft=anchorCenter-width/2;
+   panel.style.setProperty('--dropdown-columns',columns);
+   panel.style.setProperty('--dropdown-width',width+'px');
+   panel.style.setProperty('--dropdown-left',(viewportLeft-groupLeft)+'px');
+  });
+ };
+ placeDropdowns();window.addEventListener('resize',placeDropdowns);
+ window.addEventListener('pageshow',placeDropdowns);
+ document.querySelectorAll('.nav-group').forEach(group=>group.addEventListener('pointerenter',placeDropdowns));
+ if(document.fonts)document.fonts.ready.then(placeDropdowns);
 })();
