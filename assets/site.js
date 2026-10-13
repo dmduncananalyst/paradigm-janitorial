@@ -2,7 +2,7 @@
   'use strict';
   const nav = document.querySelector('.main-nav');
   const menu = document.querySelector('.menu-button');
-  const compact = window.matchMedia('(max-width: 1280px)');
+  const compact = window.matchMedia('(max-width: 1400px)');
   const closeGroups = () => document.querySelectorAll('.nav-group').forEach(group => {
     group.classList.remove('expanded');
     group.querySelector(':scope > a').setAttribute('aria-expanded', 'false');
@@ -19,12 +19,6 @@
     menu.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     if (!open) closeGroups();
   });
-  // Preload dropdown photography so the first hover does not flash alt text before images decode.
-  document.querySelectorAll('.nav-panel img').forEach(img => {
-    img.loading = 'eager';
-    if (img.src) { const preload = new Image(); preload.src = img.src; }
-  });
-
   document.querySelectorAll('.nav-group').forEach(group => {
     const link = group.querySelector(':scope > a');
     const setOpen = open => {
@@ -98,7 +92,7 @@
     container.classList.add('mobile-card-carousel');
     const cards = [...container.children].filter(el => !el.classList.contains('mobile-card-nav'));
     if (cards.length < 2) return;
-    const nav = document.createElement('div');
+    const nav = container.nextElementSibling?.classList.contains('mobile-card-nav') ? container.nextElementSibling : document.createElement('div');
     nav.className = 'mobile-card-nav';
     nav.innerHTML = `<button type="button" class="mobile-card-prev" aria-label="Previous item">←</button><span class="mobile-card-count" aria-live="polite">1 of ${cards.length}</span><button type="button" class="mobile-card-next" aria-label="Next item">→</button>`;
     container.insertAdjacentElement('afterend', nav);
@@ -127,7 +121,7 @@
       carousel.dataset.mobileNavReady = 'true';
       const cards = [...carousel.querySelectorAll('.service-card')];
       if (cards.length < 2) return;
-      const nav = document.createElement('div');
+      const nav = carousel.nextElementSibling?.classList.contains('mobile-card-nav') ? carousel.nextElementSibling : document.createElement('div');
       nav.className = 'mobile-card-nav';
       nav.innerHTML = `<button type="button" class="mobile-card-prev" aria-label="Previous service">←</button><span class="mobile-card-count" aria-live="polite">1 of ${cards.length}</span><button type="button" class="mobile-card-next" aria-label="Next service">→</button>`;
       carousel.insertAdjacentElement('afterend', nav);
@@ -637,7 +631,7 @@
 // Fit each dropdown to its cards and anchor it below its own trigger.
 (() => {
  const placeDropdowns=()=>{
-  if(window.innerWidth<=1280)return;
+  if(window.innerWidth<=1400)return;
   document.querySelectorAll('.main-nav .nav-panel.commercial-mega').forEach(panel=>{
    const count=panel.querySelectorAll('.commercial-mega-card').length;
    const trigger=panel.parentElement.querySelector(':scope > a');
