@@ -1,0 +1,432 @@
+﻿[
+    {
+        "exception":  null,
+        "result":  {
+                       "errors":  [
+
+                                  ],
+                       "panels":  [
+                                      {
+                                          "width":  902,
+                                          "columns":  "204px 204px 204px 204px",
+                                          "left":  275.8125,
+                                          "right":  1177.8125,
+                                          "cards":  4
+                                      },
+                                      {
+                                          "width":  1122,
+                                          "columns":  "204px 204px 204px 204px 204px",
+                                          "left":  257.234375,
+                                          "right":  1379.234375,
+                                          "cards":  10
+                                      },
+                                      {
+                                          "width":  682,
+                                          "columns":  "204px 204px 204px",
+                                          "left":  825.109375,
+                                          "right":  1507.109375,
+                                          "cards":  3
+                                      },
+                                      {
+                                          "width":  462,
+                                          "columns":  "204px 204px",
+                                          "left":  1065.8125,
+                                          "right":  1527.8125,
+                                          "cards":  2
+                                      }
+                                  ],
+                       "navAlignment":  "center",
+                       "navGap":  "14px",
+                       "overflow":  false
+                   },
+        "width":  1920,
+        "page":  "index.html"
+    },
+    {
+        "exception":  null,
+        "result":  {
+                       "errors":  [
+
+                                  ],
+                       "panels":  [
+                                      {
+                                          "width":  902,
+                                          "columns":  "204px 204px 204px 204px",
+                                          "left":  275.8125,
+                                          "right":  1177.8125,
+                                          "cards":  4
+                                      },
+                                      {
+                                          "width":  1122,
+                                          "columns":  "204px 204px 204px 204px 204px",
+                                          "left":  257.234375,
+                                          "right":  1379.234375,
+                                          "cards":  10
+                                      },
+                                      {
+                                          "width":  682,
+                                          "columns":  "204px 204px 204px",
+                                          "left":  825.109375,
+                                          "right":  1507.109375,
+                                          "cards":  3
+                                      },
+                                      {
+                                          "width":  462,
+                                          "columns":  "204px 204px",
+                                          "left":  1065.8125,
+                                          "right":  1527.8125,
+                                          "cards":  2
+                                      }
+                                  ],
+                       "navAlignment":  "center",
+                       "navGap":  "14px",
+                       "overflow":  false
+                   },
+        "width":  1920,
+        "page":  "about.html"
+    },
+    {
+        "exception":  null,
+        "result":  {
+                       "errors":  [
+
+                                  ],
+                       "panels":  [
+                                      {
+                                          "width":  682,
+                                          "columns":  "204px 204px 204px",
+                                          "left":  108.8125,
+                                          "right":  790.8125,
+                                          "cards":  4
+                                      },
+                                      {
+                                          "width":  902,
+                                          "columns":  "204px 204px 204px 204px",
+                                          "left":  90.234375,
+                                          "right":  992.234375,
+                                          "cards":  10
+                                      },
+                                      {
+                                          "width":  682,
+                                          "columns":  "204px 204px 204px",
+                                          "left":  548.109375,
+                                          "right":  1230.109375,
+                                          "cards":  3
+                                      },
+                                      {
+                                          "width":  462,
+                                          "columns":  "204px 204px",
+                                          "left":  788.8125,
+                                          "right":  1250.8125,
+                                          "cards":  2
+                                      }
+                                  ],
+                       "navAlignment":  "center",
+                       "navGap":  "14px",
+                       "overflow":  false
+                   },
+        "width":  1366,
+        "page":  "index.html"
+    },
+    {
+        "exception":  null,
+        "result":  {
+                       "errors":  [
+
+                                  ],
+                       "panels":  [
+                                      {
+                                          "width":  682,
+                                          "columns":  "204px 204px 204px",
+                                          "left":  108.8125,
+                                          "right":  790.8125,
+                                          "cards":  4
+                                      },
+                                      {
+                                          "width":  902,
+                                          "columns":  "204px 204px 204px 204px",
+                                          "left":  90.234375,
+                                          "right":  992.234375,
+                                          "cards":  10
+                                      },
+                                      {
+                                          "width":  682,
+                                          "columns":  "204px 204px 204px",
+                                          "left":  548.109375,
+                                          "right":  1230.109375,
+                                          "cards":  3
+                                      },
+                                      {
+                                          "width":  462,
+                                          "columns":  "204px 204px",
+                                          "left":  788.8125,
+                                          "right":  1250.8125,
+                                          "cards":  2
+                                      }
+                                  ],
+                       "navAlignment":  "center",
+                       "navGap":  "14px",
+                       "overflow":  false
+                   },
+        "width":  1366,
+        "page":  "about.html"
+    },
+    {
+        "exception":  null,
+        "result":  {
+                       "errors":  [
+
+                                  ],
+                       "panels":  [
+                                      {
+                                          "width":  242,
+                                          "columns":  "204px",
+                                          "left":  125.8125,
+                                          "right":  367.8125,
+                                          "cards":  4
+                                      },
+                                      {
+                                          "width":  462,
+                                          "columns":  "196.5px 196.5px",
+                                          "left":  107.234375,
+                                          "right":  569.234375,
+                                          "cards":  10
+                                      },
+                                      {
+                                          "width":  462,
+                                          "columns":  "204px 204px",
+                                          "left":  455.109375,
+                                          "right":  917.109375,
+                                          "cards":  3
+                                      },
+                                      {
+                                          "width":  238.375,
+                                          "columns":  "200.375px",
+                                          "left":  697.625,
+                                          "right":  936,
+                                          "cards":  2
+                                      }
+                                  ],
+                       "navAlignment":  "center",
+                       "navGap":  "14px",
+                       "overflow":  false
+                   },
+        "width":  960,
+        "page":  "index.html"
+    },
+    {
+        "exception":  null,
+        "result":  {
+                       "errors":  [
+
+                                  ],
+                       "panels":  [
+                                      {
+                                          "width":  242,
+                                          "columns":  "204px",
+                                          "left":  125.8125,
+                                          "right":  367.8125,
+                                          "cards":  4
+                                      },
+                                      {
+                                          "width":  462,
+                                          "columns":  "196.5px 196.5px",
+                                          "left":  107.234375,
+                                          "right":  569.234375,
+                                          "cards":  10
+                                      },
+                                      {
+                                          "width":  462,
+                                          "columns":  "204px 204px",
+                                          "left":  455.109375,
+                                          "right":  917.109375,
+                                          "cards":  3
+                                      },
+                                      {
+                                          "width":  238.375,
+                                          "columns":  "200.375px",
+                                          "left":  697.625,
+                                          "right":  936,
+                                          "cards":  2
+                                      }
+                                  ],
+                       "navAlignment":  "center",
+                       "navGap":  "14px",
+                       "overflow":  false
+                   },
+        "width":  960,
+        "page":  "about.html"
+    },
+    {
+        "exception":  null,
+        "result":  {
+                       "errors":  [
+
+                                  ],
+                       "panels":  [
+                                      {
+                                          "width":  242,
+                                          "columns":  "204px",
+                                          "left":  39.703125,
+                                          "right":  281.703125,
+                                          "cards":  4
+                                      },
+                                      {
+                                          "width":  242,
+                                          "columns":  "189px",
+                                          "left":  127.125,
+                                          "right":  369.125,
+                                          "cards":  10
+                                      },
+                                      {
+                                          "width":  242,
+                                          "columns":  "204px",
+                                          "left":  463,
+                                          "right":  705,
+                                          "cards":  3
+                                      },
+                                      {
+                                          "width":  74.59375,
+                                          "columns":  "36.5938px",
+                                          "left":  669.40625,
+                                          "right":  744,
+                                          "cards":  2
+                                      }
+                                  ],
+                       "navAlignment":  "space-between",
+                       "navGap":  "10px",
+                       "overflow":  false
+                   },
+        "width":  768,
+        "page":  "index.html"
+    },
+    {
+        "exception":  null,
+        "result":  {
+                       "errors":  [
+
+                                  ],
+                       "panels":  [
+                                      {
+                                          "width":  242,
+                                          "columns":  "204px",
+                                          "left":  39.703125,
+                                          "right":  281.703125,
+                                          "cards":  4
+                                      },
+                                      {
+                                          "width":  242,
+                                          "columns":  "189px",
+                                          "left":  127.125,
+                                          "right":  369.125,
+                                          "cards":  10
+                                      },
+                                      {
+                                          "width":  242,
+                                          "columns":  "204px",
+                                          "left":  463,
+                                          "right":  705,
+                                          "cards":  3
+                                      },
+                                      {
+                                          "width":  74.59375,
+                                          "columns":  "36.5938px",
+                                          "left":  669.40625,
+                                          "right":  744,
+                                          "cards":  2
+                                      }
+                                  ],
+                       "navAlignment":  "space-between",
+                       "navGap":  "10px",
+                       "overflow":  false
+                   },
+        "width":  768,
+        "page":  "about.html"
+    },
+    {
+        "exception":  null,
+        "result":  {
+                       "errors":  [
+
+                                  ],
+                       "panels":  [
+                                      {
+                                          "width":  338,
+                                          "columns":  "143px 143px",
+                                          "left":  26,
+                                          "right":  364,
+                                          "cards":  4
+                                      },
+                                      {
+                                          "width":  338,
+                                          "columns":  "143px 143px",
+                                          "left":  26,
+                                          "right":  364,
+                                          "cards":  10
+                                      },
+                                      {
+                                          "width":  338,
+                                          "columns":  "143px 143px",
+                                          "left":  26,
+                                          "right":  364,
+                                          "cards":  3
+                                      },
+                                      {
+                                          "width":  338,
+                                          "columns":  "143px 143px",
+                                          "left":  26,
+                                          "right":  364,
+                                          "cards":  2
+                                      }
+                                  ],
+                       "navAlignment":  "flex-start",
+                       "navGap":  "0px",
+                       "overflow":  false
+                   },
+        "width":  390,
+        "page":  "index.html"
+    },
+    {
+        "exception":  null,
+        "result":  {
+                       "errors":  [
+
+                                  ],
+                       "panels":  [
+                                      {
+                                          "width":  338,
+                                          "columns":  "143px 143px",
+                                          "left":  26,
+                                          "right":  364,
+                                          "cards":  4
+                                      },
+                                      {
+                                          "width":  338,
+                                          "columns":  "143px 143px",
+                                          "left":  26,
+                                          "right":  364,
+                                          "cards":  10
+                                      },
+                                      {
+                                          "width":  338,
+                                          "columns":  "143px 143px",
+                                          "left":  26,
+                                          "right":  364,
+                                          "cards":  3
+                                      },
+                                      {
+                                          "width":  338,
+                                          "columns":  "143px 143px",
+                                          "left":  26,
+                                          "right":  364,
+                                          "cards":  2
+                                      }
+                                  ],
+                       "navAlignment":  "flex-start",
+                       "navGap":  "0px",
+                       "overflow":  false
+                   },
+        "width":  390,
+        "page":  "about.html"
+    }
+]

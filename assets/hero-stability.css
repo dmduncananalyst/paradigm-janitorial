@@ -1,0 +1,9 @@
+/* Reserve the final hero frame before scripts and images finish loading. */
+html{overflow-y:scroll}
+#full-photo-layout .hero,#full-photo-layout .page-hero{
+ width:min(100%,calc((100svh - var(--header-height) - 12px) * var(--hero-ratio,1.777777778)))!important;
+ height:auto!important;aspect-ratio:var(--hero-ratio,1.777777778)!important;
+ max-height:none!important;margin-inline:auto;
+}
+/* Display each photograph once, rather than swapping a background duplicate. */
+#full-photo-layout .hero>img,#full-photo-layout .page-hero>img{background-image:none!important}

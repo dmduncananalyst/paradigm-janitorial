@@ -1,0 +1,608 @@
+﻿[
+    {
+        "value":  {
+                      "samples":  [
+                                      {
+                                          "index":  0,
+                                          "width":  461.33331298828125,
+                                          "height":  346,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  1,
+                                          "width":  461.3333435058594,
+                                          "height":  346,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  2,
+                                          "width":  461.33331298828125,
+                                          "height":  346,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  3,
+                                          "width":  461.33331298828125,
+                                          "height":  346,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  4,
+                                          "width":  461.3333435058594,
+                                          "height":  346,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  5,
+                                          "width":  461.33331298828125,
+                                          "height":  346,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  6,
+                                          "width":  461.33331298828125,
+                                          "height":  346,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  7,
+                                          "width":  461.3333435058594,
+                                          "height":  346,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  8,
+                                          "width":  461.33331298828125,
+                                          "height":  346,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  0,
+                                          "width":  461.33331298828125,
+                                          "height":  346,
+                                          "complete":  false,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  3,
+                                          "width":  461.33331298828125,
+                                          "height":  346,
+                                          "complete":  false,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  0,
+                                          "width":  461.33331298828125,
+                                          "height":  346,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  3,
+                                          "width":  461.33331298828125,
+                                          "height":  346,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  1,
+                                          "width":  461.3333435058594,
+                                          "height":  346,
+                                          "complete":  false,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  2,
+                                          "width":  461.33331298828125,
+                                          "height":  346,
+                                          "complete":  false,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  4,
+                                          "width":  461.3333435058594,
+                                          "height":  346,
+                                          "complete":  false,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  5,
+                                          "width":  461.33331298828125,
+                                          "height":  346,
+                                          "complete":  false,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  1,
+                                          "width":  461.3333435058594,
+                                          "height":  346,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  2,
+                                          "width":  461.33331298828125,
+                                          "height":  346,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  4,
+                                          "width":  461.3333435058594,
+                                          "height":  346,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  5,
+                                          "width":  461.33331298828125,
+                                          "height":  346,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  7,
+                                          "width":  461.3333435058594,
+                                          "height":  346,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  6,
+                                          "width":  461.33331298828125,
+                                          "height":  346,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  8,
+                                          "width":  461.33331298828125,
+                                          "height":  346,
+                                          "complete":  false,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  8,
+                                          "width":  461.33331298828125,
+                                          "height":  346,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      }
+                                  ],
+                      "errors":  [
+
+                                 ]
+                  },
+        "width":  1920
+    },
+    {
+        "value":  {
+                      "samples":  [
+                                      {
+                                          "index":  0,
+                                          "width":  409.5,
+                                          "height":  307.1333312988281,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  1,
+                                          "width":  409.5,
+                                          "height":  307.1333312988281,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  2,
+                                          "width":  409.5,
+                                          "height":  307.1333312988281,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  3,
+                                          "width":  409.5,
+                                          "height":  307.1333312988281,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  4,
+                                          "width":  409.5,
+                                          "height":  307.1333312988281,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  5,
+                                          "width":  409.5,
+                                          "height":  307.1333312988281,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  6,
+                                          "width":  409.5,
+                                          "height":  307.13336181640625,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  7,
+                                          "width":  409.5,
+                                          "height":  307.13336181640625,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  8,
+                                          "width":  409.5,
+                                          "height":  307.1333312988281,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  0,
+                                          "width":  409.5,
+                                          "height":  307.1333312988281,
+                                          "complete":  false,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  1,
+                                          "width":  409.5,
+                                          "height":  307.1333312988281,
+                                          "complete":  false,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  3,
+                                          "width":  409.5,
+                                          "height":  307.1333312988281,
+                                          "complete":  false,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  0,
+                                          "width":  409.5,
+                                          "height":  307.1333312988281,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  1,
+                                          "width":  409.5,
+                                          "height":  307.1333312988281,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  2,
+                                          "width":  409.5,
+                                          "height":  307.1333312988281,
+                                          "complete":  false,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  3,
+                                          "width":  409.5,
+                                          "height":  307.1333312988281,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  2,
+                                          "width":  409.5,
+                                          "height":  307.1333312988281,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  4,
+                                          "width":  409.5,
+                                          "height":  307.1333312988281,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  7,
+                                          "width":  409.5,
+                                          "height":  307.13336181640625,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  8,
+                                          "width":  409.5,
+                                          "height":  307.1333312988281,
+                                          "complete":  false,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  8,
+                                          "width":  409.5,
+                                          "height":  307.1333312988281,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  5,
+                                          "width":  409.5,
+                                          "height":  307.1333312988281,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  6,
+                                          "width":  409.5,
+                                          "height":  307.13336181640625,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      }
+                                  ],
+                      "errors":  [
+
+                                 ]
+                  },
+        "width":  960
+    },
+    {
+        "value":  {
+                      "samples":  [
+                                      {
+                                          "index":  0,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  1,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  2,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  3,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  4,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  5,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  6,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  7,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  8,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  false,
+                                          "natural":  0,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  0,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  false,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  3,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  false,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  1,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  false,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  0,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  3,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  2,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  false,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  1,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  2,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  4,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  false,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  5,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  false,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  6,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  7,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  8,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  4,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      },
+                                      {
+                                          "index":  5,
+                                          "width":  333,
+                                          "height":  249.75,
+                                          "complete":  true,
+                                          "natural":  1448,
+                                          "noPlaceholder":  true
+                                      }
+                                  ],
+                      "errors":  [
+
+                                 ]
+                  },
+        "width":  390
+    }
+]

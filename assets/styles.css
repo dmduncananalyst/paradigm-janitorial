@@ -1486,8 +1486,8 @@ img[src$="about-hero-wide.webp"],img[src$="about-hero-wide.webp"],img[src$="floo
 .homepage-faq-item h3{font-size:22px;line-height:1.25;margin:0 0 12px}
 .homepage-faq-item p{margin:0;line-height:1.65}
 @media(max-width:767px){
-  .home-page-hero>video{display:none!important}
-  .home-page-hero .video-toggle{display:none!important}
+  .home-page-hero>video{display:block!important}
+  .home-page-hero .video-toggle{display:block!important}
   .home-page-hero .home-page-title{font-size:clamp(20px,5vw,32px)!important;max-width:100%!important;line-height:1.08!important}
   .hero-location{font-size:clamp(11px,2.9cqw,16px);line-height:1.2;margin-top:6px}
   .homepage-faq-grid{grid-template-columns:1fr;gap:22px}

@@ -1,0 +1,146 @@
+﻿[
+    {
+        "src":  "assets/images/office-flu.png",
+        "declared":  [
+                         387,
+                         "1086"
+                     ],
+        "natural":  [
+                        1448,
+                        1086
+                    ],
+        "box":  [
+                    386.625,
+                    289.96875
+                ],
+        "ratio":  "4 / 3"
+    },
+    {
+        "src":  "assets/images/apartment-trash.png",
+        "declared":  [
+                         387,
+                         "1086"
+                     ],
+        "natural":  [
+                        1448,
+                        1086
+                    ],
+        "box":  [
+                    386.625,
+                    289.96875
+                ],
+        "ratio":  "4 / 3"
+    },
+    {
+        "src":  "assets/images/restaurant-grease.png",
+        "declared":  [
+                         387,
+                         "1086"
+                     ],
+        "natural":  [
+                        1448,
+                        1086
+                    ],
+        "box":  [
+                    386.625,
+                    289.96875
+                ],
+        "ratio":  "4 / 3"
+    },
+    {
+        "src":  "assets/images/office-entryway-rain-2026-10-12.png",
+        "declared":  [
+                         387,
+                         "1086"
+                     ],
+        "natural":  [
+                        1448,
+                        1086
+                    ],
+        "box":  [
+                    386.625,
+                    289.96875
+                ],
+        "ratio":  "4 / 3"
+    },
+    {
+        "src":  "assets/images/retail-holiday-cleaning-2026-10-12.png",
+        "declared":  [
+                         387,
+                         "1086"
+                     ],
+        "natural":  [
+                        1448,
+                        1086
+                    ],
+        "box":  [
+                    386.625,
+                    289.96875
+                ],
+        "ratio":  "4 / 3"
+    },
+    {
+        "src":  "assets/images/apartment-move-out-cleaning-2026-10-12.png",
+        "declared":  [
+                         387,
+                         "1086"
+                     ],
+        "natural":  [
+                        1448,
+                        1086
+                    ],
+        "box":  [
+                    386.625,
+                    289.96875
+                ],
+        "ratio":  "4 / 3"
+    },
+    {
+        "src":  "assets/images/porter-day-cart.png",
+        "declared":  [
+                         387,
+                         "1086"
+                     ],
+        "natural":  [
+                        1448,
+                        1086
+                    ],
+        "box":  [
+                    386.625,
+                    289.96875
+                ],
+        "ratio":  "4 / 3"
+    },
+    {
+        "src":  "assets/images/power-concrete.webp",
+        "declared":  [
+                         387,
+                         "1086"
+                     ],
+        "natural":  [
+                        1448,
+                        1086
+                    ],
+        "box":  [
+                    386.625,
+                    289.96875
+                ],
+        "ratio":  "4 / 3"
+    },
+    {
+        "src":  "assets/images/slider-restaurant-1.webp",
+        "declared":  [
+                         387,
+                         "1086"
+                     ],
+        "natural":  [
+                        1448,
+                        1086
+                    ],
+        "box":  [
+                    386.625,
+                    289.96875
+                ],
+        "ratio":  "4 / 3"
+    }
+]

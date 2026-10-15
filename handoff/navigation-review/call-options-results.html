@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html><head></head><body><pre id="results">[
+  {
+    "page": "index.html",
+    "desktop": true,
+    "issues": []
+  },
+  {
+    "page": "index.html",
+    "desktop": false,
+    "issues": []
+  },
+  {
+    "page": "power-washing.html",
+    "desktop": true,
+    "issues": []
+  },
+  {
+    "page": "power-washing.html",
+    "desktop": false,
+    "issues": []
+  },
+  {
+    "page": "contact.html",
+    "desktop": true,
+    "issues": []
+  },
+  {
+    "page": "contact.html",
+    "desktop": false,
+    "issues": []
+  }
+]</pre><script>
+(async()=>{const results=[];for(const page of ['index.html','power-washing.html','contact.html'])for(const desktop of [true,false]){const f=document.createElement('iframe');document.body.append(f);await new Promise(r=>{f.onload=r;f.src='../../'+page});const w=f.contentWindow,d=f.contentDocument,original=w.matchMedia.bind(w);w.matchMedia=q=>q==='(hover: hover) and (pointer: fine)'?{matches:desktop}:original(q);const e=new w.MouseEvent('click',{bubbles:true,cancelable:true});d.querySelector('.header-phone').dispatchEvent(e);const dialog=d.querySelector('.desktop-call-dialog');const issues=[];if(desktop){if(!dialog?.open||!e.defaultPrevented)issues.push('desktop dialog failed');if(dialog?.querySelector('[data-native-call]').getAttribute('href')!=='tel:+18187465432')issues.push('wrong number');if(dialog?.querySelector('a[target="_blank"]').href!=='https://voice.google.com/')issues.push('voice link');dialog?.querySelector('form button').click();if(dialog?.open)issues.push('close failed');}else if(e.defaultPrevented||dialog)issues.push('mobile intercepted');results.push({page,desktop,issues});f.remove();}document.querySelector('pre').textContent=JSON.stringify(results,null,2)})();
+</script>
+</body></html>

@@ -1,0 +1,40 @@
+﻿[
+    {
+        "result":  {
+                       "frames":  81,
+                       "paused":  false,
+                       "rate":  1,
+                       "duration":  8.191,
+                       "videoWidth":  1280,
+                       "source":  "file:///C:/Users/its%20old/OneDrive/Documents/GitHub/paradigm-janitorial/assets/videos/home-hero-optimized.mp4?v=20261014",
+                       "time":  5.236034,
+                       "readyState":  4,
+                       "error":  null,
+                       "opacity":  "1",
+                       "playButton":  false,
+                       "callHref":  "https://voice.google.com/u/0/calls?a=nc,%2B18187465432",
+                       "callDialog":  false,
+                       "advancing":  true
+                   },
+        "width":  1366
+    },
+    {
+        "result":  {
+                       "frames":  90,
+                       "paused":  false,
+                       "rate":  1,
+                       "duration":  8.191,
+                       "videoWidth":  1280,
+                       "source":  "file:///C:/Users/its%20old/OneDrive/Documents/GitHub/paradigm-janitorial/assets/videos/home-hero-optimized.mp4?v=20261014",
+                       "time":  5.946689,
+                       "readyState":  4,
+                       "error":  null,
+                       "opacity":  "1",
+                       "playButton":  false,
+                       "callHref":  "tel:+18187465432",
+                       "callDialog":  false,
+                       "advancing":  true
+                   },
+        "width":  390
+    }
+]

@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html><head></head><body><pre id="results">[
+  {
+    "page": "about.html",
+    "width": 1920,
+    "issues": []
+  },
+  {
+    "page": "about.html",
+    "width": 1366,
+    "issues": []
+  },
+  {
+    "page": "about.html",
+    "width": 1024,
+    "issues": []
+  },
+  {
+    "page": "about.html",
+    "width": 960,
+    "issues": []
+  },
+  {
+    "page": "about.html",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "page": "about.html",
+    "width": 600,
+    "issues": []
+  },
+  {
+    "page": "about.html",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "page": "about.html",
+    "width": 320,
+    "issues": []
+  },
+  {
+    "page": "power-washing.html",
+    "width": 1920,
+    "issues": []
+  },
+  {
+    "page": "power-washing.html",
+    "width": 1366,
+    "issues": []
+  },
+  {
+    "page": "power-washing.html",
+    "width": 1024,
+    "issues": []
+  },
+  {
+    "page": "power-washing.html",
+    "width": 960,
+    "issues": []
+  },
+  {
+    "page": "power-washing.html",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "page": "power-washing.html",
+    "width": 600,
+    "issues": []
+  },
+  {
+    "page": "power-washing.html",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "page": "power-washing.html",
+    "width": 320,
+    "issues": []
+  },
+  {
+    "page": "contact.html",
+    "width": 1920,
+    "issues": []
+  },
+  {
+    "page": "contact.html",
+    "width": 1366,
+    "issues": []
+  },
+  {
+    "page": "contact.html",
+    "width": 1024,
+    "issues": []
+  },
+  {
+    "page": "contact.html",
+    "width": 960,
+    "issues": []
+  },
+  {
+    "page": "contact.html",
+    "width": 768,
+    "issues": []
+  },
+  {
+    "page": "contact.html",
+    "width": 600,
+    "issues": []
+  },
+  {
+    "page": "contact.html",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "page": "contact.html",
+    "width": 320,
+    "issues": []
+  }
+]</pre><script>
+(async()=>{
+const results=[];
+for(const page of ['about.html','power-washing.html','contact.html']) for(const width of [1920,1366,1024,960,768,600,390,320]){
+ const f=document.createElement('iframe');f.style=`width:${width}px;height:900px;border:0`;document.body.append(f);
+ await new Promise(r=>{f.onload=r;f.src='../../'+page});await new Promise(r=>setTimeout(r,150));
+ const d=f.contentDocument,w=f.contentWindow,nav=d.querySelector('.main-nav'),button=d.querySelector('.menu-button');
+ const visible=e=>w.getComputedStyle(e).display!=='none'; const links=[...nav.children].map(e=>e.matches('a')?e:e.querySelector(':scope>a'));
+ const issues=[];
+ const brand=d.querySelector('.site-header .brand'),phone=d.querySelector('.header-phone'),header=d.querySelector('.site-header');
+ const logo=brand.querySelector('img');
+ const ready=logo.classList.contains('photo-ready');logo.classList.remove('photo-ready');
+ if(w.getComputedStyle(logo).backgroundImage!=='none')issues.push('temporary logo still present');
+ const before=logo.getBoundingClientRect();logo.classList.add('photo-ready');
+ if(w.getComputedStyle(logo).backgroundImage!=='none')issues.push('duplicate logo background');
+ const after=logo.getBoundingClientRect();if(before.x!==after.x||before.width!==after.width)issues.push('logo load movement');
+ if(!ready)logo.classList.remove('photo-ready');
+ const bb=brand.getBoundingClientRect(),pb=phone.getBoundingClientRect(),hb=header.getBoundingClientRect();
+ const padding=parseFloat(w.getComputedStyle(header).paddingLeft);
+ if(Math.abs(bb.left-padding)>1)issues.push('logo not far left');
+ if(Math.abs(pb.right-(hb.right-parseFloat(w.getComputedStyle(header).paddingRight)))>1)issues.push('phone not far right');
+ if(bb.right>=pb.left)issues.push('logo phone overlap');
+ if(Math.abs((bb.top+bb.height/2)-(pb.top+pb.height/2))>2)issues.push('different top row');
+ if(width>600 && nav.getBoundingClientRect().top<bb.bottom)issues.push('nav not below logo');
+ if(width<=600){const mb=button.getBoundingClientRect();if(mb.left<bb.right||mb.right>pb.left)issues.push('mobile button overlap');} const mobile=width<=600;
+ if(visible(button)!==mobile)issues.push('hamburger');
+ if(!mobile){if(!visible(nav))issues.push('hidden navigation');const ys=links.map(e=>Math.round(e.getBoundingClientRect().top));if(new Set(ys).size!==1)issues.push('wrapped row'); for(let i=1;i<links.length;i++)if(links[i-1].getBoundingClientRect().right>links[i].getBoundingClientRect().left)issues.push('overlap');}
+ else button.click();
+ for(const group of nav.querySelectorAll('.nav-group')){
+  const a=group.querySelector(':scope>a');a.dispatchEvent(new w.PointerEvent('pointerenter',{pointerType:'mouse',bubbles:true}));
+  if(mobile){a.dispatchEvent(new w.MouseEvent('click',{bubbles:true,cancelable:true}));}else{a.dispatchEvent(new w.KeyboardEvent('keydown',{key:'ArrowDown',bubbles:true,cancelable:true}));}
+  const panel=group.querySelector('.nav-panel'),b=panel.getBoundingClientRect();
+  if(!visible(panel)||b.width===0)issues.push('dropdown hidden');
+  if(b.left<0||b.right>width)issues.push('dropdown outside viewport');
+  for(const img of panel.querySelectorAll('img'))if(!img.complete||!img.naturalWidth)issues.push('missing image');
+  group.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Escape',bubbles:true,cancelable:true}));
+ }
+ const p=d.querySelector('.header-phone');if(p.getAttribute('href')!=='tel:+18187465432'||p.getBoundingClientRect().top<0)issues.push('phone');
+ if(d.documentElement.scrollWidth>width)issues.push('page overflow '+d.documentElement.scrollWidth);
+ results.push({page,width,issues:[...new Set(issues)]}); f.remove();
+}
+document.querySelector('#results').textContent=JSON.stringify(results,null,2);
+})();
+</script>
+</body></html>

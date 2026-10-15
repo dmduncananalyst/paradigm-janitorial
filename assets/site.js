@@ -2,7 +2,7 @@
   'use strict';
   const nav = document.querySelector('.main-nav');
   const menu = document.querySelector('.menu-button');
-  const compact = window.matchMedia('(max-width: 1400px)');
+  const compact = window.matchMedia('(max-width: 600px)');
   const closeGroups = () => document.querySelectorAll('.nav-group').forEach(group => {
     group.classList.remove('expanded');
     group.querySelector(':scope > a').setAttribute('aria-expanded', 'false');
@@ -152,96 +152,37 @@
     const isHomeHero = !!video.closest('.home-page-hero');
     const control = video.parentElement.querySelector('.video-toggle');
     if (isHomeHero) {
-      const mobile = window.matchMedia('(max-width: 767px)');
-      const posterOnly = () => mobile.matches || reducedMotion.matches;
-      let hasPresentedFrame = false;
-      let revealPending = false;
-      let frameCallbackId = null;
-      let playPending = false;
-      const showPoster = () => video.classList.add('video-show-poster');
-      const showVideo = () => {
-        if (posterOnly()) return;
-        hasPresentedFrame = true;
-        video.classList.remove('video-show-poster');
+      // Native autoplay starts loading with the HTML, before this script arrives.
+      video.autoplay = true;
+      video.loop = true;
+      video.classList.remove('video-show-poster');
+      control?.remove();
+      const play = () => {
+        if (document.hidden || !video.paused) return;
+        video.play().catch(() => {});
       };
-      const revealFirstFrame = () => {
-        if (hasPresentedFrame || revealPending || posterOnly()) return;
-        revealPending = true;
-        if (typeof video.requestVideoFrameCallback === 'function') {
-          frameCallbackId = video.requestVideoFrameCallback(() => {
-            frameCallbackId = null;
-            revealPending = false;
-            showVideo();
-          });
-        } else {
-          requestAnimationFrame(() => requestAnimationFrame(() => {
-            revealPending = false;
-            if (video.readyState >= 2 && !video.paused) showVideo();
-          }));
-        }
-      };
-      const tryAutoplay = () => {
-        if (posterOnly() || playPending) return;
-        if (!video.hasAttribute('src')) {
-          video.preload = 'auto';
-          video.src = video.dataset.src;
-          video.load();
-        }
-        if (!video.paused) return;
-        playPending = true;
-        video.play().catch(() => {
-          if (!hasPresentedFrame) showPoster();
-        }).finally(() => { playPending = false; });
-      };
-      const updateMedia = () => {
-        if (posterOnly()) {
-          if (frameCallbackId !== null) video.cancelVideoFrameCallback(frameCallbackId);
-          frameCallbackId = null;
-          revealPending = false;
-          hasPresentedFrame = false;
-          video.pause();
-          video.removeAttribute('autoplay');
-          if (video.hasAttribute('src')) {
-            video.removeAttribute('src');
-            video.load();
-          }
-          showPoster();
-          if (control) control.hidden = true;
-        } else {
-          video.autoplay = true;
-          video.loop = true;
-          if (control) control.hidden = false;
-          tryAutoplay();
-        }
-      };
-      // Buffering and loop seeks retain the last displayed frame instead of flashing the poster.
-      video.addEventListener('playing', revealFirstFrame);
-      video.addEventListener('error', () => {
-        hasPresentedFrame = false;
-        showPoster();
-      });
-      mobile.addEventListener('change', updateMedia);
-      reducedMotion.addEventListener('change', updateMedia);
-      window.addEventListener('pageshow', tryAutoplay);
-      document.addEventListener('visibilitychange', () => { if (!document.hidden) tryAutoplay(); });
-      ['touchstart', 'pointerdown', 'keydown'].forEach(event => document.addEventListener(event, tryAutoplay, {once: true, passive: true}));
-      updateMedia();
-    } else if (reducedMotion.matches) video.pause();
+      video.addEventListener('loadeddata', play);
+      video.addEventListener('canplay', play);
+      window.addEventListener('pageshow', play);
+      document.addEventListener('visibilitychange', play);
+      ['touchstart','pointerdown','keydown'].forEach(event => document.addEventListener(event,play,{passive:true}));
+      play();
+      return;
+    }
+    if (reducedMotion.matches) video.pause();
     else video.play().catch(() => {});
     const sync = () => {
       if (!control) return;
       control.textContent = video.paused ? 'Play video' : 'Pause video';
-      control.setAttribute('aria-label', video.paused ? 'Play background video' : 'Pause background video');
+      control.setAttribute('aria-label',video.paused ? 'Play background video' : 'Pause background video');
     };
-    control?.addEventListener('click', () => {
-      if (isHomeHero && (window.matchMedia('(max-width: 767px)').matches || reducedMotion.matches)) return;
-      if (video.paused) video.play().catch(() => {}); else video.pause();
+    control?.addEventListener('click',()=>{
+      if(video.paused)video.play().catch(()=>{});else video.pause();
     });
-    video.addEventListener('play', sync);
-    video.addEventListener('pause', sync);
+    video.addEventListener('play',sync);
+    video.addEventListener('pause',sync);
     sync();
   });
-
   // Service photos move only when the visitor scrolls, swipes, or uses controls.
   document.querySelectorAll('.service-carousel').forEach(carousel => {
     carousel.querySelectorAll('img').forEach(img => { img.draggable = false; });
@@ -273,7 +214,7 @@
       <div class="quote-field"><label for="${prefix}-message">Message <span aria-hidden="true">*</span></label><textarea id="${prefix}-message" name="message" rows="6" maxlength="20000" required></textarea></div>
       <p class="quote-error" role="alert" hidden></p><button class="button quote-submit" type="submit">Send My Request</button>
       <p class="quote-confirmation" role="status" tabindex="-1" hidden>Thank you. Your cleaning request has been sent. We’ll be in touch soon.</p>
-    </form><p class="form-fallback">You can also call <a href="tel:8187465432">818-746-5432</a>.</p>`;
+    </form><p class="form-fallback">You can also call <a href="tel:+18187465432" aria-label="Call Paradigm Janitorial at 818-746-5432" title="Call 818-746-5432">818-746-5432</a>.</p>`;
     const form = target.querySelector('form');
     const message = form.elements.message;
     form.addEventListener('submit', async event => {
@@ -558,7 +499,7 @@
       }
       submitted = true; resetLog();
       addBubble('assistant', `Thanks, ${contactName.split(/\s+/)[0] || 'there'}. We have your cleaning details and will be in touch soon.`);
-      composer.innerHTML = `<div class="ai-chat-finished"><a class="button" href="tel:8187465432">Call 818-746-5432</a><button type="button" class="chat-back ai-close-finished">Close</button></div>`;
+      composer.innerHTML = `<div class="ai-chat-finished"><a class="button" href="tel:+18187465432" aria-label="Call Paradigm Janitorial at 818-746-5432" title="Call 818-746-5432">Call 818-746-5432</a><button type="button" class="chat-back ai-close-finished">Close</button></div>`;
       composer.querySelector('.ai-close-finished').addEventListener('click', close);
     } catch (error) {
       const msg = composer.querySelector('.chat-form-error');
@@ -591,7 +532,7 @@
       if (submitted) {
         resetLog();
         addBubble('assistant', `Thanks, ${contactName.split(/\s+/)[0] || 'there'}. We have your cleaning details and will be in touch soon.`);
-        composer.innerHTML = `<div class="ai-chat-finished"><a class="button" href="tel:8187465432">Call 818-746-5432</a><button type="button" class="chat-back ai-close-finished">Close</button></div>`;
+        composer.innerHTML = `<div class="ai-chat-finished"><a class="button" href="tel:+18187465432" aria-label="Call Paradigm Janitorial at 818-746-5432" title="Call 818-746-5432">Call 818-746-5432</a><button type="button" class="chat-back ai-close-finished">Close</button></div>`;
         composer.querySelector('.ai-close-finished').addEventListener('click', close);
       } else if (step >= config.questions.length) {
         renderContact();
@@ -603,19 +544,17 @@
   });
 })();
 
-// Size hero height against the browser's actual visible window, retaining its existing width.
+// Measure the header for dropdowns; CSS reserves hero geometry from first paint.
 (() => {
  const fitHeroHeights = () => {
   const header=document.querySelector('.site-header');
   const headerHeight=header?header.getBoundingClientRect().height:0;
-  const available=Math.max(0,window.innerHeight-headerHeight-12);
   document.documentElement.style.setProperty('--visible-window-height',window.innerHeight+'px');
   document.documentElement.style.setProperty('--measured-header-height',headerHeight+'px');
   document.querySelectorAll('.hero,.page-hero').forEach(hero=>{
-   const ratio=parseFloat(getComputedStyle(hero).getPropertyValue('--hero-ratio'))||16/9;
-   hero.style.height=Math.min(hero.getBoundingClientRect().width/ratio,available)+'px';
-   hero.style.aspectRatio='auto';
+
    if(hero.classList.contains('home-page-hero')){
+    const ratio=parseFloat(getComputedStyle(hero).getPropertyValue('--hero-ratio'))||16/9;
     const bounds=hero.getBoundingClientRect();
     const sideGap=Math.max(0,(bounds.width-bounds.height*ratio)/2);
     hero.style.setProperty('--video-side-gap',sideGap+'px');
@@ -631,7 +570,7 @@
 // Fit each dropdown to its cards and anchor it below its own trigger.
 (() => {
  const placeDropdowns=()=>{
-  if(window.innerWidth<=1400)return;
+  if(window.innerWidth<=600)return;
   document.querySelectorAll('.main-nav .nav-panel.commercial-mega').forEach(panel=>{
    const count=panel.querySelectorAll('.commercial-mega-card').length;
    const trigger=panel.parentElement.querySelector(':scope > a');
@@ -651,4 +590,30 @@
  window.addEventListener('pageshow',placeDropdowns);
  document.querySelectorAll('.nav-group').forEach(group=>group.addEventListener('pointerenter',placeDropdowns));
  if(document.fonts)document.fonts.ready.then(placeDropdowns);
+})();
+
+// One click opens Google Voice on computers; phones keep the native dialer.
+(() => {
+ const phoneMode=()=>window.matchMedia('(max-width: 600px)').matches || navigator.userAgentData?.mobile || /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || !window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+ const prepare=link=>{
+  const number=link.dataset.callNumber || link.getAttribute('href').slice(4);
+  link.dataset.callNumber=number;
+  if(phoneMode()){
+   link.href='tel:'+number;
+   link.removeAttribute('target');link.removeAttribute('rel');
+   link.setAttribute('aria-label','Call Paradigm Janitorial at 818-746-5432');
+   link.title='Call 818-746-5432';
+  }else{
+   link.href='https://voice.google.com/u/0/calls?a=nc,'+encodeURIComponent(number);
+   link.target='_blank';link.rel='noopener noreferrer';
+   link.setAttribute('aria-label','Open Google Voice to call 818-746-5432');
+   link.title='Open Google Voice';
+  }
+ };
+ const update=()=>document.querySelectorAll('a[href^="tel:"],a[data-call-number]').forEach(prepare);
+ update();window.addEventListener('resize',update);
+ document.addEventListener('click',event=>{
+  const link=event.target.closest('a[href^="tel:"],a[data-call-number]');
+  if(link)prepare(link);
+ });
 })();

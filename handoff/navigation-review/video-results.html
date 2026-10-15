@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html><head></head><body><pre id="results">[
+  {
+    "width": 1366,
+    "initial": {
+      "paused": false,
+      "currentTime": 1.363632,
+      "readyState": 4,
+      "visible": "block",
+      "opacity": "1",
+      "source": true,
+      "control": true
+    },
+    "pausedByButton": true,
+    "resumed": true
+  },
+  {
+    "width": 390,
+    "initial": {
+      "paused": false,
+      "currentTime": 0,
+      "readyState": 1,
+      "visible": "block",
+      "opacity": "0",
+      "source": true,
+      "control": true
+    },
+    "pausedByButton": true,
+    "resumed": true
+  }
+]</pre><script>
+(async()=>{const out=[];for(const width of [1366,390]){const f=document.createElement('iframe');f.style=`width:${width}px;height:900px`;document.body.append(f);await new Promise(r=>{f.onload=r;f.src='../../index.html'});const w=f.contentWindow,d=f.contentDocument,v=d.querySelector('.home-page-hero video');for(let tries=0;tries<240 && (v.readyState<2 || v.currentTime===0);tries++)await new Promise(r=>setTimeout(r,250));await new Promise(r=>setTimeout(r,500));const initial={paused:v.paused,currentTime:v.currentTime,readyState:v.readyState,error:v.error?.message,visible:w.getComputedStyle(v).display,opacity:w.getComputedStyle(v).opacity,source:!!v.getAttribute('src'),control:!!d.querySelector('.video-toggle')};const control=d.querySelector('.video-toggle');control.click();const pausedByButton=v.paused;control.click();await new Promise(r=>setTimeout(r,1000));out.push({width,initial,pausedByButton,resumed:!v.paused});f.remove();}document.querySelector('pre').textContent=JSON.stringify(out,null,2)})();
+</script>
+</body></html>

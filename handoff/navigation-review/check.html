@@ -1,0 +1,28 @@
+﻿<!doctype html><html><body><pre id="results">RUNNING</pre><script>
+(async()=>{
+const results=[];
+for(const page of ['index.html','power-washing.html','contact.html']) for(const width of [1920,1440,1366,1280,1024,960,820,768,600,390]){
+ const f=document.createElement('iframe');f.style=`width:${width}px;height:900px;border:0`;document.body.append(f);
+ await new Promise(r=>{f.onload=r;f.src='../../'+page});await new Promise(r=>setTimeout(r,150));
+ const d=f.contentDocument,w=f.contentWindow,nav=d.querySelector('.main-nav'),button=d.querySelector('.menu-button');
+ const visible=e=>w.getComputedStyle(e).display!=='none'; const links=[...nav.children].map(e=>e.matches('a')?e:e.querySelector(':scope>a'));
+ const issues=[]; const mobile=width<=600;
+ if(visible(button)!==mobile)issues.push('hamburger');
+ if(!mobile){if(!visible(nav))issues.push('hidden navigation');const ys=links.map(e=>Math.round(e.getBoundingClientRect().top));if(new Set(ys).size!==1)issues.push('wrapped row'); for(let i=1;i<links.length;i++)if(links[i-1].getBoundingClientRect().right>links[i].getBoundingClientRect().left)issues.push('overlap');}
+ else button.click();
+ for(const group of nav.querySelectorAll('.nav-group')){
+  const a=group.querySelector(':scope>a');a.dispatchEvent(new w.PointerEvent('pointerenter',{pointerType:'mouse',bubbles:true}));
+  if(mobile){a.dispatchEvent(new w.MouseEvent('click',{bubbles:true,cancelable:true}));}else{a.dispatchEvent(new w.KeyboardEvent('keydown',{key:'ArrowDown',bubbles:true,cancelable:true}));}
+  const panel=group.querySelector('.nav-panel'),b=panel.getBoundingClientRect();
+  if(!visible(panel)||b.width===0)issues.push('dropdown hidden');
+  if(b.left<0||b.right>width)issues.push('dropdown outside viewport');
+  for(const img of panel.querySelectorAll('img'))if(!img.complete||!img.naturalWidth)issues.push('missing image');
+  group.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Escape',bubbles:true,cancelable:true}));
+ }
+ const p=d.querySelector('.header-phone');if(p.getAttribute('href')!=='tel:+18187465432'||p.getBoundingClientRect().top<0)issues.push('phone');
+ if(d.documentElement.scrollWidth>width)issues.push('page overflow '+d.documentElement.scrollWidth);
+ results.push({page,width,issues:[...new Set(issues)]}); f.remove();
+}
+document.querySelector('#results').textContent=JSON.stringify(results,null,2);
+})();
+</script></body></html>

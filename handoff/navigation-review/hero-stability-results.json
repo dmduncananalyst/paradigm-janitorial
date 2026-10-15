@@ -1,0 +1,128 @@
+﻿[
+    {
+        "samples":  [
+                        {
+                            "x":  12.734375,
+                            "width":  1325.515625,
+                            "height":  745.984375,
+                            "imageX":  12.734375,
+                            "imageWidth":  1325.515625,
+                            "background":  true
+                        }
+                    ],
+        "width":  1366,
+        "page":  "about.html"
+    },
+    {
+        "samples":  [
+                        {
+                            "x":  178.171875,
+                            "width":  994.65625,
+                            "height":  745.984375,
+                            "imageX":  178.171875,
+                            "imageWidth":  994.65625,
+                            "background":  true
+                        }
+                    ],
+        "width":  1366,
+        "page":  "power-washing.html"
+    },
+    {
+        "samples":  [
+                        {
+                            "x":  12.390625,
+                            "width":  1326.21875,
+                            "height":  745.984375,
+                            "imageX":  12.390625,
+                            "imageWidth":  1326.21875,
+                            "background":  true
+                        }
+                    ],
+        "width":  1366,
+        "page":  "index.html"
+    },
+    {
+        "samples":  [
+                        {
+                            "x":  0,
+                            "width":  945,
+                            "height":  531.84375,
+                            "imageX":  0,
+                            "imageWidth":  945,
+                            "background":  true
+                        }
+                    ],
+        "width":  960,
+        "page":  "about.html"
+    },
+    {
+        "samples":  [
+                        {
+                            "x":  0,
+                            "width":  945,
+                            "height":  708.75,
+                            "imageX":  0,
+                            "imageWidth":  945,
+                            "background":  true
+                        }
+                    ],
+        "width":  960,
+        "page":  "power-washing.html"
+    },
+    {
+        "samples":  [
+                        {
+                            "x":  0,
+                            "width":  945,
+                            "height":  531.5625,
+                            "imageX":  0,
+                            "imageWidth":  945,
+                            "background":  true
+                        }
+                    ],
+        "width":  960,
+        "page":  "index.html"
+    },
+    {
+        "samples":  [
+                        {
+                            "x":  0,
+                            "width":  390,
+                            "height":  219.484375,
+                            "imageX":  0,
+                            "imageWidth":  390,
+                            "background":  true
+                        }
+                    ],
+        "width":  390,
+        "page":  "about.html"
+    },
+    {
+        "samples":  [
+                        {
+                            "x":  0,
+                            "width":  390,
+                            "height":  292.5,
+                            "imageX":  0,
+                            "imageWidth":  390,
+                            "background":  true
+                        }
+                    ],
+        "width":  390,
+        "page":  "power-washing.html"
+    },
+    {
+        "samples":  [
+                        {
+                            "x":  0,
+                            "width":  390,
+                            "height":  219.375,
+                            "imageX":  0,
+                            "imageWidth":  390,
+                            "background":  true
+                        }
+                    ],
+        "width":  390,
+        "page":  "index.html"
+    }
+]
