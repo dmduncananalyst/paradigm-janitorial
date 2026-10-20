@@ -1,0 +1,18 @@
+{
+    "archiveCards":  16,
+    "indexedPages":  73,
+    "metadataChanges":  56,
+    "pending":  [
+                    "Visual browser testing: previous browser launch permission declined",
+                    "HubSpot delivery and notifications: no external submission made",
+                    "Hosted HTTP 404 status and published favicon URLs: local only, no deployment"
+                ],
+    "htmlPages":  149,
+    "localTargetsChecked":  11990,
+    "protectedLongTitles":  [
+                                "blog-auto-repair-waiting-room-tells-customers.html",
+                                "blog-law-office-conference-room-looks-tired.html",
+                                "blog-physical-therapy-equipment-patients-share.html"
+                            ],
+    "checks":  "PASS: metadata, canonical URLs, headings, unique titles/descriptions, local links, JSON schema, icons, fallbacks, archive reachability, consistent preview images, protected supplied metadata, phone validation"
+}

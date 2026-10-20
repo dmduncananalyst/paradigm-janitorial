@@ -1,0 +1,37 @@
+{
+    "browser":  "not run: launch permission declined",
+    "checks":  [
+                   {
+                       "content":  "exact match",
+                       "sharedTemplate":  "unchanged",
+                       "schema":  "pass",
+                       "localLinks":  "pass",
+                       "metadata":  "pass",
+                       "page":  "blog-auto-repair-waiting-room-tells-customers.html",
+                       "image":  "original PNG, 1536 by 1024, same card and article"
+                   },
+                   {
+                       "content":  "exact match",
+                       "sharedTemplate":  "unchanged",
+                       "schema":  "pass",
+                       "localLinks":  "pass",
+                       "metadata":  "pass",
+                       "page":  "blog-law-office-conference-room-looks-tired.html",
+                       "image":  "original PNG, 1536 by 1024, same card and article"
+                   },
+                   {
+                       "content":  "exact match",
+                       "sharedTemplate":  "unchanged",
+                       "schema":  "pass",
+                       "localLinks":  "pass",
+                       "metadata":  "pass",
+                       "page":  "blog-physical-therapy-equipment-patients-share.html",
+                       "image":  "original PNG, 1536 by 1024, same card and article"
+                   }
+               ],
+    "archiveCount":  16,
+    "existingArticles":  "unchanged",
+    "audit":  "PDF read as reference only; restored orphan article archive card and canonical homepage sitemap URL",
+    "sitemap":  "valid XML, unique URLs, all local targets exist",
+    "existingCards":  "unchanged"
+}

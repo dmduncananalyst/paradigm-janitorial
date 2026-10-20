@@ -1,0 +1,5 @@
+﻿{
+    "execution":  "cscript.exe //nologo handoff/audit-2026-10-20/phone-tests.js; approved local execution returned exit code 0",
+    "hash":  "07A4CAA02A6FA8CB4FC0224BEA25D5DB369B3664D2C93CAA1FD0208A7308205E",
+    "passed":  12
+}

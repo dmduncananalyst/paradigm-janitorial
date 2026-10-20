@@ -202,75 +202,6 @@
   // Both entry points use the existing chat form, whose fields are contact properties.
   const QUOTE_FORM = 'b90d8e3d-5896-4bc1-b73a-69cdb94e51ec';
   const SUBMIT_URL = `https://api.hsforms.com/submissions/v3/integration/submit/${PORTAL}/${QUOTE_FORM}`;
-  let transcript = '';
-  let draftMessage = '';
-  let chatForm;
-
-  function makeQuoteForm(target, prefix, getContext = () => '') {
-    target.innerHTML = `<form class="cleaning-quote-form" data-hubspot-form-id="${QUOTE_FORM}">
-      <div class="quote-field"><label for="${prefix}-name">Name <span aria-hidden="true">*</span></label><input id="${prefix}-name" name="name" autocomplete="name" maxlength="200" required></div>
-      <div class="quote-field"><label for="${prefix}-phone">Phone</label><input id="${prefix}-phone" name="phone" type="tel" autocomplete="tel" maxlength="80"></div>
-      <div class="quote-field"><label for="${prefix}-email">Email <span aria-hidden="true">*</span></label><input id="${prefix}-email" name="email" type="email" autocomplete="email" maxlength="254" required></div>
-      <div class="quote-field"><label for="${prefix}-message">Message <span aria-hidden="true">*</span></label><textarea id="${prefix}-message" name="message" rows="6" maxlength="20000" required></textarea></div>
-      <p class="quote-error" role="alert" hidden></p><button class="button quote-submit" type="submit">Send My Request</button>
-      <p class="quote-confirmation" role="status" tabindex="-1" hidden>Thank you. Your cleaning request has been sent. We’ll be in touch soon.</p>
-    </form><p class="form-fallback">You can also call <a href="tel:+18187465432" aria-label="Call Paradigm Janitorial at 818-746-5432" title="Call 818-746-5432">818-746-5432</a>.</p>`;
-    const form = target.querySelector('form');
-    const message = form.elements.message;
-    form.addEventListener('submit', async event => {
-      event.preventDefault();
-      if (form.dataset.sending === 'true' || form.dataset.sent === 'true') return;
-      for (const field of [form.elements.name, form.elements.email, message]) {
-        field.value = field.value.trim();
-      }
-      if (!form.reportValidity()) return;
-      const button = form.querySelector('.quote-submit');
-      const error = form.querySelector('.quote-error');
-      error.hidden = true;
-      const names = form.elements.name.value.split(/\s+/);
-      const fields = [
-        {objectTypeId: '0-1', name: 'firstname', value: names.shift()},
-        {objectTypeId: '0-1', name: 'lastname', value: names.join(' ')},
-        {objectTypeId: '0-1', name: 'email', value: form.elements.email.value},
-        {objectTypeId: '0-1', name: 'phone', value: form.elements.phone.value.trim()}
-      ];
-      const details = getContext();
-      const value = details && !message.value.includes(details) ? `${message.value}\n\nCleaning details:\n${details}` : message.value;
-      fields.push({objectTypeId: '0-1', name: 'message', value});
-      const context = {
-        pageUri: /^https?:$/.test(location.protocol) ? location.href.split('#')[0].split('?')[0] : document.querySelector('link[rel="canonical"]').href,
-        pageName: document.title
-      };
-      form.dataset.sending = 'true';button.disabled = true;button.textContent = 'Sending…';
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 30000);
-      try {
-        const response = await fetch(SUBMIT_URL, {
-          method: 'POST', headers: {'Content-Type': 'application/json'}, signal: controller.signal,
-          body: JSON.stringify({fields, context, submittedAt: String(Date.now())})
-        });
-        if (!response.ok) {
-          const result = await response.json().catch(() => ({}));
-          if (response.status === 429) throw new Error('Please wait a moment before sending again. Your details are still here.');
-          if (result.errors?.some(item => /EMAIL/.test(item.errorType || ''))) throw new Error('Please check your email address and try again.');
-          throw new Error('Your request could not be sent. Please try again or call 818-746-5432.');
-        }
-        form.dataset.sent = 'true';
-        form.querySelectorAll('.quote-field,.quote-submit').forEach(element => {element.hidden = true;});
-        const confirmation = form.querySelector('.quote-confirmation');confirmation.hidden = false;confirmation.focus();
-        form.dispatchEvent(new CustomEvent('quote:sent', {bubbles: true}));
-      } catch (reason) {
-        error.textContent = reason.name === 'AbortError' ? 'We couldn’t confirm delivery. Your details are still here. Please call 818-746-5432 if you need help.' : reason instanceof TypeError ? 'Please check your connection and try again. Your details are still here.' : reason.message;
-        error.hidden = false;
-      } finally {
-        clearTimeout(timeout);form.dataset.sending = 'false';button.disabled = false;button.textContent = 'Send My Request';
-      }
-    });
-    return {element: form, message};
-  }
-  const contact = document.querySelector('.hubspot-contact-form');
-  if (contact) makeQuoteForm(contact, 'contact');
-
   function applyTranscript() {
     // The transcript is intentionally never rendered to the visitor.
     // It is submitted to HubSpot in the background as the Message property.
@@ -417,6 +348,11 @@
   }
 
   let contactMethod = '';
+  function isValidQuotePhone(value) {
+    const digits = value.replace(/\D/g, '');
+    return /^[+()\d\s.\-]+$/.test(value) && digits.length >= 10 && digits.length <= 15;
+  }
+
   function renderContact() {
     resetLog();
     config.questions.forEach((question, index) => { addBubble('assistant', question); addBubble('user', answers[index] || ''); });
@@ -457,6 +393,8 @@
       const value = input.value.trim();
       if (!value) { const error=composer.querySelector('.chat-form-error'); error.textContent=`Please add your ${isPhone ? 'phone number' : 'email address'} to continue.`; error.hidden=false; input.focus(); return; }
       if (!isPhone && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) { const error=composer.querySelector('.chat-form-error'); error.textContent='Please enter a valid email address.'; error.hidden=false; input.focus(); return; }
+      if (isPhone && !isValidQuotePhone(value)) { const error=composer.querySelector('.chat-form-error'); error.textContent='Please enter a valid phone number with at least 10 digits.'; error.hidden=false; input.setAttribute('aria-invalid','true'); input.focus(); return; }
+      input.removeAttribute('aria-invalid');
       if (isPhone) { contactPhone=value; contactEmail=''; } else { contactEmail=value; contactPhone=''; }
       await submitChatRequest();
     };
@@ -542,6 +480,8 @@
       panel.focus();
     });
   });
+  // Hide fallback instructions only after quote handlers initialize.
+  document.documentElement.classList.add('quote-flow-ready');
 })();
 
 // Measure the header for dropdowns; CSS reserves hero geometry from first paint.
