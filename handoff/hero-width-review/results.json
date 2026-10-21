@@ -1,0 +1,166 @@
+﻿[
+    {
+        "result":  {
+                       "viewport":  1905,
+                       "heroWidth":  1905,
+                       "heroHeight":  1071.5625,
+                       "mediaWidth":  1905,
+                       "mediaHeight":  1071.5625,
+                       "fit":  "contain",
+                       "overflow":  false,
+                       "videoReady":  4
+                   },
+        "width":  1920,
+        "file":  "index.html"
+    },
+    {
+        "result":  {
+                       "viewport":  1905,
+                       "heroWidth":  1905,
+                       "heroHeight":  1072.125,
+                       "mediaWidth":  1905,
+                       "mediaHeight":  1072.125,
+                       "fit":  "contain",
+                       "overflow":  false
+                   },
+        "width":  1920,
+        "file":  "office-cleaning.html"
+    },
+    {
+        "result":  {
+                       "viewport":  1905,
+                       "heroWidth":  1905,
+                       "heroHeight":  1071.5625,
+                       "mediaWidth":  1905,
+                       "mediaHeight":  1071.5625,
+                       "fit":  "contain",
+                       "overflow":  false,
+                       "videoReady":  4
+                   },
+        "width":  1920,
+        "file":  "los-angeles-county.html"
+    },
+    {
+        "result":  {
+                       "viewport":  1425,
+                       "heroWidth":  1425,
+                       "heroHeight":  801.5625,
+                       "mediaWidth":  1425,
+                       "mediaHeight":  801.5625,
+                       "fit":  "contain",
+                       "overflow":  false,
+                       "videoReady":  4
+                   },
+        "width":  1440,
+        "file":  "index.html"
+    },
+    {
+        "result":  {
+                       "viewport":  1425,
+                       "heroWidth":  1425,
+                       "heroHeight":  801.984375,
+                       "mediaWidth":  1425,
+                       "mediaHeight":  801.984375,
+                       "fit":  "contain",
+                       "overflow":  false
+                   },
+        "width":  1440,
+        "file":  "office-cleaning.html"
+    },
+    {
+        "result":  {
+                       "viewport":  1425,
+                       "heroWidth":  1425,
+                       "heroHeight":  801.5625,
+                       "mediaWidth":  1425,
+                       "mediaHeight":  801.5625,
+                       "fit":  "contain",
+                       "overflow":  false,
+                       "videoReady":  4
+                   },
+        "width":  1440,
+        "file":  "los-angeles-county.html"
+    },
+    {
+        "result":  {
+                       "viewport":  753,
+                       "heroWidth":  753,
+                       "heroHeight":  423.5625,
+                       "mediaWidth":  753,
+                       "mediaHeight":  423.5625,
+                       "fit":  "contain",
+                       "overflow":  false,
+                       "videoReady":  4
+                   },
+        "width":  768,
+        "file":  "index.html"
+    },
+    {
+        "result":  {
+                       "viewport":  753,
+                       "heroWidth":  753,
+                       "heroHeight":  423.78125,
+                       "mediaWidth":  753,
+                       "mediaHeight":  423.78125,
+                       "fit":  "contain",
+                       "overflow":  false
+                   },
+        "width":  768,
+        "file":  "office-cleaning.html"
+    },
+    {
+        "result":  {
+                       "viewport":  753,
+                       "heroWidth":  753,
+                       "heroHeight":  423.5625,
+                       "mediaWidth":  753,
+                       "mediaHeight":  423.5625,
+                       "fit":  "contain",
+                       "overflow":  false,
+                       "videoReady":  4
+                   },
+        "width":  768,
+        "file":  "los-angeles-county.html"
+    },
+    {
+        "result":  {
+                       "viewport":  390,
+                       "heroWidth":  390,
+                       "heroHeight":  219.375,
+                       "mediaWidth":  390,
+                       "mediaHeight":  219.375,
+                       "fit":  "contain",
+                       "overflow":  false,
+                       "videoReady":  4
+                   },
+        "width":  390,
+        "file":  "index.html"
+    },
+    {
+        "result":  {
+                       "viewport":  390,
+                       "heroWidth":  390,
+                       "heroHeight":  219.484375,
+                       "mediaWidth":  390,
+                       "mediaHeight":  219.484375,
+                       "fit":  "contain",
+                       "overflow":  false
+                   },
+        "width":  390,
+        "file":  "office-cleaning.html"
+    },
+    {
+        "result":  {
+                       "viewport":  390,
+                       "heroWidth":  390,
+                       "heroHeight":  219.375,
+                       "mediaWidth":  390,
+                       "mediaHeight":  219.375,
+                       "fit":  "contain",
+                       "overflow":  false,
+                       "videoReady":  4
+                   },
+        "width":  390,
+        "file":  "los-angeles-county.html"
+    }
+]

@@ -89,3 +89,19 @@
 @media(min-width:960px){
  #full-photo-layout .site-header .main-nav{justify-content:center!important;gap:14px!important}
 }
+
+/* Open desktop dropdowns at their full content height. */
+@media(min-width:601px){
+ #full-photo-layout .site-header .main-nav .nav-panel.commercial-mega{
+  height:auto!important;max-height:none!important;overflow:visible!important;
+ }
+}
+/* Touch tablets can scroll long dropdowns within the visible screen. */
+@media(min-width:601px) and (hover:none) and (pointer:coarse){
+ #full-photo-layout .site-header .main-nav .nav-panel.commercial-mega{
+  max-height:calc(100dvh - var(--measured-header-height,var(--header-height)) - 16px)!important;
+  overflow-y:auto!important;overflow-x:hidden!important;
+  overscroll-behavior-y:contain;-webkit-overflow-scrolling:touch;
+  touch-action:pan-y;scrollbar-width:thin;
+ }
+}

@@ -1,0 +1,128 @@
+[
+    {
+        "result":  {
+                       "overflow":  false,
+                       "errors":  [
+
+                                  ],
+                       "cardCount":  17,
+                       "h1":  "Blog",
+                       "image":  {
+                                     "loaded":  true,
+                                     "fit":  "contain",
+                                     "ratio":  1.3333842939407838,
+                                     "src":  "assets/images/blog-previews/janitorial_office_cleaning.png"
+                                 },
+                       "referenceCount":  0,
+                       "description":  "Cleaning and property-care tips for offices, estates, businesses, and managed properties across Los Angeles County and San Bernardino County.",
+                       "quoteReady":  true
+                   },
+        "width":  1440,
+        "page":  "blog.html"
+    },
+    {
+        "result":  {
+                       "overflow":  false,
+                       "errors":  [
+
+                                  ],
+                       "cardCount":  0,
+                       "h1":  "How Often Should a Commercial Office Be Professionally Cleaned?",
+                       "image":  {
+                                     "loaded":  true,
+                                     "fit":  "contain",
+                                     "ratio":  1.7768890158548778,
+                                     "src":  "assets/images/blog-previews/janitorial_office_cleaning.png"
+                                 },
+                       "referenceCount":  4,
+                       "description":  "Learn how office occupancy, restrooms, shared spaces, floors, and working hours affect a practical commercial cleaning schedule.",
+                       "quoteReady":  true
+                   },
+        "width":  1440,
+        "page":  "blog-how-often-commercial-office-professionally-cleaned.html"
+    },
+    {
+        "result":  {
+                       "overflow":  false,
+                       "errors":  [
+
+                                  ],
+                       "cardCount":  17,
+                       "h1":  "Blog",
+                       "image":  {
+                                     "loaded":  true,
+                                     "fit":  "contain",
+                                     "ratio":  1.3333960135389245,
+                                     "src":  "assets/images/blog-previews/janitorial_office_cleaning.png"
+                                 },
+                       "referenceCount":  0,
+                       "description":  "Cleaning and property-care tips for offices, estates, businesses, and managed properties across Los Angeles County and San Bernardino County.",
+                       "quoteReady":  true
+                   },
+        "width":  768,
+        "page":  "blog.html"
+    },
+    {
+        "result":  {
+                       "overflow":  false,
+                       "errors":  [
+
+                                  ],
+                       "cardCount":  0,
+                       "h1":  "How Often Should a Commercial Office Be Professionally Cleaned?",
+                       "image":  {
+                                     "loaded":  true,
+                                     "fit":  "contain",
+                                     "ratio":  1.7768947152806227,
+                                     "src":  "assets/images/blog-previews/janitorial_office_cleaning.png"
+                                 },
+                       "referenceCount":  4,
+                       "description":  "Learn how office occupancy, restrooms, shared spaces, floors, and working hours affect a practical commercial cleaning schedule.",
+                       "quoteReady":  true
+                   },
+        "width":  768,
+        "page":  "blog-how-often-commercial-office-professionally-cleaned.html"
+    },
+    {
+        "result":  {
+                       "overflow":  false,
+                       "errors":  [
+
+                                  ],
+                       "cardCount":  17,
+                       "h1":  "Blog",
+                       "image":  {
+                                     "loaded":  true,
+                                     "fit":  "contain",
+                                     "ratio":  1.3333333333333333,
+                                     "src":  "assets/images/blog-previews/janitorial_office_cleaning.png"
+                                 },
+                       "referenceCount":  0,
+                       "description":  "Cleaning and property-care tips for offices, estates, businesses, and managed properties across Los Angeles County and San Bernardino County.",
+                       "quoteReady":  true
+                   },
+        "width":  390,
+        "page":  "blog.html"
+    },
+    {
+        "result":  {
+                       "overflow":  false,
+                       "errors":  [
+
+                                  ],
+                       "cardCount":  0,
+                       "h1":  "How Often Should a Commercial Office Be Professionally Cleaned?",
+                       "image":  {
+                                     "loaded":  true,
+                                     "fit":  "contain",
+                                     "ratio":  1.776931619863557,
+                                     "src":  "assets/images/blog-previews/janitorial_office_cleaning.png"
+                                 },
+                       "referenceCount":  4,
+                       "description":  "Learn how office occupancy, restrooms, shared spaces, floors, and working hours affect a practical commercial cleaning schedule.",
+                       "quoteReady":  true
+                   },
+        "width":  390,
+        "page":  "blog-how-often-commercial-office-professionally-cleaned.html"
+    }
+]

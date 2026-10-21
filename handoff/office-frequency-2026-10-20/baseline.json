@@ -1,0 +1,598 @@
+[
+    {
+        "hash":  "676713DEB717AE27292D27DB11653F98A356C74A461F8154739E38EB94F4CB41",
+        "file":  "404.html"
+    },
+    {
+        "hash":  "E96A3FF0C257442D481489EC72C802B109EA4C8E16C7F41D8910D51DD4DDE0F4",
+        "file":  "about.html"
+    },
+    {
+        "hash":  "C541573452B5BEB4F9CD4C1BC3929F665611781EF486DC4CA7EE64CA22E97EA7",
+        "file":  "apartment-buildings.html"
+    },
+    {
+        "hash":  "D56F7624D32455073A8291069C1CCAB7CB365E7B93036A39ED957236EFF4E57F",
+        "file":  "blog-apartment-garage-stairwell-cleaning-2026.html"
+    },
+    {
+        "hash":  "624277131B4F7931B7DF5C2B71D2736B60E5E6579A05348706BD7F3BD6B9E0A8",
+        "file":  "blog-apartment-move-out-cleaning-2026.html"
+    },
+    {
+        "hash":  "C72EB0DB4D143E8F554115AB7158D62B51387F5A384A13E5D80208880F4A87B1",
+        "file":  "blog-apartment-trash-areas-resident-satisfaction.html"
+    },
+    {
+        "hash":  "7D6DA628F80C4837D653DB129617F38FFD2F59E55F3BC8D8A5849CB2D9BE6515",
+        "file":  "blog-auto-repair-waiting-room-tells-customers.html"
+    },
+    {
+        "hash":  "9AB83D2DA94F8E4AEADE1ABB6A6760854D0BB38CE0B2D5BCD59955573CEC5100",
+        "file":  "blog-law-office-conference-room-looks-tired.html"
+    },
+    {
+        "hash":  "36A8336E10E556A080C26B9BB93CBF8E3B0A2370837DBF4B2E1F248CFBB8C342",
+        "file":  "blog-office-checklist-workplace-essentials.html"
+    },
+    {
+        "hash":  "1221B20903C698127D10EE4DAA98084ABC275C01BDC616F2536D00AAC362037A",
+        "file":  "blog-office-entryways-rainy-season-2026.html"
+    },
+    {
+        "hash":  "966D3CE29445560EA7AFE59E5B21A2C078E180AD3E7E9914BFAC0BCC90B5618F",
+        "file":  "blog-office-flu-season-2026.html"
+    },
+    {
+        "hash":  "20D1743DA63A2B3B46AC5D3326F877896D5599982C10F8E0606603A3E8004B01",
+        "file":  "blog-physical-therapy-equipment-patients-share.html"
+    },
+    {
+        "hash":  "A1EF1A2729A6C325AB95D2B51811CF58077E206CF7B2BFD9D387E475C9C19221",
+        "file":  "blog-power-washing-dirty-storefront.html"
+    },
+    {
+        "hash":  "4D8105223D5A4F25340D306A5E70B1CAE4EEDFA29C6B58B8FEAC864F9BF69CA9",
+        "file":  "blog-restaurant-cleaning-after-closing.html"
+    },
+    {
+        "hash":  "8199D92DC1DEA2FF8362BA73148F2EE57A828B2DE11B9A4C76C16703AB7A81E4",
+        "file":  "blog-restaurant-grease-dining-room.html"
+    },
+    {
+        "hash":  "5EEFF3D56519A70025385DA88AAC2892A4C57FFEFC735E0989D396C0EC4E9EBA",
+        "file":  "blog-retail-holiday-cleaning-2026.html"
+    },
+    {
+        "hash":  "711BB330516AE58904CD162F152DFE29B6B25E15642786B7FEFBF3CBA830D695",
+        "file":  "blog-warehouse-break-room-cleaning-2026.html"
+    },
+    {
+        "hash":  "20464B82198485349D91BE387626804CDB8EE4122632F8082A775C51DDF3B6F3",
+        "file":  "blog-what-is-porter-service.html"
+    },
+    {
+        "hash":  "9DAEF20FC58DF2CBBA0C99AFFFAE7F0FBB2DF1087863C919DC8898B48BDC1326",
+        "file":  "blog-worship-weekend-cleaning-2026.html"
+    },
+    {
+        "hash":  "1FD9B42B0DECDF2719997A5E9053DA2CA661AE1A4B9252CED40B3F89B93A25ED",
+        "file":  "blog.html"
+    },
+    {
+        "hash":  "A2D7194843EF3D11D15B0B5BAE90D34696868E9E86D8A95A34EA9456168BD764",
+        "file":  "business-commercial-questions.html"
+    },
+    {
+        "hash":  "30AD5557D98632F57E05CC54F08DFAC35699A914BAEA931813FC1E91FFA272C1",
+        "file":  "clean-spaces-apartment-common-area-responsibility.html"
+    },
+    {
+        "hash":  "617E1A7F6004C0D5985023B548FC13636E2A8B06816F03CF46D1296094230E2F",
+        "file":  "clean-spaces-business-open-late-opens-early.html"
+    },
+    {
+        "hash":  "EB7A759FC4D454E5BD00998354CE5D6924CDF28A63876D4E6ED00BB6E39A2F0C",
+        "file":  "clean-spaces-carpet-stains-return.html"
+    },
+    {
+        "hash":  "940DE976ED6E33D7D857EDC8A159EA46D4FF412AF43AF4EE2D397A7B3A4A2772",
+        "file":  "clean-spaces-cleaning-before-after-carpet-installation.html"
+    },
+    {
+        "hash":  "A9C4004C151943DFDF527ACFCA7EDD1CB5C1F67538D462BF0E6B4B91338E38CF",
+        "file":  "clean-spaces-cleaning-throughout-the-day.html"
+    },
+    {
+        "hash":  "68C671E96CAAE125EB892E5DD36D0AFBE6F408E5A873A6A6396AF0EF39ABA629",
+        "file":  "clean-spaces-cloudy-new-tile.html"
+    },
+    {
+        "hash":  "DBED26EF543A7F69530241DA522D74CD35F301D90DB7B9B794C3A1ADEE55563F",
+        "file":  "clean-spaces-construction-dust-building-ready.html"
+    },
+    {
+        "hash":  "077673A8A73ED5E80663B1B6990DDB23E2DF01AF572B47030EC0165E17861C87",
+        "file":  "clean-spaces-dry-slippery-restaurant-floor.html"
+    },
+    {
+        "hash":  "6CB12353ED6EC06C3D6FE6F46019CC8C71922D4062545DB75C65289B1F2BCDC9",
+        "file":  "clean-spaces-estate-cleaning-zones.html"
+    },
+    {
+        "hash":  "128DFADAFBAE8760336B4D013E975F082FDF185A4D2ED94F1A76E4241634D875",
+        "file":  "clean-spaces-estate-delicate-finishes.html"
+    },
+    {
+        "hash":  "6288474A16CDD22A6AF91031F5C1AF5310EB5910FC7A5CEE8D4C85CED06B6E6E",
+        "file":  "clean-spaces-estate-staff-cleaning-schedules.html"
+    },
+    {
+        "hash":  "B7E218DD71C247C2CAE36F5A228534B7EF10A790A2CD964A05FDF4C6F3805CD5",
+        "file":  "clean-spaces-floor-care-are-your-floor-technicians-certified.html"
+    },
+    {
+        "hash":  "DC2A9A3188563CFE8D39C01F08FCA717E4F9128C01CC3C80DDCAE18C32A16F64",
+        "file":  "clean-spaces-floor-care-do-you-do-floor-care-after-hours.html"
+    },
+    {
+        "hash":  "12DC63F020A5AEDF905482301ED75B438E1FABDCFB8B8DB00478850B2F92C918",
+        "file":  "clean-spaces-floor-care-how-long-for-floors-to-dry-after-cleaning.html"
+    },
+    {
+        "hash":  "3E08DE31D3ED0BEF78734084D379C9314EADCD0BC1B59A1679ADADB401CC99F5",
+        "file":  "clean-spaces-floor-care-how-often-should-commercial-carpets-be-deep-cleaned.html"
+    },
+    {
+        "hash":  "016530CBCF62CE6476C0A361E6D1D389BD926F026944C933E7C5F6C1CD526E4D",
+        "file":  "clean-spaces-floor-care-how-often-should-tile-be-stripped-waxed-and-polished.html"
+    },
+    {
+        "hash":  "424BC9A28E7CC5194412BF38F5EF64F866A3F046352E4473119908E27D0500F1",
+        "file":  "clean-spaces-floor-care-what-types-of-flooring-do-you-maintain.html"
+    },
+    {
+        "hash":  "CC70BEEABDEA99ABB97CC433480B4AE0611841A3A2857FA20C4F6583D7F17E8A",
+        "file":  "clean-spaces-floor-care-will-floor-care-disrupt-business-operations.html"
+    },
+    {
+        "hash":  "102588AC13D01CB6A04385C73D4C8A5190ADBDCA631B0EB8DC27ACA6AD8D83F1",
+        "file":  "clean-spaces-house-renovation-what-to-expect.html"
+    },
+    {
+        "hash":  "DC0BC2C2A81A7CA1286506858563CD202A5C0BB3F63E660893EE88E359F81999",
+        "file":  "clean-spaces-kitchen-staff-or-cleaning-service.html"
+    },
+    {
+        "hash":  "EEF7DB5CA8A88100A38E3365E51759A22DA661144992DB900A33CECD656EF254",
+        "file":  "clean-spaces-medical-dental-daytime-cleaning.html"
+    },
+    {
+        "hash":  "7FA691DB5C2DA5BC631367DEBFCFE026F40531556BD77710F2CA5BD421F3ECC0",
+        "file":  "clean-spaces-new-office-affordable-cleaning.html"
+    },
+    {
+        "hash":  "E9336D3A5DFD07844BECC2EFEE64D53BD3E647A5DE019145FA0C6E3051231D46",
+        "file":  "clean-spaces-office-cleaning-are-commercial-cleaning-companies-licensed.html"
+    },
+    {
+        "hash":  "8E4A75A947606E96B1E23AB4143AB4D7B63CC34233104D7942520A4C9B57C8B2",
+        "file":  "clean-spaces-office-cleaning-can-a-cleaning-company-provide-references.html"
+    },
+    {
+        "hash":  "FE1070DEF50EEE972092CE14244562001B5A51BB6F1908D07315F4CD108AA878",
+        "file":  "clean-spaces-office-cleaning-do-cleaning-companies-bring-their-own-supplies.html"
+    },
+    {
+        "hash":  "7738741ABFA498902E6B9F08509166E1F0E2F869F71A90D8D49461A748EBC3E8",
+        "file":  "clean-spaces-office-cleaning-do-cleaning-companies-do-background-checks.html"
+    },
+    {
+        "hash":  "42403C1B3A3CF716C2FBA3696F3A2AFD4F92403519AD5C66ED1B33D626F1C2CC",
+        "file":  "clean-spaces-office-cleaning-do-you-use-employees-or-subcontractors.html"
+    },
+    {
+        "hash":  "A3008D2952C457CBFA196A5891DCC4C0280A580A7418525166D94D47A2EAD078",
+        "file":  "clean-spaces-office-cleaning-do-you-use-green-cleaning-products.html"
+    },
+    {
+        "hash":  "4DAD4F9FFA1C92BC96CB2A550ABA1F1E5CAA11A55EB6C74D8ADE305FFEC50A97",
+        "file":  "clean-spaces-office-cleaning-how-do-cleaning-companies-inspect-work-quality.html"
+    },
+    {
+        "hash":  "DA2C7F881A435EB210C9FC33BB9C4DC1108CB9B1B81FA6D52E2748398ABB048B",
+        "file":  "clean-spaces-office-cleaning-how-do-you-handle-keys-fobs-and-alarm-codes.html"
+    },
+    {
+        "hash":  "CDAA02736A5C78AC739FCF2C5724E7C9A39BC4BA9DB12B87B9B09B771FBD2223",
+        "file":  "clean-spaces-office-cleaning-how-often-should-an-office-be-professionally-cleaned.html"
+    },
+    {
+        "hash":  "9D857AE87BD88B4A1107BEC795A1C65CAFE3792D1B06C90631501B63BD4876D2",
+        "file":  "clean-spaces-office-cleaning-should-office-cleaning-happen-during-or-after-hours.html"
+    },
+    {
+        "hash":  "92CDA602B348BE1AF9AA0D1B19844C04C078B9B2127B4968606ECCAC820C8DBF",
+        "file":  "clean-spaces-office-cleaning-what-is-the-difference-between-office-cleaning-and-janitorial-services.html"
+    },
+    {
+        "hash":  "A3FA12DD0C512180C555B1CF2DD33066770AEA21ECBBAA6909C5E26A5DC97670",
+        "file":  "clean-spaces-office-cleaning-what-training-does-cleaning-staff-receive.html"
+    },
+    {
+        "hash":  "D198368EB90AB8A4630AE8C5FF02686F966CA8182C78920A6B751F7134197638",
+        "file":  "clean-spaces-office-cleaning-who-do-i-contact-after-hours-for-urgent-cleaning.html"
+    },
+    {
+        "hash":  "ED11D10361B5CE602ADADE264CA9EAECF9F77ADAB6419A502B4F0BB2F68919D4",
+        "file":  "clean-spaces-office-cleaning-will-the-same-cleaning-team-come-each-visit.html"
+    },
+    {
+        "hash":  "5C3E1947EC4D74C9557CF587AE8C91E15879D0C3C328738F75D7862364C9FE6C",
+        "file":  "clean-spaces-office-front-warehouse-back.html"
+    },
+    {
+        "hash":  "93074A6A06687FC4EDA10A645D241D43D611E462705EBF87E26E7DD0203AEE58",
+        "file":  "clean-spaces-office-kitchen-accountability.html"
+    },
+    {
+        "hash":  "62D8A922EA5A73DF568E7BE7B9AD47C81E314779BAA578D3BBCEA3259E8C5158",
+        "file":  "clean-spaces-painted-apartment-cleaning-before-move-in.html"
+    },
+    {
+        "hash":  "8E95EEE3CE66D69917CE56E8377ED0FE8B7A9894A40284A57F642351465888F3",
+        "file":  "clean-spaces-porter-service-can-porter-schedules-fit-busiest-hours.html"
+    },
+    {
+        "hash":  "7C486CE9397A5F73584BA4FE2D007B75D552795B14C63895E5320B0B9B4A6566",
+        "file":  "clean-spaces-porter-service-difference-between-porter-service-and-janitorial-service.html"
+    },
+    {
+        "hash":  "3DEB92035676FE91F68DE1A4C9354BED3BB1386C45E440FCD65DC68C1E961FC2",
+        "file":  "clean-spaces-porter-service-do-you-offer-evening-porter-service.html"
+    },
+    {
+        "hash":  "DDD2A78ED0C027A7DBD923990EF40595215ABC8D94FB8A14D30B72A5FA6CA251",
+        "file":  "clean-spaces-porter-service-does-porter-service-include-restroom-restocking.html"
+    },
+    {
+        "hash":  "0D37EEA600C3EBE4EDFC616BE0C83173AD58666B00C3A79F0D41A93625A631D1",
+        "file":  "clean-spaces-porter-service-full-time-or-part-time-porter-service.html"
+    },
+    {
+        "hash":  "DABAE5E2DFEF2D42F3ED364D470D35DC7B6E9B8C4841E50AEBC8D8942A7AF4F0",
+        "file":  "clean-spaces-porter-service-how-many-hours-of-porter-coverage.html"
+    },
+    {
+        "hash":  "A4B408F9C3E2014EFD0A59EF4F335B3CC582BF9643229D657DDD808186E70024",
+        "file":  "clean-spaces-porter-service-what-does-a-day-porter-do.html"
+    },
+    {
+        "hash":  "C235C3822F67E3F193DB9C32CED6CC1535FE80A23866D2201A6D9052748C5517",
+        "file":  "clean-spaces-porter-service-what-should-be-in-porter-scope-of-work.html"
+    },
+    {
+        "hash":  "81FF30D24F9FC7BF7C412C2A2BDA35002A42C4018723A138DA53C4C9D64973AC",
+        "file":  "clean-spaces-porter-service-which-properties-need-a-day-porter.html"
+    },
+    {
+        "hash":  "64CC5A11FE6D0FD4132E11369E4DBEBDF21BA2082DA51EE9D61314EB015DF528",
+        "file":  "clean-spaces-power-washing-best-time-of-year-for-power-washing.html"
+    },
+    {
+        "hash":  "2A4492A4AF21B672CA06D5AC3341A2465F733473672295758F98554EAB6C653C",
+        "file":  "clean-spaces-power-washing-can-power-washing-damage-building-surfaces.html"
+    },
+    {
+        "hash":  "7466E5320726E93021D63ACDBC78D5B4E8E70590DA73645A7AFE55019F5CCC30",
+        "file":  "clean-spaces-power-washing-does-power-washing-prevent-mold-and-mildew.html"
+    },
+    {
+        "hash":  "61CF6F21B960E0668FE315A4F9E85E704E609B2A0965C13EEAF763AB45428615",
+        "file":  "clean-spaces-power-washing-how-long-does-power-washing-take.html"
+    },
+    {
+        "hash":  "9016D3A36CCD40C1DF24B56FF5A1125B85A3619B0C34CE3A46378E5D6979A584",
+        "file":  "clean-spaces-power-washing-how-often-should-a-commercial-building-be-power-washed.html"
+    },
+    {
+        "hash":  "15737588D7AB41989FD898C32A7D5C6F4A48EF65523573DC8647E1C897820EE2",
+        "file":  "clean-spaces-power-washing-is-power-washing-environmentally-safe.html"
+    },
+    {
+        "hash":  "8B2EBED5BC611089F481D1F3067735B01DCCCA57727195CC7BA43EE3D29AA34D",
+        "file":  "clean-spaces-power-washing-what-is-included-in-commercial-power-washing.html"
+    },
+    {
+        "hash":  "2281E735A784CD2F90ECD4213C2BDA8318DFB183E1B406285637C370F97A7576",
+        "file":  "clean-spaces-power-washing-what-is-soft-washing-and-when-is-it-used.html"
+    },
+    {
+        "hash":  "9F97B5EEB03990C0169CE3C3E918BFE7ABD32F6F104086F6C923F64821EE05B4",
+        "file":  "clean-spaces-power-washing-what-surfaces-can-be-power-washed.html"
+    },
+    {
+        "hash":  "6C137CA8514EF659E532E79D6096767F9D137FD57FBEAC43C65D2CDE2E9A7602",
+        "file":  "clean-spaces-residential-apartment-do-you-clean-vacant-apartment-properties.html"
+    },
+    {
+        "hash":  "A3448D47192AE1FCBE05BAC6A0CC19162D26A89F97FF89E634FFB237020C9F5F",
+        "file":  "clean-spaces-residential-apartment-do-you-do-post-renovation-cleaning-for-apartments.html"
+    },
+    {
+        "hash":  "512DC7C94B6DEE8A8A828E3C8180510AB9A9B0FFA99B89C791825E81A183675E",
+        "file":  "clean-spaces-residential-apartment-do-you-do-turnover-cleaning-between-tenants.html"
+    },
+    {
+        "hash":  "958CAE16851F9A4F2DB2A68D38CF5C904C496CB099D7D3A134A5A367C2C1E2DD",
+        "file":  "clean-spaces-residential-apartment-do-you-handle-emergency-cleanups.html"
+    },
+    {
+        "hash":  "0D996300AEBC6B2A21AEC685B6BB0F116DF2C3FB2CE4517B91C6DF2A5A2BD4CC",
+        "file":  "clean-spaces-residential-apartment-how-often-should-apartment-common-areas-be-cleaned.html"
+    },
+    {
+        "hash":  "58B9B4FEF1911F5852BE48A4D9F7616C941C7882388CC6411748D054A5080FC0",
+        "file":  "clean-spaces-residential-apartment-what-is-included-in-apartment-common-area-cleaning.html"
+    },
+    {
+        "hash":  "F3A63A397D530D8C68D760833E62291AABC09EBB958C2DB04F2B4649FE51EA8D",
+        "file":  "clean-spaces-residential-apartment-what-is-included-vs-billed-separately.html"
+    },
+    {
+        "hash":  "145C243B7A4790DDF1BEEC348F9CFEE9C9BAFF2224A0E7C2EF9E19334F338674",
+        "file":  "clean-spaces-residential-apartment-which-apartment-spaces-do-you-clean.html"
+    },
+    {
+        "hash":  "C1E72F36864AB9E94A8A542D64F6A2EDCAB8C80934AE1F1943166CACC7514F73",
+        "file":  "clean-spaces-restaurant-cleaning-can-cleaning-help-prepare-for-health-inspection.html"
+    },
+    {
+        "hash":  "9ADFD2DDA6ED63444BBF4F5AA7A0220EF8B5FF888837A8BAA4CEB8FB04155829",
+        "file":  "clean-spaces-restaurant-cleaning-can-restaurant-cleaning-be-scheduled-around-operating-hours.html"
+    },
+    {
+        "hash":  "B870775BF973992727927AF5E6191EBCFF670419650857822FE673271AAB338B",
+        "file":  "clean-spaces-restaurant-cleaning-difference-between-deep-cleaning-and-regular-restaurant-cleaning.html"
+    },
+    {
+        "hash":  "33AD2135E10BD3F8BE7DB6342DF0D17012FDCDFC0DD2CB3C1D0DA0AAC922420B",
+        "file":  "clean-spaces-restaurant-cleaning-do-you-clean-exhaust-hoods-and-grease-behind-appliances.html"
+    },
+    {
+        "hash":  "562A423B87DBEFF122EFCF4CA5A26FF189A3FAF394E0FDCE86B2F267B0AEE3A7",
+        "file":  "clean-spaces-restaurant-cleaning-do-you-move-equipment-during-deep-cleaning.html"
+    },
+    {
+        "hash":  "D299982D170905A5FCF967FDD9BA7995D503B588C0D461B8F46CBFA5ADBC62E9",
+        "file":  "clean-spaces-restaurant-cleaning-does-professional-cleaning-help-pass-health-inspections.html"
+    },
+    {
+        "hash":  "DDBCD9F01ADFE98C7534F74B80AFC3E666B84A83C00035755C7B5BCB410176B7",
+        "file":  "clean-spaces-restaurant-cleaning-how-long-does-restaurant-deep-cleaning-take.html"
+    },
+    {
+        "hash":  "310F56CCB438ED72A043B95CCFFB71C47931AB8679591CD4588725A8CB4222B1",
+        "file":  "clean-spaces-restaurant-cleaning-how-often-should-a-restaurant-kitchen-be-deep-cleaned.html"
+    },
+    {
+        "hash":  "1A1F911B1762A656CC9143CAB6795A4814ACB836EF2B814726F620A4865A98CA",
+        "file":  "clean-spaces-restaurant-cleaning-which-kitchen-areas-get-deep-cleaned.html"
+    },
+    {
+        "hash":  "98943F22ED338B1430C0AEF3DF783E81A51F502E41D688DD289174909B1EF73B",
+        "file":  "clean-spaces-retail-storefront-daytime-cleaning.html"
+    },
+    {
+        "hash":  "D8F423D6217BD9299C3FAAFEF16253A15C67B591B41C298E0244FC981C9AA149",
+        "file":  "clean-spaces-seasonal-estate-cleaning.html"
+    },
+    {
+        "hash":  "0FDED8BFA279F393BCEB317601EBF1C8C9EDB2BE6A6C348DDA107AF7DBAAD54D",
+        "file":  "clean-spaces-tenants-different-cleanliness.html"
+    },
+    {
+        "hash":  "B14CAC8E34D478B84544356FB62DBBBFC8E55C572CA0D2911ECF7E148C28323C",
+        "file":  "clean-spaces-window-cleaning-are-frames-screens-tracks-and-sills-included.html"
+    },
+    {
+        "hash":  "9EAE9EB0473DF4632C834CD2AF3C26EF13BA4A03A2D06747AA3D156E66349CE9",
+        "file":  "clean-spaces-window-cleaning-bad-weather-policy-for-window-cleaning.html"
+    },
+    {
+        "hash":  "D349D3EC89D2B55C68C1F28BE15C98D15A67E2D0C2152B17BCF37245CD9CF018",
+        "file":  "clean-spaces-window-cleaning-can-window-cleaning-scratch-glass.html"
+    },
+    {
+        "hash":  "A007A85FBF28ECDE3F855DFD96C7553513EB5A8D64470E14FAC6C751628F875C",
+        "file":  "clean-spaces-window-cleaning-can-you-remove-hard-water-stains.html"
+    },
+    {
+        "hash":  "4C9480D181BDD1A7860AF3A1971662BD5209FB61BBDA4B10739CD5A92A7B83DA",
+        "file":  "clean-spaces-window-cleaning-do-i-need-to-be-present-during-window-cleaning.html"
+    },
+    {
+        "hash":  "01870DDEDB8CEE7AACF5E20B870A03840DDF34A4157E47F8062673DED899CB01",
+        "file":  "clean-spaces-window-cleaning-do-storefronts-need-more-frequent-window-cleaning.html"
+    },
+    {
+        "hash":  "640022FA5B25CBCA0DED1E72E040D69BE327C97D66D3D6130A6F41DF449C5523",
+        "file":  "clean-spaces-window-cleaning-do-you-clean-interior-and-exterior-windows.html"
+    },
+    {
+        "hash":  "749D708B1A172D7A8A282A35E827AA76F76F52FF4532AF487694E0C611DC9C82",
+        "file":  "clean-spaces-window-cleaning-how-often-should-commercial-windows-be-cleaned.html"
+    },
+    {
+        "hash":  "7DE7B715F541F0CAF638E6FD2E414F1EED63DFF3C6BAF2FECF9668037D079AE7",
+        "file":  "clean-spaces-window-cleaning-what-methods-for-commercial-window-cleaning.html"
+    },
+    {
+        "hash":  "F98F89029523CCFD9ABBBC2A2B761CB4C276CC5027451867B518B3BA646D46C1",
+        "file":  "clean-spaces.html"
+    },
+    {
+        "hash":  "15419FF620541A582B61EADDAE20BC6AB0F7D3BB59E49CC11C977D5A3F3799D8",
+        "file":  "cleaning-services-beverly-hills.html"
+    },
+    {
+        "hash":  "D8262DD9F573315BD96169F9BD6ABF94F69FE2005BDD139F9FE03BC7D4EE136E",
+        "file":  "cleaning-services-big-bear-lake.html"
+    },
+    {
+        "hash":  "0FA887932751D3ADDFE2E14DC0009AF72236A5F8DE36B45D2BA296961D4FCB0F",
+        "file":  "cleaning-services-calabasas.html"
+    },
+    {
+        "hash":  "28AC32A1160F6F8062E92ADFD81931D89A33345E852628CBDC42E4B17FE44366",
+        "file":  "cleaning-services-chino-hills.html"
+    },
+    {
+        "hash":  "A150DBC0AF9159CC6F455A082F520FC94F5312DB352CDBCA7318B3E642447246",
+        "file":  "cleaning-services-la-canada-flintridge.html"
+    },
+    {
+        "hash":  "EFB33C14F77800863C1BF16EED9B34915E1F6B8B755219618FFCB2F0122BFEDD",
+        "file":  "cleaning-services-lake-arrowhead.html"
+    },
+    {
+        "hash":  "400B74D35A69395B8C212D180B8DB2FB6F09196B056E0F3AE43A960F1DDA7AA5",
+        "file":  "cleaning-services-rancho-cucamonga.html"
+    },
+    {
+        "hash":  "F4CF94E240B5FB478D510D223BCEA35448AE8BC4670652272A9BAD5B685018FF",
+        "file":  "cleaning-services-san-marino.html"
+    },
+    {
+        "hash":  "696026A8A43C6A24E114897B1C6FA1FDDEF44B73FC832FB5025F57BDC64B5C63",
+        "file":  "commercial.html"
+    },
+    {
+        "hash":  "8A1B5087885E9E1B3B153977745C6676750B05EA9BAE3D493E6C236813D9128D",
+        "file":  "construction-cleaning.html"
+    },
+    {
+        "hash":  "885914C6D8D4DFBA06463E5FB22915082972F84E0DFB9DE4E5C151D8FDFE5DD8",
+        "file":  "construction-renovation-questions.html"
+    },
+    {
+        "hash":  "E9DADD4F2788319D3951A43E2F17919843C1805EF6AC59FC1BEF046039D74A11",
+        "file":  "contact.html"
+    },
+    {
+        "hash":  "DD89F5AF30F067AAD6FA7A19DC42BCCF01AA8D426E0449CC3A307933E8323E5F",
+        "file":  "day-night-porter-service.html"
+    },
+    {
+        "hash":  "9411984AD1891A1008229F0791DAEB1DDB4EEA876FF07D75768597B7D38147D0",
+        "file":  "duplexes.html"
+    },
+    {
+        "hash":  "BE8C98C543CA76ECAB596AF7D6BD1D11BB7388F6FED1E3CBB1A86C1E460F71F5",
+        "file":  "estates-apartment-questions.html"
+    },
+    {
+        "hash":  "8381A835F4659A22B0749CFBE3CDD32CFF538B4803B48B1047438A8E16AAE465",
+        "file":  "estates.html"
+    },
+    {
+        "hash":  "700596617431391350C96DA9D7D96A42F6C9D979C7F0765D6BB0D860EF35A28C",
+        "file":  "faq.html"
+    },
+    {
+        "hash":  "DFA237017064C2E9DFC9B8F74BD56F36CAD06FD0BD73D16378370DD90C482A08",
+        "file":  "floor-care-questions.html"
+    },
+    {
+        "hash":  "04C016889A699FFBC2125EC68FB1E1EFE8BC946ABE7C2FB969D24D9933533939",
+        "file":  "floor-care.html"
+    },
+    {
+        "hash":  "BB166E6442C7B91B23B53BD45C7276D0C9789E245793CC80B77D31A157DE40CE",
+        "file":  "index.html"
+    },
+    {
+        "hash":  "257747FEA519E8284E07F45DDD99EA182476DDF45059DBE075D87E5BBEB33027",
+        "file":  "learning-facility-cleaning.html"
+    },
+    {
+        "hash":  "10E5A3ACB6CF6015226050232C4AFEF3A9932F5760A34DD0107E6A4164F3F111",
+        "file":  "locations.html"
+    },
+    {
+        "hash":  "2C1A96D270B9CFE684E26E2404746B5D49BB7B95E54B37C5AF347F82CB78E274",
+        "file":  "los-angeles-county.html"
+    },
+    {
+        "hash":  "9EC72BC8DA9EC91CA2FDD220CD820C796E27853DEA71904A56F39C50BDBB291B",
+        "file":  "medical-dental-office-cleaning.html"
+    },
+    {
+        "hash":  "DFA237017064C2E9DFC9B8F74BD56F36CAD06FD0BD73D16378370DD90C482A08",
+        "file":  "office-cleaning-questions.html"
+    },
+    {
+        "hash":  "A8ABF9741C2928A7E22F1D7D359C6855DDB46A464F0EC008DC54ECA50EFB7F31",
+        "file":  "office-cleaning.html"
+    },
+    {
+        "hash":  "DFA237017064C2E9DFC9B8F74BD56F36CAD06FD0BD73D16378370DD90C482A08",
+        "file":  "porter-service-questions.html"
+    },
+    {
+        "hash":  "C9EB7F7425529D20986F9E4EBEF4961B0B97608859F97A682C34FDCB4174C55F",
+        "file":  "post-construction-renovation-cleaning.html"
+    },
+    {
+        "hash":  "DFA237017064C2E9DFC9B8F74BD56F36CAD06FD0BD73D16378370DD90C482A08",
+        "file":  "power-washing-questions.html"
+    },
+    {
+        "hash":  "E89DAE9254D475ED10A0917F4EDEFACF53C711693C30A6A609258A57B12801E3",
+        "file":  "power-washing.html"
+    },
+    {
+        "hash":  "F24FAEB50FB325118CE97B09DE1FCE4ED2BAF49660F3E6F29CC2D60474B9F101",
+        "file":  "residential-apartment-questions.html"
+    },
+    {
+        "hash":  "47AFB887F569197D38A4B12CE3D0CCE99EBAF527828E679892068B43AB8D4ED7",
+        "file":  "residential.html"
+    },
+    {
+        "hash":  "DFA237017064C2E9DFC9B8F74BD56F36CAD06FD0BD73D16378370DD90C482A08",
+        "file":  "restaurant-cleaning-questions.html"
+    },
+    {
+        "hash":  "55E82D4ACFF669DB4B119B1291112D477EB348212FC250AA145B7CA3549BA1AC",
+        "file":  "restaurant-cleaning.html"
+    },
+    {
+        "hash":  "A41DA87676D5DEF1287E905ECCF59F3A05B20D81E589FDA337B4D1667BBAE009",
+        "file":  "retail-cleaning.html"
+    },
+    {
+        "hash":  "AA4B3EED4FE96C8B588B72F1BD3BF3D6A34496A21E0BFD81370423B6545E704B",
+        "file":  "retail-storefront-cleaning.html"
+    },
+    {
+        "hash":  "A593103CF6F292BF188838D9394D30564FCEB22782CBFC4918FF19A4856ECD41",
+        "file":  "san-bernardino-county.html"
+    },
+    {
+        "hash":  "A6B4C033B3E5472B8F41BCDFA20B9CC682CE214345D6BCAC1BE908B29C43BDC6",
+        "file":  "single-family-homes.html"
+    },
+    {
+        "hash":  "45F8AAAF9BC7F8E508D4C47FF5BD75CE1CAD2E63A62DAA87F6DB076665D76FE0",
+        "file":  "warehouse-industrial-cleaning.html"
+    },
+    {
+        "hash":  "DFA237017064C2E9DFC9B8F74BD56F36CAD06FD0BD73D16378370DD90C482A08",
+        "file":  "window-cleaning-questions.html"
+    },
+    {
+        "hash":  "760EE7EB07F81A80DCDB517727385B8A3A7A61B59A4FE911EEBD1E3AA5E53044",
+        "file":  "window-cleaning.html"
+    }
+]

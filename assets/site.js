@@ -516,11 +516,11 @@
    const trigger=panel.parentElement.querySelector(':scope > a');
    const triggerBounds=trigger.getBoundingClientRect();
    const anchorCenter=triggerBounds.left+triggerBounds.width/2;
-   const availableWidth=2*Math.min(anchorCenter-24,window.innerWidth-anchorCenter-24);
+   const availableWidth=window.innerWidth-48;
    const columns=Math.min(5,Math.max(1,count),Math.max(1,Math.floor((availableWidth-22)/220)));
    const width=Math.min(38+columns*204+(columns-1)*16,availableWidth);
    const groupLeft=panel.parentElement.getBoundingClientRect().left;
-   const viewportLeft=anchorCenter-width/2;
+   const viewportLeft=Math.max(24,Math.min(anchorCenter-width/2,window.innerWidth-width-24));
    panel.style.setProperty('--dropdown-columns',columns);
    panel.style.setProperty('--dropdown-width',width+'px');
    panel.style.setProperty('--dropdown-left',(viewportLeft-groupLeft)+'px');
