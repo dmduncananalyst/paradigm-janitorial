@@ -1,0 +1,260 @@
+﻿[
+    {
+        "archiveCards":  20,
+        "photos":  [
+                       {
+                           "src":  "assets/images/blog-previews/Professional Cleaner in Upscale Dining Room.png",
+                           "width":  408.828125,
+                           "height":  272.546875,
+                           "naturalWidth":  1536,
+                           "naturalHeight":  1024,
+                           "fit":  "contain",
+                           "containerHeight":  272.546875
+                       },
+                       {
+                           "src":  "assets/images/blog-previews/Attendant Arranging Flowers in Memorial Parlor.png",
+                           "width":  408.828125,
+                           "height":  272.546875,
+                           "naturalWidth":  1536,
+                           "naturalHeight":  1024,
+                           "fit":  "contain",
+                           "containerHeight":  272.546875
+                       },
+                       {
+                           "src":  "assets/images/blog-previews/Professional Office Cleaning in Action.png",
+                           "width":  408.828125,
+                           "height":  272.546875,
+                           "naturalWidth":  1536,
+                           "naturalHeight":  1024,
+                           "fit":  "contain",
+                           "containerHeight":  272.546875
+                       }
+                   ],
+        "width":  1440,
+        "file":  "blog.html",
+        "passed":  true
+    },
+    {
+        "archiveCards":  0,
+        "photos":  [
+                       {
+                           "src":  "assets/images/blog-previews/Professional Cleaner in Upscale Dining Room.png",
+                           "width":  777.5,
+                           "height":  518.328125,
+                           "naturalWidth":  1536,
+                           "naturalHeight":  1024,
+                           "fit":  "contain",
+                           "containerHeight":  4712.640625
+                       }
+                   ],
+        "width":  1440,
+        "file":  "blog-assisted-living-dining-room-tour.html",
+        "passed":  true
+    },
+    {
+        "archiveCards":  0,
+        "photos":  [
+                       {
+                           "src":  "assets/images/blog-previews/Attendant Arranging Flowers in Memorial Parlor.png",
+                           "width":  777.5,
+                           "height":  518.328125,
+                           "naturalWidth":  1536,
+                           "naturalHeight":  1024,
+                           "fit":  "contain",
+                           "containerHeight":  4215.265625
+                       }
+                   ],
+        "width":  1440,
+        "file":  "blog-funeral-home-visitation-room.html",
+        "passed":  true
+    },
+    {
+        "archiveCards":  0,
+        "photos":  [
+                       {
+                           "src":  "assets/images/blog-previews/Professional Office Cleaning in Action.png",
+                           "width":  777.5,
+                           "height":  518.328125,
+                           "naturalWidth":  1536,
+                           "naturalHeight":  1024,
+                           "fit":  "contain",
+                           "containerHeight":  4223.78125
+                       }
+                   ],
+        "width":  1440,
+        "file":  "blog-studio-floor-every-class.html",
+        "passed":  true
+    },
+    {
+        "archiveCards":  20,
+        "photos":  [
+                       {
+                           "src":  "assets/images/blog-previews/Professional Cleaner in Upscale Dining Room.png",
+                           "width":  332.390625,
+                           "height":  221.59375,
+                           "naturalWidth":  1536,
+                           "naturalHeight":  1024,
+                           "fit":  "contain",
+                           "containerHeight":  221.59375
+                       },
+                       {
+                           "src":  "assets/images/blog-previews/Attendant Arranging Flowers in Memorial Parlor.png",
+                           "width":  332.390625,
+                           "height":  221.59375,
+                           "naturalWidth":  1536,
+                           "naturalHeight":  1024,
+                           "fit":  "contain",
+                           "containerHeight":  221.59375
+                       },
+                       {
+                           "src":  "assets/images/blog-previews/Professional Office Cleaning in Action.png",
+                           "width":  332.390625,
+                           "height":  221.59375,
+                           "naturalWidth":  1536,
+                           "naturalHeight":  1024,
+                           "fit":  "contain",
+                           "containerHeight":  221.59375
+                       }
+                   ],
+        "width":  768,
+        "file":  "blog.html",
+        "passed":  true
+    },
+    {
+        "archiveCards":  0,
+        "photos":  [
+                       {
+                           "src":  "assets/images/blog-previews/Professional Cleaner in Upscale Dining Room.png",
+                           "width":  677.71875,
+                           "height":  451.8125,
+                           "naturalWidth":  1536,
+                           "naturalHeight":  1024,
+                           "fit":  "contain",
+                           "containerHeight":  5122.546875
+                       }
+                   ],
+        "width":  768,
+        "file":  "blog-assisted-living-dining-room-tour.html",
+        "passed":  true
+    },
+    {
+        "archiveCards":  0,
+        "photos":  [
+                       {
+                           "src":  "assets/images/blog-previews/Attendant Arranging Flowers in Memorial Parlor.png",
+                           "width":  677.71875,
+                           "height":  451.8125,
+                           "naturalWidth":  1536,
+                           "naturalHeight":  1024,
+                           "fit":  "contain",
+                           "containerHeight":  4459.796875
+                       }
+                   ],
+        "width":  768,
+        "file":  "blog-funeral-home-visitation-room.html",
+        "passed":  true
+    },
+    {
+        "archiveCards":  0,
+        "photos":  [
+                       {
+                           "src":  "assets/images/blog-previews/Professional Office Cleaning in Action.png",
+                           "width":  677.71875,
+                           "height":  451.8125,
+                           "naturalWidth":  1536,
+                           "naturalHeight":  1024,
+                           "fit":  "contain",
+                           "containerHeight":  4567.390625
+                       }
+                   ],
+        "width":  768,
+        "file":  "blog-studio-floor-every-class.html",
+        "passed":  true
+    },
+    {
+        "archiveCards":  20,
+        "photos":  [
+                       {
+                           "src":  "assets/images/blog-previews/Professional Cleaner in Upscale Dining Room.png",
+                           "width":  335,
+                           "height":  223.328125,
+                           "naturalWidth":  1536,
+                           "naturalHeight":  1024,
+                           "fit":  "contain",
+                           "containerHeight":  223.328125
+                       },
+                       {
+                           "src":  "assets/images/blog-previews/Attendant Arranging Flowers in Memorial Parlor.png",
+                           "width":  335,
+                           "height":  223.328125,
+                           "naturalWidth":  1536,
+                           "naturalHeight":  1024,
+                           "fit":  "contain",
+                           "containerHeight":  223.328125
+                       },
+                       {
+                           "src":  "assets/images/blog-previews/Professional Office Cleaning in Action.png",
+                           "width":  335,
+                           "height":  223.328125,
+                           "naturalWidth":  1536,
+                           "naturalHeight":  1024,
+                           "fit":  "contain",
+                           "containerHeight":  223.328125
+                       }
+                   ],
+        "width":  390,
+        "file":  "blog.html",
+        "passed":  true
+    },
+    {
+        "archiveCards":  0,
+        "photos":  [
+                       {
+                           "src":  "assets/images/blog-previews/Professional Cleaner in Upscale Dining Room.png",
+                           "width":  335,
+                           "height":  223.328125,
+                           "naturalWidth":  1536,
+                           "naturalHeight":  1024,
+                           "fit":  "contain",
+                           "containerHeight":  7802.546875
+                       }
+                   ],
+        "width":  390,
+        "file":  "blog-assisted-living-dining-room-tour.html",
+        "passed":  true
+    },
+    {
+        "archiveCards":  0,
+        "photos":  [
+                       {
+                           "src":  "assets/images/blog-previews/Attendant Arranging Flowers in Memorial Parlor.png",
+                           "width":  335,
+                           "height":  223.328125,
+                           "naturalWidth":  1536,
+                           "naturalHeight":  1024,
+                           "fit":  "contain",
+                           "containerHeight":  6843.265625
+                       }
+                   ],
+        "width":  390,
+        "file":  "blog-funeral-home-visitation-room.html",
+        "passed":  true
+    },
+    {
+        "archiveCards":  0,
+        "photos":  [
+                       {
+                           "src":  "assets/images/blog-previews/Professional Office Cleaning in Action.png",
+                           "width":  335,
+                           "height":  223.328125,
+                           "naturalWidth":  1536,
+                           "naturalHeight":  1024,
+                           "fit":  "contain",
+                           "containerHeight":  6876.875
+                       }
+                   ],
+        "width":  390,
+        "file":  "blog-studio-floor-every-class.html",
+        "passed":  true
+    }
+]

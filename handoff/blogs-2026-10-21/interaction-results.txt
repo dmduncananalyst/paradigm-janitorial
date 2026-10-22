@@ -1,0 +1,1 @@
+PASS: all three card clicks, mobile menu opening and closing, 20 archive schema entries, 17 unchanged existing cards, unchanged shared header and footer.

@@ -1,0 +1,182 @@
+﻿[
+    {
+        "width":  1440,
+        "photos":  {
+                       "value":  [
+                                     {
+                                         "src":  "assets/images/blog-previews/Professional Cleaner in Upscale Dining Room.png",
+                                         "width":  408.828125,
+                                         "height":  272.546875,
+                                         "containerHeight":  272.546875,
+                                         "ratio":  1.5000286647939,
+                                         "fit":  "contain",
+                                         "loaded":  true
+                                     },
+                                     {
+                                         "src":  "assets/images/blog-previews/Serene Funeral Home Visitation Parlor.png",
+                                         "width":  408.828125,
+                                         "height":  272.546875,
+                                         "containerHeight":  272.546875,
+                                         "ratio":  1.5000286647939,
+                                         "fit":  "contain",
+                                         "loaded":  true
+                                     },
+                                     {
+                                         "src":  "assets/images/blog-previews/Professional Office Cleaning in Action.png",
+                                         "width":  408.828125,
+                                         "height":  272.546875,
+                                         "containerHeight":  272.546875,
+                                         "ratio":  1.5000286647939,
+                                         "fit":  "contain",
+                                         "loaded":  true
+                                     },
+                                     {
+                                         "src":  "assets/images/blog-previews/janitorial_office_cleaning.png",
+                                         "width":  408.828125,
+                                         "height":  272.546875,
+                                         "containerHeight":  272.546875,
+                                         "ratio":  1.5000286647939,
+                                         "fit":  "cover",
+                                         "loaded":  true
+                                     }
+                                 ],
+                       "Count":  4
+                   },
+        "passed":  true
+    },
+    {
+        "width":  1100,
+        "photos":  {
+                       "value":  [
+                                     {
+                                         "src":  "assets/images/blog-previews/Professional Cleaner in Upscale Dining Room.png",
+                                         "width":  306.828125,
+                                         "height":  204.546875,
+                                         "containerHeight":  204.546875,
+                                         "ratio":  1.5000381941792071,
+                                         "fit":  "contain",
+                                         "loaded":  true
+                                     },
+                                     {
+                                         "src":  "assets/images/blog-previews/Serene Funeral Home Visitation Parlor.png",
+                                         "width":  306.828125,
+                                         "height":  204.546875,
+                                         "containerHeight":  204.546875,
+                                         "ratio":  1.5000381941792071,
+                                         "fit":  "contain",
+                                         "loaded":  true
+                                     },
+                                     {
+                                         "src":  "assets/images/blog-previews/Professional Office Cleaning in Action.png",
+                                         "width":  306.828125,
+                                         "height":  204.546875,
+                                         "containerHeight":  204.546875,
+                                         "ratio":  1.5000381941792071,
+                                         "fit":  "contain",
+                                         "loaded":  true
+                                     },
+                                     {
+                                         "src":  "assets/images/blog-previews/janitorial_office_cleaning.png",
+                                         "width":  306.828125,
+                                         "height":  204.546875,
+                                         "containerHeight":  204.546875,
+                                         "ratio":  1.5000381941792071,
+                                         "fit":  "cover",
+                                         "loaded":  true
+                                     }
+                                 ],
+                       "Count":  4
+                   },
+        "passed":  true
+    },
+    {
+        "width":  768,
+        "photos":  {
+                       "value":  [
+                                     {
+                                         "src":  "assets/images/blog-previews/Professional Cleaner in Upscale Dining Room.png",
+                                         "width":  332.390625,
+                                         "height":  221.59375,
+                                         "containerHeight":  221.59375,
+                                         "ratio":  1.5,
+                                         "fit":  "contain",
+                                         "loaded":  true
+                                     },
+                                     {
+                                         "src":  "assets/images/blog-previews/Serene Funeral Home Visitation Parlor.png",
+                                         "width":  332.390625,
+                                         "height":  221.59375,
+                                         "containerHeight":  221.59375,
+                                         "ratio":  1.5,
+                                         "fit":  "contain",
+                                         "loaded":  true
+                                     },
+                                     {
+                                         "src":  "assets/images/blog-previews/Professional Office Cleaning in Action.png",
+                                         "width":  332.390625,
+                                         "height":  221.59375,
+                                         "containerHeight":  221.59375,
+                                         "ratio":  1.5,
+                                         "fit":  "contain",
+                                         "loaded":  true
+                                     },
+                                     {
+                                         "src":  "assets/images/blog-previews/janitorial_office_cleaning.png",
+                                         "width":  332.390625,
+                                         "height":  221.59375,
+                                         "containerHeight":  221.59375,
+                                         "ratio":  1.5,
+                                         "fit":  "cover",
+                                         "loaded":  true
+                                     }
+                                 ],
+                       "Count":  4
+                   },
+        "passed":  true
+    },
+    {
+        "width":  390,
+        "photos":  {
+                       "value":  [
+                                     {
+                                         "src":  "assets/images/blog-previews/Professional Cleaner in Upscale Dining Room.png",
+                                         "width":  335,
+                                         "height":  223.328125,
+                                         "containerHeight":  223.328125,
+                                         "ratio":  1.5000349821590988,
+                                         "fit":  "contain",
+                                         "loaded":  true
+                                     },
+                                     {
+                                         "src":  "assets/images/blog-previews/Serene Funeral Home Visitation Parlor.png",
+                                         "width":  335,
+                                         "height":  223.328125,
+                                         "containerHeight":  223.328125,
+                                         "ratio":  1.5000349821590988,
+                                         "fit":  "contain",
+                                         "loaded":  true
+                                     },
+                                     {
+                                         "src":  "assets/images/blog-previews/Professional Office Cleaning in Action.png",
+                                         "width":  335,
+                                         "height":  223.328125,
+                                         "containerHeight":  223.328125,
+                                         "ratio":  1.5000349821590988,
+                                         "fit":  "contain",
+                                         "loaded":  true
+                                     },
+                                     {
+                                         "src":  "assets/images/blog-previews/janitorial_office_cleaning.png",
+                                         "width":  335,
+                                         "height":  223.328125,
+                                         "containerHeight":  223.328125,
+                                         "ratio":  1.5000349821590988,
+                                         "fit":  "cover",
+                                         "loaded":  true
+                                     }
+                                 ],
+                       "Count":  4
+                   },
+        "passed":  true
+    }
+]
