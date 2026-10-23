@@ -1,0 +1,23 @@
+
+# Local browser testing, authentication snapshots, and disposable build output.
+/.local-test-output/
+/.test-build/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.auth/
+/.auth/
+**/chrome-profile*/
+**/chromium-profile*/
+**/puppeteer-profile*/
+**/__pycache__/
+*.pyc
+*.pyo
+/debug.log
+/npm-debug.log*
+.env
+.env.*
+!.env.example
+!.env.template
+/credentials.json
+/service-account*.json
