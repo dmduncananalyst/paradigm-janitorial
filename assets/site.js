@@ -1,5 +1,12 @@
 (() => {
   'use strict';
+  // Decode the existing menu photographs before a visitor opens a panel.
+  // Their eager HTML requests begin during parsing; this does not delay opening.
+  document.querySelectorAll('.site-header .nav-panel img').forEach(image => {
+    const prepare = () => { if (image.naturalWidth && image.decode) image.decode().catch(() => {}); };
+    if (image.complete) prepare();
+    else image.addEventListener('load', prepare, {once: true});
+  });
   const nav = document.querySelector('.main-nav');
   const menu = document.querySelector('.menu-button');
   const compact = window.matchMedia('(max-width: 600px)');
