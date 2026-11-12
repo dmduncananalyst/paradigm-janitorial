@@ -1,0 +1,26 @@
+[
+  {
+    "number": 4,
+    "repo": "paradigm-janitorial",
+    "name": "article-04",
+    "source": "C:\\Users\\Owner\\.codex\\generated_images\\01a1d07c-ff9c-7db0-abd1-f36faa930f0e\\exec-4f5cbcf2-293e-489a-b131-2fb30ee3df89.png",
+    "prompt": "Photorealistic commercial cleaning editorial photograph, wide landscape 3:2. Los Angeles office lobby prepared for the winter holidays, tasteful small tree and wreath, visibly dull high traffic flooring with subtle scuffing and dusty baseboards. A professional Black female cleaner in plain neat workwear uses a realistic commercial floor mop and bucket with safe posture, cleaning rather than celebrating. Natural office lighting, credible scale, realistic hands and equipment. No logos, invented company insignia, watermark or text. Professional image for holiday office floor cleaning.",
+    "tool": "built-in image_gen"
+  },
+  {
+    "number": 5,
+    "repo": "paradigm-janitorial",
+    "name": "article-05",
+    "source": "C:\\Users\\Owner\\.codex\\generated_images\\01a1d07c-ff9c-7db0-abd1-f36faa930f0e\\exec-fa1966bf-23b3-44cb-a66c-2822762ab356.png",
+    "prompt": "Original professional photorealistic landscape editorial photo, 3:2. Apartment community clubhouse in Southern California, comfortable shared lounge adjoining a kitchenette, subtle neglected condition with scuffed flooring, lightly marked counters, overflowing small wastebasket kept discreet and believable. An Asian woman resident and her Mexican parents enter with a covered food dish, looking at the room naturally. Warm late afternoon light, normal human proportions, realistic hands and environment. Relevant to clubhouse cleaning before family gatherings, no exaggerated grime, no text, logos, or watermark.",
+    "tool": "built-in image_gen"
+  },
+  {
+    "number": 6,
+    "repo": "paradigm-janitorial",
+    "name": "article-06",
+    "source": "C:\\Users\\Owner\\.codex\\generated_images\\01a1d07c-ff9c-7db0-abd1-f36faa930f0e\\exec-9a6a1b98-ea59-4bd7-a28a-defcfa12729f.png",
+    "prompt": "Original professional photorealistic editorial photograph, wide landscape 3:2. Neighborhood bakery in Southern California viewed from customer side, sparkling glass pastry display with attractive croissants and breads, contrast with subtly tracked and dull floor beneath checkout counter and entrance mat. A Middle Eastern male cleaner in unbranded workwear cleans a clear section away from food using a realistic flat mop. Bakery attendant in background, warm morning light, realistic hands and equipment, believable food service environment, no text, logos, watermark.",
+    "tool": "built-in image_gen"
+  }
+]

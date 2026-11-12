@@ -1,0 +1,37 @@
+{
+  "repository": "paradigm-janitorial",
+  "articles": [
+    {
+      "url": "https://paradigmjanitorial.net/blog-office-holiday-decorations-tired-floors.html",
+      "approved_text_exact": true,
+      "pdf_text_exact": true,
+      "authorized_numerical_corrections": false,
+      "body_characters": 8548,
+      "meta_characters": 142,
+      "image_bytes": 298264,
+      "missing_references": []
+    },
+    {
+      "url": "https://paradigmjanitorial.net/blog-apartment-clubhouse-cleaning-resident-guests.html",
+      "approved_text_exact": true,
+      "pdf_text_exact": true,
+      "authorized_numerical_corrections": false,
+      "body_characters": 8177,
+      "meta_characters": 139,
+      "image_bytes": 269053,
+      "missing_references": []
+    },
+    {
+      "url": "https://paradigmjanitorial.net/blog-bakery-display-case-floor-cleaning.html",
+      "approved_text_exact": true,
+      "pdf_text_exact": true,
+      "authorized_numerical_corrections": false,
+      "body_characters": 8473,
+      "meta_characters": 154,
+      "image_bytes": 377599,
+      "missing_references": []
+    }
+  ],
+  "errors": [],
+  "publication": "not yet performed"
+}
